@@ -1,0 +1,38 @@
+@import "./globals.reset.scss";
+@import "./globals.fonts.scss";
+@import "./globals.icons.scss";
+@import "./utilities/colors";
+
+:root {
+  font: 400 16px/1.62em "Quattrocento Sans";
+  background-color: $clrCharcoal700;
+  color: $clrCharcoal100;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $clrCharcoal500;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $clrCharcoal400;
+  }
+}
+
+.wrapper {
+  max-width: 80rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
