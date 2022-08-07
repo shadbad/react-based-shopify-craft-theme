@@ -33,10 +33,11 @@
         "react"
     ],
     "rules": {
+        "import/prefer-default-export": 0,
         "react/react-in-jsx-scope": 0,
         "jsx-quotes": [
             "error",
-            "prefer-single"
+            "prefer-double"
         ],
         "react/jsx-indent": [
             "error",
