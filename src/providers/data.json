@@ -1,4 +1,8 @@
 {
+    "announcement": {
+        "body": "Check out our latest bundled collections",
+        "url": "/collections/bundles"
+    },
     "productCategories": [
         {
             "id": "f58bdafc-4531-4799-9557-6aa0b33f394f",
