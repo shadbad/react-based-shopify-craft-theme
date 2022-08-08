@@ -1,0 +1,48 @@
+@use "/src/assets/styles/colors.scss";
+
+._link {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+._link--show-badge {
+  @extend ._link;
+  overflow: visible;
+
+  ._badge {
+    display: block;
+  }
+}
+
+._badge {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: colors.$charcoal-300;
+  color: colors.$charcoal500;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1.125rem;
+  font-size: 0.75rem;
+  border-radius: 50%;
+}
