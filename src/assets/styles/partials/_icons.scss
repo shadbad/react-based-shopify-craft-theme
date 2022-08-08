@@ -1,5 +1,5 @@
 $root: "../../icons";
-$cacheBuster: "ntttkw";
+$cacheBuster: "sysfwt";
 
 @font-face {
   font-family: "craft";
@@ -24,6 +24,12 @@ $cacheBuster: "ntttkw";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-logo:before {
+  content: "\e910";
+}
+.icon-care:before {
+  content: "\e911";
+}
 .icon-ruler:before {
   content: "\e900";
 }
