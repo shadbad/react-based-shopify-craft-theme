@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './announcement.module.scss';
 
-const Announcement = React.memo(({ text, url }) => {
+const Announcement = React.memo(function ({ className, text, url }) {
 
-    const innerElement = (url && url.length > 0) ? <a href={url}>{text}</a> : <span>{text}</span>;
+    const innerElement = (url && url.length > 0) ?
+        <a className={styles['_link']} href={url}>{text}</a>
+        :
+        <span className={styles['_message']}>{text}</span>;
 
     return (
-        <div className={styles.announcement}>
+        <div className={`${className} ${styles['_']}`}>
             <div className="wrapper">
                 {innerElement}
             </div>
@@ -18,11 +21,13 @@ const Announcement = React.memo(({ text, url }) => {
 
 Announcement.propTypes = {
     text: PropTypes.string.isRequired,
-    url: PropTypes.string
+    url: PropTypes.string,
+    className: PropTypes.string
 };
 
 Announcement.defaultProps = {
-    url: null
+    url: null,
+    className: ''
 };
 
 export { Announcement };
