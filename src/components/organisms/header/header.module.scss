@@ -1,0 +1,28 @@
+._ {
+  padding: 1rem 1.5rem;
+  position: relative;
+  min-height: 8rem;
+  box-sizing: border-box;
+}
+
+._company {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+._search,
+._cart {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+._search {
+  left: 1.5rem;
+}
+
+._cart {
+  right: 1.5rem;
+}
