@@ -1,5 +1,5 @@
 $root: "../../icons";
-$cacheBuster: "sysfwt";
+$cacheBuster: "norqcf";
 
 @font-face {
   font-family: "craft";
@@ -57,6 +57,9 @@ $cacheBuster: "sysfwt";
 .icon-heart:before {
   content: "\e908";
 }
+.icon-menu:before {
+  content: "\e912";
+}
 .icon-minus:before {
   content: "\e909";
 }
@@ -66,15 +69,15 @@ $cacheBuster: "sysfwt";
 .icon-search:before {
   content: "\e90b";
 }
-.icon-shopping-bag:before {
+.icon-cart:before {
   content: "\e90c";
 }
-.icon-trash-2:before {
+.icon-trash:before {
   content: "\e90d";
 }
 .icon-upload:before {
   content: "\e90e";
 }
-.icon-x:before {
+.icon-cross:before {
   content: "\e90f";
 }
