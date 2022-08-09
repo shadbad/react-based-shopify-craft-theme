@@ -1,5 +1,6 @@
 @use "/src/assets/styles/colors.scss";
 @use "/src/assets/styles/fonts.scss";
+@use "/src/assets/styles/shared.scss";
 
 ._ {
   width: 100%;
@@ -9,8 +10,12 @@
   text-align: center;
 }
 
-._link,
-._message {
+._container {
+  @extend .wrapper;
+}
+
+._container__link,
+._container__message {
   font-size: 0.75rem;
   letter-spacing: 0.125rem;
   line-height: 2.5rem;
@@ -19,7 +24,7 @@
   position: relative;
 }
 
-._link {
+._container__link {
   padding-right: 1.5rem;
 
   &::after {

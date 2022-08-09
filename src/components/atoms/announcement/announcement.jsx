@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './announcement.module.scss';
 
-const Announcement = React.memo(function ({ className, text, url }) {
+const Announcement = React.memo(function ({ text, url }) {
 
     const innerElement = (url && url.length > 0) ?
-        <a className={styles['_link']} href={url}>{text}</a>
+        <a className={styles['_container__link']} href={url}>{text}</a>
         :
-        <span className={styles['_message']}>{text}</span>;
+        <span className={styles['_container__message']}>{text}</span>;
 
     return (
-        <div className={`${className} ${styles['_']}`}>
-            <div className="wrapper">
+        <div className={styles['_']}>
+            <div className={styles['_container']}>
                 {innerElement}
             </div>
         </div>
@@ -21,13 +21,11 @@ const Announcement = React.memo(function ({ className, text, url }) {
 
 Announcement.propTypes = {
     text: PropTypes.string.isRequired,
-    url: PropTypes.string,
-    className: PropTypes.string
+    url: PropTypes.string
 };
 
 Announcement.defaultProps = {
-    url: null,
-    className: ''
+    url: null
 };
 
 export { Announcement };
