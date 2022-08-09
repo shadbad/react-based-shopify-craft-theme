@@ -1,19 +1,42 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
 ._ {
+  @extend .wrapper;
   padding: 1rem 1.5rem;
-  position: relative;
-  min-height: 8rem;
-  box-sizing: border-box;
+  text-align: center;
 }
 
 ._company {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  font-size: 6rem;
+  display: inline-block;
+
+  &::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media (max-width: 1000px) {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 4rem;
+  }
+
+  @media (max-width: 400px) {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 3rem;
+  }
 }
 
 ._search,
-._cart {
+._cart,
+._menu {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -21,8 +44,22 @@
 
 ._search {
   left: 1.5rem;
+
+  @media (max-width: 1000px) {
+    left: auto;
+    right: 4rem;
+  }
 }
 
 ._cart {
   right: 1.5rem;
+}
+
+._menu {
+  left: 1.5rem;
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
 }

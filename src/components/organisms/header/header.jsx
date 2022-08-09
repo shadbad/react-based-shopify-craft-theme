@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Announcement, CompanyLink, IconLink } from 'components/atoms';
+import { Announcement, IconLink } from 'components/atoms';
 import styles from './header.module.scss';
 
 const Header = function ({ announcement }) {
@@ -11,13 +11,16 @@ const Header = function ({ announcement }) {
 
             {announcement && <Announcement text={announcement.text} url={announcement.url} />}
 
-            <div className={`${styles['_']} wrapper`}>
+            <div className={`${styles['_']}`}>
+
+                <IconLink className={styles['_menu']} url="#" iconName="menu" />
+
+                <IconLink className={styles['_company']} url="/" iconName="logo" />
 
                 <IconLink className={styles['_search']} url="#" iconName="search" />
 
-                <CompanyLink className={styles['_company']} />
+                <IconLink className={styles['_cart']} url="/cart" iconName="cart" badge="0" />
 
-                <IconLink className={styles['_cart']} url="/cart" iconName="shopping-bag" badge="0" />
             </div>
 
         </header>
