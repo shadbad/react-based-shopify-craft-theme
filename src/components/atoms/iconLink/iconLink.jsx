@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import styles from './iconLink.module.scss';
+import styles from './icon-link.module.scss';
 
 const IconLink = React.memo(function ({ className, url, iconName, handleClick, badge }) {
 
     const showBadge = badge !== '';
 
-    const classNames = `${className} ${showBadge ? styles['_link--show-badge'] : styles['_link']} icon-${iconName}`;
+    const classNames = `${showBadge ? styles['_link--show-badge'] : styles['_link']} icon-${iconName} ${className}`;
 
     return (
         <Link to={url} className={classNames} onClick={handleClick}>
