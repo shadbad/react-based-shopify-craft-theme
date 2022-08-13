@@ -7,7 +7,9 @@ import styles from './navigation-link.module.scss';
 const NavigationLink = React.memo(function ({ className, url, title, mod }) {
 
     return (
-        <NavLink className={`link${styles[`--${mod}`]} ${className}`} to={url}>{title}</NavLink>
+
+        <NavLink className={`${styles[mod]} ${className}`} to={url}>{title}</NavLink>
+
     );
 
 });
@@ -16,12 +18,12 @@ NavigationLink.propTypes = {
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    mod: PropTypes.oneOf(['main-link', 'sub-link'])
+    mod: PropTypes.oneOf(['main', 'sub'])
 };
 
 NavigationLink.defaultProps = {
     className: '',
-    mod: 'mainLink'
+    mod: 'main'
 };
 
 export { NavigationLink };

@@ -1,11 +1,7 @@
 @use "/src/assets/styles/colors.scss";
 @use "/src/assets/styles/shared.scss";
 
-._ {
-  color: blue;
-}
-
-.link {
+.root {
   font-size: 1rem;
   letter-spacing: 0.0625rem;
   height: 1rem;
@@ -19,7 +15,9 @@
   }
 }
 
-.link--main-link {
+.main {
+  @extend .root;
+
   &::after {
     content: "";
     height: 0.0625rem;
