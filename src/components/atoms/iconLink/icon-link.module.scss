@@ -24,8 +24,7 @@
   }
 }
 
-.link--show-badge {
-  @extend .link;
+.showBadge {
   overflow: visible;
 
   .badge {
