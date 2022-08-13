@@ -5,13 +5,13 @@ import styles from './announcement.module.scss';
 const Announcement = React.memo(function ({ text, url }) {
 
     const innerElement = (url && url.length > 0) ?
-        <a className={styles['link']} href={url}>{text}</a>
+        <a className={styles.link} href={url}>{text}</a>
         :
-        <span className={styles['message']}>{text}</span>;
+        <span className={styles.message}>{text}</span>;
 
     return (
-        <div className={styles['container']}>
-            <div className="wrapper">
+        <div className={styles.root}>
+            <div className={styles.wrapper}>
                 {innerElement}
             </div>
         </div>

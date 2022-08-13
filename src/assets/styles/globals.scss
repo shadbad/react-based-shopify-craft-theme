@@ -1,11 +1,11 @@
 @use "/src/assets/styles/colors.scss";
-@use "/src/assets/styles/fonts.scss";
+@use "/src/assets/styles/typography.scss";
 @import "/src/assets/styles/partials/reset";
 @import "/src/assets/styles/partials/fonts";
 @import "/src/assets/styles/partials/icons";
 
 :root {
-  font: 400 16px/1.62em fonts.$body;
+  font: 400 16px/1.62em typography.$body;
   background-color: colors.$charcoal600;
   color: colors.$charcoal100;
   -webkit-touch-callout: none;
