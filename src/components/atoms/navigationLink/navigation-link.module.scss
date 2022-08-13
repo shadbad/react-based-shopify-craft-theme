@@ -1,0 +1,40 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+._ {
+  color: blue;
+}
+
+.link {
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  height: 1rem;
+  line-height: 1rem;
+  position: relative;
+  color: colors.$charcoal200;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: colors.$charcoal100;
+  }
+}
+
+.link--main-link {
+  &::after {
+    content: "";
+    height: 0.0625rem;
+    position: absolute;
+    left: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0;
+    opacity: 0;
+    background-color: colors.$charcoal200;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

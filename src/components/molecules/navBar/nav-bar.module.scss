@@ -1,0 +1,25 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.container {
+  @extend .wrapper;
+}
+
+.mainMenu {
+  text-align: center;
+  margin-top: 0.5rem;
+
+  & > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.5rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.subMenu {
+  display: none;
+}

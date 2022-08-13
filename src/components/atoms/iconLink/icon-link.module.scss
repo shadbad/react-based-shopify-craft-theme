@@ -1,6 +1,6 @@
 @use "/src/assets/styles/colors.scss";
 
-._link {
+.link {
   display: block;
   width: 2rem;
   height: 2rem;
@@ -24,16 +24,16 @@
   }
 }
 
-._link--show-badge {
-  @extend ._link;
+.link--show-badge {
+  @extend .link;
   overflow: visible;
 
-  ._badge {
+  .badge {
     display: block;
   }
 }
 
-._badge {
+.badge {
   display: none;
   position: absolute;
   bottom: 0;

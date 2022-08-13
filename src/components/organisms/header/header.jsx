@@ -1,40 +1,48 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-import { Announcement, IconLink } from 'components/atoms';
-import styles from './header.module.scss';
+import { Announcement } from 'components/atoms';
+import { HeaderDrawer, NavBar } from 'components/molecules';
 
-const Header = function ({ announcement }) {
+import { useDataProvider } from 'hooks';
+
+const Header = React.memo(function () {
+
+    const announcement = useDataProvider('announcement');
+
+    const categories = useDataProvider('categories');
+
+    const eventHandlers = {
+
+        menuClick() {
+
+            alert('menu button clicked');
+
+        },
+
+        searchClick() {
+
+            alert('search button clicked');
+
+        }
+
+    };
 
     return (
         <header>
 
-            {announcement && <Announcement text={announcement.text} url={announcement.url} />}
+            {announcement.status === 'done' && <Announcement text={announcement.data.text} url={announcement.data.url} />}
 
-            <div className={`${styles['_']}`}>
+            <HeaderDrawer menuClickHandler={eventHandlers.menuClick} searchClickHandler={eventHandlers.searchClick} cartBadge="0" />
 
-                <IconLink className={styles['_menu']} url="#" iconName="menu" />
+            <div className="search" />
 
-                <IconLink className={styles['_company']} url="/" iconName="logo" />
-
-                <IconLink className={styles['_search']} url="#" iconName="search" />
-
-                <IconLink className={styles['_cart']} url="/cart" iconName="cart" badge="0" />
-
-            </div>
+            {categories.status === 'done' && <NavBar links={categories.data} />}
 
         </header>
     );
 
-};
-
-Header.propTypes = {
-    announcement: PropTypes.shape({
-        text: PropTypes.string.isRequired,
-        url: PropTypes.string
-    })
-
-};
+});
 
 Header.defaultProps = {
     announcement: null

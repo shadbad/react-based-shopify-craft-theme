@@ -2,7 +2,7 @@
 @use "/src/assets/styles/fonts.scss";
 @use "/src/assets/styles/shared.scss";
 
-._ {
+.container {
   width: 100%;
   background-color: colors.$charcoal100;
   font-family: fonts.$heading;
@@ -10,32 +10,28 @@
   text-align: center;
 }
 
-._container {
-  @extend .wrapper;
-}
-
-._container__link,
-._container__message {
+.link,
+.message {
   font-size: 0.75rem;
   letter-spacing: 0.125rem;
-  line-height: 2.5rem;
   display: inline-block;
-  white-space: nowrap;
   position: relative;
+  padding: 0.5rem 0;
 }
 
-._container__link {
+.link {
   padding-right: 1.5rem;
 
   &::after {
     font-family: "craft" !important;
     content: "\e901";
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     right: 0.25rem;
     display: block;
-    height: 2.5rem;
-    line-height: 2.625rem;
+    height: 1rem;
+    line-height: 1.1rem;
     font-size: 0.875rem;
     width: 1rem;
     text-align: center;

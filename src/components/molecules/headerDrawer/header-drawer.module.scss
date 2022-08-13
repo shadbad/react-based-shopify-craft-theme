@@ -1,13 +1,13 @@
 @use "/src/assets/styles/colors.scss";
 @use "/src/assets/styles/shared.scss";
 
-._ {
+.container {
   @extend .wrapper;
   padding: 1rem 1.5rem;
   text-align: center;
 }
 
-._company {
+.company {
   width: 6rem;
   height: 6rem;
   line-height: 6rem;
@@ -34,15 +34,15 @@
   }
 }
 
-._search,
-._cart,
-._menu {
+.search,
+.cart,
+.menu {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-._search {
+.search {
   left: 1.5rem;
 
   @media (max-width: 1000px) {
@@ -51,11 +51,11 @@
   }
 }
 
-._cart {
+.cart {
   right: 1.5rem;
 }
 
-._menu {
+.menu {
   left: 1.5rem;
   display: none;
 

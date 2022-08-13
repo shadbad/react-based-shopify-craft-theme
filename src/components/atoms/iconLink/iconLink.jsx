@@ -3,30 +3,37 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './icon-link.module.scss';
 
-const IconLink = React.memo(function ({ className, url, iconName, handleClick, badge }) {
+const IconLink = React.memo(function ({ className, url, iconName, clickHandler, badge }) {
 
     const showBadge = badge !== '';
 
-    const classNames = `${showBadge ? styles['_link--show-badge'] : styles['_link']} icon-${iconName} ${className}`;
+    const classNames = `${showBadge ? styles['link--show-badge'] : styles['link']} icon-${iconName} ${className}`;
 
     return (
-        <Link to={url} className={classNames} onClick={handleClick}>
-            {showBadge && <i className={styles['_badge']}>{badge}</i>}
+        <Link to={url} className={classNames} onClick={clickHandler}>
+            {showBadge && <i className={styles['badge']}>{badge}</i>}
         </Link>
     );
 
+});
+
+IconLink.model = PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    iconName: PropTypes.string.isRequired,
+    clickHandler: PropTypes.func,
+    badge: PropTypes.string
 });
 
 IconLink.propTypes = {
     className: PropTypes.string,
     url: PropTypes.string.isRequired,
     iconName: PropTypes.string.isRequired,
-    handleClick: PropTypes.func,
+    clickHandler: PropTypes.func,
     badge: PropTypes.string
 };
 
 IconLink.defaultProps = {
-    handleClick: null,
+    clickHandler: null,
     className: '',
     badge: ''
 };
