@@ -1,12 +1,12 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
-
+import React, { useState } from 'react';
 import { Announcement } from 'components/atoms';
 import { HeaderDrawer, NavBar } from 'components/molecules';
 
 import { useDataProvider } from 'hooks';
 
 const Header = React.memo(function () {
+
+    const [menuIsExpanded, setMenuIsExpanded] = useState(false);
 
     const announcement = useDataProvider('announcement');
 
@@ -16,7 +16,7 @@ const Header = React.memo(function () {
 
         menuClick() {
 
-            alert('menu button clicked');
+            setMenuIsExpanded((prevMenuIsExpanded) => !prevMenuIsExpanded);
 
         },
 
@@ -33,11 +33,16 @@ const Header = React.memo(function () {
 
             {announcement.status === 'done' && <Announcement text={announcement.data.text} url={announcement.data.url} />}
 
-            <HeaderDrawer menuClickHandler={eventHandlers.menuClick} searchClickHandler={eventHandlers.searchClick} cartBadge="0" />
+            <HeaderDrawer
+                menuIsExpanded={menuIsExpanded}
+                menuClickHandler={eventHandlers.menuClick}
+                searchClickHandler={eventHandlers.searchClick}
+                cartBadge="0"
+            />
 
             <div className="search" />
 
-            {categories.status === 'done' && <NavBar links={categories.data} />}
+            {categories.status === 'done' && <NavBar links={categories.data} menuIsExpanded={menuIsExpanded} />}
 
         </header>
     );

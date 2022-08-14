@@ -2,16 +2,16 @@
 @use "/src/assets/styles/shared.scss";
 
 .root {
-  font-size: 1rem;
+  font-size: 0.875rem;
   letter-spacing: 0.0625rem;
   height: 1rem;
   line-height: 1rem;
   position: relative;
-  color: colors.$charcoal200;
+  color: colors.$charcoal300;
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: colors.$charcoal100;
+    color: colors.$charcoal-300;
   }
 }
 
@@ -22,11 +22,11 @@
     content: "";
     height: 0.0625rem;
     position: absolute;
-    left: 0.0625rem;
-    right: 0.0625rem;
+    left: 0;
+    right: 0;
     bottom: 0;
     opacity: 0;
-    background-color: colors.$charcoal200;
+    background-color: colors.$charcoal300;
     transition: opacity 0.3s ease-in-out;
   }
 
@@ -35,4 +35,8 @@
       opacity: 1;
     }
   }
+}
+
+.sub {
+  @extend .root;
 }

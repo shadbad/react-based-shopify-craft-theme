@@ -4,7 +4,6 @@
 .container {
   @extend .wrapper;
   padding: 1rem 1.5rem;
-  text-align: center;
 }
 
 .company {
@@ -13,7 +12,8 @@
   line-height: 6rem;
   text-align: center;
   font-size: 6rem;
-  display: inline-block;
+  display: block;
+  margin: auto;
 
   &::before {
     transform: translate(-50%, -50%) scale(1);
