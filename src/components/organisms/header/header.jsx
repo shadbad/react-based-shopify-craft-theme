@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Announcement } from 'components/atoms';
-import { HeaderDrawer, NavBar } from 'components/molecules';
-
+import { HeaderDrawer, NavBar, SearchBar } from 'components/molecules';
 import { useDataProvider } from 'hooks';
+
+import styles from './header.module.scss';
 
 const Header = React.memo(function () {
 
     const [menuIsExpanded, setMenuIsExpanded] = useState(false);
+
+    const [searchBarVisibility, setSearchBarVisibility] = useState(false);
 
     const announcement = useDataProvider('announcement');
 
@@ -22,7 +25,7 @@ const Header = React.memo(function () {
 
         searchClick() {
 
-            alert('search button clicked');
+            setSearchBarVisibility((prevSearchVisibility) => !prevSearchVisibility);
 
         }
 
@@ -40,7 +43,11 @@ const Header = React.memo(function () {
                 cartBadge="0"
             />
 
-            <div className="search" />
+            <SearchBar
+                className={styles.header}
+                searchBarVisibility={searchBarVisibility}
+                setSearchBarVisibility={setSearchBarVisibility}
+            />
 
             {categories.status === 'done' && <NavBar links={categories.data} menuIsExpanded={menuIsExpanded} />}
 
