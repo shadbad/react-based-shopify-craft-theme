@@ -33,6 +33,7 @@
         "react"
     ],
     "rules": {
+        "jsx-a11y/control-has-associated-label": 0,
         "dot-notation": 0,
         "prefer-arrow-callback": 0,
         "import/prefer-default-export": 0,
