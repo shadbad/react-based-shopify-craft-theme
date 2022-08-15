@@ -15,6 +15,8 @@
   -ms-user-select: none;
   user-select: none;
 
+  min-height: 3000px;
+
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -26,6 +28,11 @@
   &::-webkit-scrollbar-thumb {
     background-color: colors.$charcoal400;
   }
+}
+
+::selection {
+  color: colors.$charcoal100;
+  background-color: colors.$charcoal500;
 }
 
 .wrapper {
