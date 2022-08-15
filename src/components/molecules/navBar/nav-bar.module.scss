@@ -53,7 +53,9 @@ $sidebarWidth: 18rem;
 
 .mainMenu {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0;
+  line-height: 0;
 
   @media (max-width: $breakPoint) {
     text-align: left;
