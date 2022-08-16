@@ -24,7 +24,7 @@ const NavBar = React.memo(function ({ links, socialLinks, menuIsExpanded, topPos
 
                             }
 
-                            return <NavBar.RenderSubmenu key={link.id} id={link.id} title={link.title} subs={link.subs} />;
+                            return <NavBar.Submenu key={link.id} id={link.id} title={link.title} subs={link.subs} />;
 
                         })
                     }
@@ -135,7 +135,7 @@ NavBar.Link.propTypes = {
     url: PropTypes.string.isRequired
 };
 
-NavBar.RenderSubmenu = React.memo(function ({ id, title, subs }) {
+NavBar.Submenu = React.memo(function ({ id, title, subs }) {
 
     return (
 
@@ -189,7 +189,7 @@ NavBar.RenderSubmenu = React.memo(function ({ id, title, subs }) {
 
 });
 
-NavBar.RenderSubmenu.propTypes = {
+NavBar.Submenu.propTypes = {
     id: PropTypes.string.isRequired,
 
     title: PropTypes.string.isRequired,
