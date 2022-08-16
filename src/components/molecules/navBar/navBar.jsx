@@ -1,13 +1,9 @@
-// #region imports
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavigationLink, SocialLink } from 'components/atoms';
 import { useWindowResizeEffect } from 'hooks';
 
 import styles from './nav-bar.module.scss';
-
-// #endregion
 
 const NavBar = React.memo(function ({ links, socialLinks, menuIsExpanded }) {
 
@@ -22,8 +18,13 @@ const NavBar = React.memo(function ({ links, socialLinks, menuIsExpanded }) {
                     {
                         links.map((link) => {
 
-                            if (!link.subs || link.subs.length === 0) return <RenderLink key={link.id} id={link.id} title={link.title} url={link.url} />;
-                            return <RenderSubmenu key={link.id} id={link.id} title={link.title} subs={link.subs} />;
+                            if (!link.subs || link.subs.length === 0) {
+
+                                return <NavBar.Link key={link.id} id={link.id} title={link.title} url={link.url} />;
+
+                            }
+
+                            return <NavBar.RenderSubmenu key={link.id} id={link.id} title={link.title} subs={link.subs} />;
 
                         })
                     }
@@ -126,7 +127,7 @@ NavBar.eventHandlers = {
 
 // #region sub components
 
-const RenderLink = React.memo(function ({ id, title, url }) {
+NavBar.Link = React.memo(function ({ id, title, url }) {
 
     return (
 
@@ -138,13 +139,13 @@ const RenderLink = React.memo(function ({ id, title, url }) {
 
 });
 
-RenderLink.propTypes = {
+NavBar.Link.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
 };
 
-const RenderSubmenu = React.memo(function ({ id, title, subs }) {
+NavBar.RenderSubmenu = React.memo(function ({ id, title, subs }) {
 
     return (
 
@@ -170,7 +171,9 @@ const RenderSubmenu = React.memo(function ({ id, title, subs }) {
                     onKeyPress={NavBar.eventHandlers.subMenuTitleClick}
                     onClick={NavBar.eventHandlers.subMenuTitleClick}
                 >
+
                     {title}
+
                 </li>
 
                 {
@@ -196,7 +199,7 @@ const RenderSubmenu = React.memo(function ({ id, title, subs }) {
 
 });
 
-RenderSubmenu.propTypes = {
+NavBar.RenderSubmenu.propTypes = {
     id: PropTypes.string.isRequired,
 
     title: PropTypes.string.isRequired,
