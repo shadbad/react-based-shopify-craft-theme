@@ -5,11 +5,11 @@ import { IconLink } from 'components/atoms';
 
 import styles from './header-drawer.module.scss';
 
-const HeaderDrawer = React.memo(function ({ menuIsExpanded, menuClickHandler, searchClickHandler, cartBadge }) {
+const HeaderDrawer = React.memo(function ({ className, menuIsExpanded, menuClickHandler, searchClickHandler, cartBadge }) {
 
     return (
 
-        <div className={styles.container}>
+        <div className={`${styles.container} ${className}`}>
 
             <IconLink className={styles.menu} url="#" iconName={menuIsExpanded ? 'cross' : 'menu'} clickHandler={menuClickHandler} />
 
@@ -29,11 +29,13 @@ HeaderDrawer.propTypes = {
     menuIsExpanded: PropTypes.bool,
     menuClickHandler: PropTypes.func.isRequired,
     searchClickHandler: PropTypes.func.isRequired,
-    cartBadge: PropTypes.string.isRequired
+    cartBadge: PropTypes.string.isRequired,
+    className: PropTypes.string
 };
 
 HeaderDrawer.defaultProps = {
-    menuIsExpanded: false
+    menuIsExpanded: false,
+    className: ''
 };
 
 export { HeaderDrawer };

@@ -1,17 +1,13 @@
 import React, { useReducer } from 'react';
 import { Announcement } from 'components/atoms';
 import { HeaderDrawer, NavBar, SearchBar } from 'components/molecules';
-import { useDataProvider } from 'hooks';
+import { useDataProvider, useWindowResizeEffect } from 'hooks';
 
 import styles from './header.module.scss';
 
 const Header = React.memo(function () {
 
-    const announcement = useDataProvider('announcement');
-
-    const categories = useDataProvider('categories');
-
-    const socialLinks = useDataProvider('SOCIAL_PLATFORMS');
+    // #region State
 
     const reducer = function (state, action) {
 
@@ -19,8 +15,28 @@ const Header = React.memo(function () {
 
             case 'toggleMenu':
                 return { ...state, menuIsExpanded: !state.menuIsExpanded };
+
             case 'toggleSearch':
                 return { ...state, searchIsVisible: !state.searchIsVisible };
+
+            case 'calcNavBarTopPosition': {
+
+                if (parseFloat(window.innerWidth) <= 1000) {
+
+                    const announcement = document.querySelector(`header .${styles.announcement}`);
+                    const drawer = document.querySelector(`header .${styles.drawer}`);
+
+                    const announcementHeight = announcement ? parseFloat(announcement.getBoundingClientRect().height) : 0;
+                    const drawerHeight = drawer ? parseFloat(drawer.getBoundingClientRect().height) : 0;
+
+                    return { ...state, navBarTopPosition: announcementHeight + drawerHeight };
+
+                }
+
+                return { ...state, navBarTopPosition: 0 };
+
+            }
+
             default:
                 throw new Error();
 
@@ -28,14 +44,38 @@ const Header = React.memo(function () {
 
     };
 
-    const [state, dispatch] = useReducer(reducer, { menuIsExpanded: false, searchIsVisible: false });
+    const [state, dispatch] = useReducer(reducer, { menuIsExpanded: false, searchIsVisible: false, navBarTopPosition: 0 });
+
+    // #endregion
+
+    // #region Fetching Data
+
+    const announcement = useDataProvider('announcement');
+
+    const categories = useDataProvider('categories');
+
+    const socialLinks = useDataProvider('SOCIAL_PLATFORMS');
+
+    // #endregion
+
+    useWindowResizeEffect(() => dispatch({ type: 'calcNavBarTopPosition' }));
 
     return (
         <header>
 
-            {announcement.status === 'done' && <Announcement text={announcement.data.text} url={announcement.data.url} />}
+            {
+                announcement.status === 'done' &&
+                (
+                    <Announcement
+                        className={styles.announcement}
+                        text={announcement.data.text}
+                        url={announcement.data.url}
+                    />
+                )
+            }
 
             <HeaderDrawer
+                className={styles.drawer}
                 menuIsExpanded={state.menuIsExpanded}
                 menuClickHandler={() => dispatch({ type: 'toggleMenu' })}
                 searchClickHandler={() => dispatch({ type: 'toggleSearch' })}
@@ -43,14 +83,22 @@ const Header = React.memo(function () {
             />
 
             <SearchBar
-                className={styles.header}
+                className={styles.search}
                 searchBarVisibility={state.searchIsVisible}
                 setSearchBarVisibility={() => dispatch({ type: 'toggleSearch' })}
             />
 
             {
                 (categories.status === 'done' && socialLinks.status === 'done') &&
-                <NavBar links={categories.data} menuIsExpanded={state.menuIsExpanded} socialLinks={socialLinks.data} />
+                (
+                    <NavBar
+                        className={styles.nav}
+                        links={categories.data}
+                        menuIsExpanded={state.menuIsExpanded}
+                        socialLinks={socialLinks.data}
+                        topPosition={state.navBarTopPosition}
+                    />
+                )
             }
 
         </header>

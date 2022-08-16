@@ -5,12 +5,12 @@ import { useWindowResizeEffect } from 'hooks';
 
 import styles from './nav-bar.module.scss';
 
-const NavBar = React.memo(function ({ links, socialLinks, menuIsExpanded }) {
+const NavBar = React.memo(function ({ links, socialLinks, menuIsExpanded, topPosition, className }) {
 
     useWindowResizeEffect(NavBar.eventHandlers.windowResize);
 
     return (
-        <div className={`${styles.root} ${menuIsExpanded ? styles.expandMenu : ''}`}>
+        <div className={`${styles.root} ${menuIsExpanded ? styles.expandMenu : ''} ${className}`} style={{ top: `${topPosition}px` }}>
 
             <nav className={styles.wrapper}>
 
@@ -73,19 +73,25 @@ NavBar.propTypes = {
     socialLinks: PropTypes.arrayOf(PropTypes.shape({
         platform: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired
-    })).isRequired
+    })).isRequired,
+
+    topPosition: PropTypes.number,
+
+    className: PropTypes.string
 
 };
 
 NavBar.defaultProps = {
-    menuIsExpanded: false
+    menuIsExpanded: false,
+    topPosition: 0,
+    className: ''
 };
 
 NavBar.eventHandlers = {
 
     subMenuTitleClick({ target }) {
 
-        const container = target.closest('li[class*="menuItemWrapper"]');
+        const container = target.closest(`li.${styles.menuItemWrapper}`);
 
         if (container.classList.contains(styles.expanded)) {
 
@@ -101,25 +107,9 @@ NavBar.eventHandlers = {
 
     windowResize() {
 
-        const navBar = document.querySelector('#root > header div[class^="nav-bar"]');
+        const navBar = document.querySelector(`header > .${styles.root}`);
 
         Array.from(navBar.querySelectorAll(`.${styles.expanded}`)).forEach((element) => element.classList.remove(styles.expanded));
-
-        if (parseFloat(window.innerWidth) <= 1000) {
-
-            const announcement = document.querySelector('#root > header div[class^="announcement"]');
-            const drawer = document.querySelector('#root > header div[class^="header-drawer"]');
-
-            const announcementHeight = announcement ? parseFloat(announcement.getBoundingClientRect().height) : 0;
-            const drawerHeight = drawer ? parseFloat(drawer.getBoundingClientRect().height) : 0;
-
-            navBar.style.top = `${announcementHeight + drawerHeight}px`;
-
-        } else {
-
-            navBar.removeAttribute('style');
-
-        }
 
     }
 

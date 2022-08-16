@@ -1,5 +1,16 @@
 @use "/src/assets/styles/colors.scss";
 @use "/src/assets/styles/shared.scss";
 
+.announcement {
+  box-sizing: border-box;
+}
+
+.drawer {
+  box-sizing: border-box;
+}
 .search {
+  box-sizing: border-box;
+}
+.nav {
+  box-sizing: border-box;
 }
