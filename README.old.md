@@ -1,1 +1,0 @@
-# react-based-shopify-craft-theme

@@ -1,0 +1,47 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+
+.root {
+  display: block;
+  background-color: transparent;
+  overflow: hidden;
+
+  img {
+    display: block;
+    float: left;
+    width: 3rem;
+    height: 4.5rem;
+    margin-right: 1rem;
+    object-fit: contain;
+    object-position: center;
+    background-color: colors.$charcoal400;
+  }
+
+  strong {
+    display: block;
+    font-family: typography.$heading;
+    font-size: 0.875rem;
+    letter-spacing: 0.0625rem;
+    line-height: 1.25em;
+    color: colors.$charcoal-300;
+    margin-bottom: 0.25rem;
+  }
+
+  & > span {
+    display: block;
+    color: colors.$charcoal300;
+    font-size: 0.875rem;
+    letter-spacing: 0.0625rem;
+
+    s {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &:hover {
+    strong {
+      text-decoration: underline;
+    }
+  }
+}

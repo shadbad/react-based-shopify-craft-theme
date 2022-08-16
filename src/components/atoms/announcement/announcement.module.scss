@@ -1,0 +1,53 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.root {
+  width: 100%;
+  background-color: colors.$charcoal100;
+  font-family: typography.$heading;
+  color: colors.$charcoal700;
+  text-align: center;
+}
+
+.wrapper {
+  @extend .wrapper;
+}
+
+.message {
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  letter-spacing: 0.125rem;
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.link {
+  @extend .message;
+  padding-right: 1.5rem;
+
+  &::after {
+    font-family: "craft" !important;
+    content: "\e901";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.25rem;
+    display: block;
+    height: 1rem;
+    line-height: 1.1rem;
+    font-size: 0.875rem;
+    width: 1rem;
+    text-align: center;
+    z-index: 1;
+    color: colors.$charcoal700;
+    transition: right 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      right: 0;
+    }
+  }
+}

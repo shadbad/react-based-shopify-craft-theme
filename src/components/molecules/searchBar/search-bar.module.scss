@@ -1,0 +1,173 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.root {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  background-color: rgba(colors.$charcoal100, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    background-color: colors.$charcoal500;
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transition: opacity 0.3s ease-in-out, clip-path 0.3s ease-in-out;
+  }
+
+  &.visible {
+    transition: opacity 0.3s ease-in-out, visibility 0s linear;
+    opacity: 1;
+    visibility: visible;
+
+    &::before {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+
+    .wrapper {
+      transition: opacity 0.3s ease-in-out 0.2s;
+      opacity: 1;
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  max-width: 35rem;
+  margin: auto;
+  position: absolute;
+  top: 3.5rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+.textBox {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  width: calc(100% - 5.5rem);
+  transition: border-radius 0.3s ease-in-out;
+  background-color: colors.$charcoal600;
+
+  &.showingResult {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.result {
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+  width: calc(100% - 5.5rem);
+  background-color: colors.$charcoal600;
+  box-sizing: border-box;
+  padding: 1rem 0 3rem 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 0.0625rem solid colors.$charcoal300;
+  border-top: none;
+
+  & > span {
+    display: block;
+    padding: 0 1rem 0.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1em;
+    letter-spacing: 0.0625rem;
+    color: colors.$charcoal300;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      right: 1rem;
+      height: 0.0625rem;
+      background-color: colors.$charcoal400;
+    }
+  }
+
+  & > a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.875rem;
+    height: 3rem;
+    line-height: 3rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top: 0.0625rem solid colors.$charcoal400;
+    transition: background-color 0.3s ease-in-out;
+
+    &::after {
+      font-family: "craft";
+      content: "\e901";
+      display: block;
+      float: right;
+      height: 3rem;
+      line-height: 3rem;
+      margin-right: 0.5rem;
+      font-size: 1rem;
+      transition: margin 0.3s ease-in-out;
+    }
+
+    &.no-result {
+      border: none;
+    }
+
+    &:hover {
+      background-color: colors.$charcoal500;
+
+      &::after {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.resultList {
+  li {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    clear: both;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: colors.$charcoal500;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
