@@ -1,27 +1,15 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { IconLink, TextBox } from 'components/atoms';
 
 import styles from './search-bar.module.scss';
 
-const SearchBar = React.memo(function ({ searchBarVisibility, setSearchBarVisibility, className }) {
-
-    const [topPosition, setTopPosition] = useState(0);
+const SearchBar = React.memo(function ({ searchBarVisibility, setSearchBarVisibility, className, topPosition }) {
 
     const [query, setQuery] = useState('');
 
     const navigate = useNavigate();
-
-    useLayoutEffect(() => {
-
-        const announcement = document.querySelector('#root > header div[class^="announcement"]');
-
-        const announcementHeight = announcement ? parseFloat(announcement.getBoundingClientRect().height) : 0;
-
-        setTopPosition(() => announcementHeight);
-
-    });
 
     const eventHandlers = {
 
@@ -73,11 +61,13 @@ const SearchBar = React.memo(function ({ searchBarVisibility, setSearchBarVisibi
 SearchBar.propTypes = {
     searchBarVisibility: PropTypes.bool.isRequired,
     setSearchBarVisibility: PropTypes.func.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    topPosition: PropTypes.number
 };
 
 SearchBar.defaultProps = {
-    className: ''
+    className: '',
+    topPosition: 0
 };
 
 export { SearchBar };

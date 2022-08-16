@@ -19,21 +19,25 @@ const Header = React.memo(function () {
             case 'toggleSearch':
                 return { ...state, searchIsVisible: !state.searchIsVisible };
 
-            case 'calcNavBarTopPosition': {
+            case 'calcTopPositions': {
+
+                const announcement = document.querySelector(`header .${styles.announcement}`);
+                const announcementHeight = announcement ? parseFloat(announcement.getBoundingClientRect().height) : 0;
+
+                const drawer = document.querySelector(`header .${styles.drawer}`);
+
+                let navBarTopPosition = 0;
+                const searchBarTopPosition = announcementHeight;
 
                 if (parseFloat(window.innerWidth) <= 1000) {
 
-                    const announcement = document.querySelector(`header .${styles.announcement}`);
-                    const drawer = document.querySelector(`header .${styles.drawer}`);
-
-                    const announcementHeight = announcement ? parseFloat(announcement.getBoundingClientRect().height) : 0;
                     const drawerHeight = drawer ? parseFloat(drawer.getBoundingClientRect().height) : 0;
 
-                    return { ...state, navBarTopPosition: announcementHeight + drawerHeight };
+                    navBarTopPosition = announcementHeight + drawerHeight;
 
                 }
 
-                return { ...state, navBarTopPosition: 0 };
+                return { ...state, searchBarTopPosition, navBarTopPosition };
 
             }
 
@@ -44,7 +48,7 @@ const Header = React.memo(function () {
 
     };
 
-    const [state, dispatch] = useReducer(reducer, { menuIsExpanded: false, searchIsVisible: false, navBarTopPosition: 0 });
+    const [state, dispatch] = useReducer(reducer, { menuIsExpanded: false, searchIsVisible: false, navBarTopPosition: 0, searchBarTopPosition: 0 });
 
     // #endregion
 
@@ -58,7 +62,7 @@ const Header = React.memo(function () {
 
     // #endregion
 
-    useWindowResizeEffect(() => dispatch({ type: 'calcNavBarTopPosition' }));
+    useWindowResizeEffect(() => dispatch({ type: 'calcTopPositions' }));
 
     return (
         <header>
@@ -86,6 +90,7 @@ const Header = React.memo(function () {
                 className={styles.search}
                 searchBarVisibility={state.searchIsVisible}
                 setSearchBarVisibility={() => dispatch({ type: 'toggleSearch' })}
+                topPosition={state.searchBarTopPosition}
             />
 
             {
