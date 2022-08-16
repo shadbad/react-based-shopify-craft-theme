@@ -75,5 +75,39 @@
             "platform": "twitter",
             "url": "https://twitter.com/SinaShadbad"
         }
+    ],
+    "PRODUCTS": [
+        {
+            "id": "0d07dad1-1ac0-463d-a606-1cc939995c77",
+            "title": "Test Product A",
+            "image": "https://picsum.photos/60/90",
+            "price": 28,
+            "discount": 0.1,
+            "url": "/products/product_a"
+        },
+        {
+            "id": "0401def7-5713-410f-b0d1-2cd5c9f5b44a",
+            "title": "Test Product B",
+            "image": "https://picsum.photos/60/90",
+            "price": 20.4,
+            "discount": 0.15,
+            "url": "/products/product_b"
+        },
+        {
+            "id": "6812b7ab-1544-4784-8a27-c898ba1462f1",
+            "title": "Test Product C",
+            "image": "https://picsum.photos/60/90",
+            "price": 48.99,
+            "discount": 0.2,
+            "url": "/products/product_c"
+        },
+        {
+            "id": "a36ff6f4-b4ca-4048-b739-e52563ed53c2",
+            "title": "Test Product D",
+            "image": "https://picsum.photos/60/90",
+            "price": 8.2,
+            "discount": 0,
+            "url": "/products/product_d"
+        }
     ]
 }

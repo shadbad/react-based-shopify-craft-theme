@@ -21,7 +21,8 @@ const Header = React.memo(function () {
 
             case 'calcTopPositions': {
 
-                const announcement = document.querySelector(`header .${styles.announcement}`);
+                const announcement = document.querySelector(`.${styles.announcement}`);
+
                 const announcementHeight = announcement ? parseFloat(announcement.getBoundingClientRect().height) : 0;
 
                 const drawer = document.querySelector(`header .${styles.drawer}`);
@@ -41,6 +42,12 @@ const Header = React.memo(function () {
 
             }
 
+            case 'setSearchQuery': {
+
+                return { ...state, searchQuery: action.payload.query || '' };
+
+            }
+
             default:
                 throw new Error();
 
@@ -48,7 +55,19 @@ const Header = React.memo(function () {
 
     };
 
-    const [state, dispatch] = useReducer(reducer, { menuIsExpanded: false, searchIsVisible: false, navBarTopPosition: 0, searchBarTopPosition: 0 });
+    const [state, dispatch] = useReducer(
+
+        reducer,
+
+        {
+            menuIsExpanded: false,
+            searchIsVisible: false,
+            navBarTopPosition: 0,
+            searchBarTopPosition: 0,
+            searchQuery: ''
+        }
+
+    );
 
     // #endregion
 
@@ -60,12 +79,14 @@ const Header = React.memo(function () {
 
     const socialLinks = useDataProvider('SOCIAL_PLATFORMS');
 
+    const searchResult = useDataProvider('PRODUCTS', { query: state.searchQuery }, [state.searchQuery]);
+
     // #endregion
 
     useWindowResizeEffect(() => dispatch({ type: 'calcTopPositions' }));
 
     return (
-        <header>
+        <header className={styles.root}>
 
             {
                 announcement.status === 'done' &&
@@ -88,9 +109,12 @@ const Header = React.memo(function () {
 
             <SearchBar
                 className={styles.search}
-                searchBarVisibility={state.searchIsVisible}
-                setSearchBarVisibility={() => dispatch({ type: 'toggleSearch' })}
+                visibility={state.searchIsVisible}
+                setVisibility={() => dispatch({ type: 'toggleSearch' })}
                 topPosition={state.searchBarTopPosition}
+                query={state.searchQuery}
+                setQuery={(query) => dispatch({ type: 'setSearchQuery', payload: { query } })}
+                searchResult={searchResult}
             />
 
             {

@@ -35,6 +35,10 @@
   background-color: colors.$charcoal500;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 80rem;
   width: 100%;
