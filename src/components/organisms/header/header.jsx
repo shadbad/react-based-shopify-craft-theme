@@ -15,6 +15,8 @@ const Header = React.memo(function () {
 
     const categories = useDataProvider('categories');
 
+    const socialLinks = useDataProvider('SOCIAL_PLATFORMS');
+
     const eventHandlers = {
 
         menuClick() {
@@ -49,7 +51,10 @@ const Header = React.memo(function () {
                 setSearchBarVisibility={setSearchBarVisibility}
             />
 
-            {categories.status === 'done' && <NavBar links={categories.data} menuIsExpanded={menuIsExpanded} />}
+            {
+                (categories.status === 'done' && socialLinks.status === 'done') &&
+                <NavBar links={categories.data} menuIsExpanded={menuIsExpanded} socialLinks={socialLinks.data} />
+            }
 
         </header>
     );
