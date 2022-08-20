@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './icon.scss';
 
-const Icon = React.memo(function ({ name }) {
+const Icon = React.memo(function ({ name, className }) {
 
     const [state, setState] = useState({ height: 0, size: 0, paths: [] });
 
@@ -45,7 +45,7 @@ const Icon = React.memo(function ({ name }) {
             width={state.size}
             height={state.size}
             viewBox={`0 0 ${state.height} ${state.height}`}
-            className={`icon ${name}`}
+            className={`icon ${name} ${className}`}
         >
 
             <title>{name}</title>
@@ -58,7 +58,12 @@ const Icon = React.memo(function ({ name }) {
 });
 
 Icon.propTypes = {
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    className: PropTypes.string
+};
+
+Icon.defaultProps = {
+    className: ''
 };
 
 export { Icon };
