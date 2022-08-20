@@ -1,0 +1,63 @@
+@use "/src/assets/styles/colors.scss";
+
+.button {
+  height: 3rem;
+  line-height: 3rem;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 0.2s linear, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transform: scale(0.99);
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+.button--ghost {
+  @extend .button;
+
+  &:hover {
+    background-color: colors.$charcoal500;
+  }
+
+  &.button--disabled {
+    color: colors.$charcoal300;
+  }
+}
+
+.button--filled {
+  @extend .button;
+  background-color: colors.$charcoal100;
+  color: colors.$charcoal400;
+
+  &.button--disabled {
+    background-color: colors.$charcoal300;
+    color: colors.$charcoal400;
+  }
+}
+
+.button--outlined {
+  @extend .button;
+  border: 0.0625rem solid colors.$charcoal200;
+  line-height: 2.75;
+
+  &:hover {
+    background-color: colors.$charcoal500;
+  }
+
+  &.button--disabled {
+    border-color: colors.$charcoal400;
+    color: colors.$charcoal300;
+  }
+}
+
+.button--disabled {
+  pointer-events: none;
+}

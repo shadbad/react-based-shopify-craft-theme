@@ -1,4 +1,5 @@
 export { Icon } from './icon/icon';
+export { Button } from './button/button';
 export { Announcement } from './announcement/announcement';
 export { Heading } from './heading/heading';
 export { IconLink } from './iconLink/iconLink';
