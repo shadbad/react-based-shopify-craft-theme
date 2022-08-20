@@ -1,0 +1,15 @@
+@use "/src/assets/styles/colors.scss";
+
+.link {
+  color: colors.$charcoal100;
+}
+
+.link--inline {
+  @extend .link;
+  display: inline-block;
+}
+
+.link--block {
+  @extend .link;
+  display: block;
+}
