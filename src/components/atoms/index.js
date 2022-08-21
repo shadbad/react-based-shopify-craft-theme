@@ -1,7 +1,8 @@
 export { Icon } from './icon/icon';
 export { Button } from './button/button';
+export { Badge } from './badge/badge';
+
 export { Announcement } from './announcement/announcement';
-export { Heading } from './heading/heading';
 export { IconLink } from './iconLink/iconLink';
 export { NavigationLink } from './navigationLink/navigationLink';
 export { SocialLink } from './socialLink/socialLink';
