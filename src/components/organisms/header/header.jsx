@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { HeaderDrawer, NavBar, SearchBar } from 'components/molecules';
+import { NavBar, SearchBar } from 'components/molecules';
 import { useDataProvider, useWindowResizeEffect } from 'hooks';
 
 import styles from './header.module.scss';
@@ -84,14 +84,6 @@ const Header = React.memo(function () {
 
     return (
         <header className={styles.root}>
-
-            <HeaderDrawer
-                className={styles.drawer}
-                menuIsExpanded={state.menuIsExpanded}
-                menuClickHandler={() => dispatch({ type: 'toggleMenu' })}
-                searchClickHandler={() => dispatch({ type: 'toggleSearch' })}
-                cartBadge="0"
-            />
 
             <SearchBar
                 className={styles.search}
