@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import { Announcement } from 'components/atoms';
 import { HeaderDrawer, NavBar, SearchBar } from 'components/molecules';
 import { useDataProvider, useWindowResizeEffect } from 'hooks';
 
@@ -73,8 +72,6 @@ const Header = React.memo(function () {
 
     // #region Fetching Data
 
-    const announcement = useDataProvider('announcement');
-
     const categories = useDataProvider('categories');
 
     const socialLinks = useDataProvider('SOCIAL_PLATFORMS');
@@ -87,17 +84,6 @@ const Header = React.memo(function () {
 
     return (
         <header className={styles.root}>
-
-            {
-                announcement.status === 'done' &&
-                (
-                    <Announcement
-                        className={styles.announcement}
-                        text={announcement.data.text}
-                        url={announcement.data.url}
-                    />
-                )
-            }
 
             <HeaderDrawer
                 className={styles.drawer}
