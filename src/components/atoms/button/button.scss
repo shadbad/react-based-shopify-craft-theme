@@ -14,10 +14,14 @@
   background-color: transparent;
   transition: transform 0.2s linear, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transform: scale(0.99);
+  outline: none;
+}
 
-  &:hover {
-    transform: scale(1);
-  }
+.button--plain {
+  @extend .button;
+  transform: scale(1);
+  border-radius: 0;
+  padding: 0;
 }
 
 .button--ghost {
@@ -25,6 +29,7 @@
 
   &:hover {
     background-color: colors.$charcoal500;
+    transform: scale(1);
   }
 
   &.button--disabled {
@@ -41,6 +46,10 @@
     background-color: colors.$charcoal300;
     color: colors.$charcoal400;
   }
+
+  &:hover {
+    transform: scale(1);
+  }
 }
 
 .button--outlined {
@@ -50,6 +59,7 @@
 
   &:hover {
     background-color: colors.$charcoal500;
+    transform: scale(1);
   }
 
   &.button--disabled {

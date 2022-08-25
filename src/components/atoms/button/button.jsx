@@ -8,7 +8,7 @@ const Button = React.memo(function ({ className, children, onClick, variant, dis
 
         <button
             type="button"
-            className={`${className} button--${variant} ${disabled ? 'button--disabled' : ''}`}
+            className={`button--${variant} ${disabled ? 'button--disabled' : ''} ${className}`}
             onClick={onClick}
         >
 
@@ -24,7 +24,7 @@ Button.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
-    variant: PropTypes.oneOf(['ghost', 'filled', 'outlined']),
+    variant: PropTypes.oneOf(['ghost', 'filled', 'outlined', 'plain']),
     disabled: PropTypes.bool
 };
 
