@@ -1,6 +1,7 @@
 export { Icon } from './icon/icon';
 export { Button } from './button/button';
 export { Badge } from './badge/badge';
+export { Link } from './link/link';
 
 export { Announcement } from './announcement/announcement';
 export { IconLink } from './iconLink/iconLink';
