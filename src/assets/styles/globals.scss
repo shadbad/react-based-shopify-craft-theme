@@ -30,6 +30,16 @@
   }
 }
 
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font-family: typography.$body !important;
+}
+
 ::selection {
   color: colors.$charcoal100;
   background-color: colors.$charcoal500;
