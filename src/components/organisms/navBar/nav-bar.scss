@@ -1,0 +1,7 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.nav-bar__menu {
+  @extend .wrapper;
+  overflow: visible;
+}
