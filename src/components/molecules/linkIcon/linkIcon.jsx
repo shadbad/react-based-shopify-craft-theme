@@ -6,7 +6,7 @@ import './link-icon.scss';
 const LinkIcon = React.memo(function ({ className, href, iconName, variant, badgeValue, badgeMax }) {
 
     return (
-        <Link className={`link-icon--${variant} ${className}`} href={href} variant="block">
+        <Link className={`link-icon--${variant} ${className}`} href={href}>
 
             <Icon className="link-icon__icon" name={iconName} />
 
