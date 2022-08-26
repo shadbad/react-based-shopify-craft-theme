@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { NavBar, SearchBar } from 'components/molecules';
+import { SearchBar } from 'components/molecules';
 import { useDataProvider, useWindowResizeEffect } from 'hooks';
 
 import styles from './header.module.scss';
@@ -72,10 +72,6 @@ const Header = React.memo(function () {
 
     // #region Fetching Data
 
-    const categories = useDataProvider('categories');
-
-    const socialLinks = useDataProvider('SOCIAL_PLATFORMS');
-
     const searchResult = useDataProvider('PRODUCTS', { query: state.searchQuery }, [state.searchQuery]);
 
     // #endregion
@@ -94,19 +90,6 @@ const Header = React.memo(function () {
                 setQuery={(query) => dispatch({ type: 'setSearchQuery', payload: { query } })}
                 searchResult={searchResult}
             />
-
-            {
-                (categories.status === 'done' && socialLinks.status === 'done') &&
-                (
-                    <NavBar
-                        className={styles.nav}
-                        links={categories.data}
-                        menuIsExpanded={state.menuIsExpanded}
-                        socialLinks={socialLinks.data}
-                        topPosition={state.navBarTopPosition}
-                    />
-                )
-            }
 
         </header>
     );
