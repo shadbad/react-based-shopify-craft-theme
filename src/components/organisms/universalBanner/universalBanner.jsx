@@ -13,7 +13,7 @@ const UniversalBanner = React.memo(function () {
 
         // TODO: toast an appropriate message instead of console log
 
-        console.error('Universal Banner Molecule: ', announcement.error);
+        console.error('Universal banner organism: ', announcement.error);
 
         return <div className="universal-banner--error" />;
 
