@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import announcement from './slices/announcementSlice';
-import ui from './slices/uiSlice';
+import announcement from './slices/announcement.slice';
+import ui from './slices/ui.slice';
+import category from './slices/category.slice';
 
 const store = configureStore({
 
-    reducer: { announcement, ui },
+    reducer: { announcement, category, ui },
 
     middleware: (getDefaultMiddleware) => [...getDefaultMiddleware()]
 

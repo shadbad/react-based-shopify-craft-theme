@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { actions as uiActions } from 'store/slices/uiSlice';
+import { actions as uiActions } from 'store/slices/ui.slice';
 import { LinkIcon, ButtonIcon } from 'components/molecules';
 import './app-bar.scss';
 
