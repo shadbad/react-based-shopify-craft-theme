@@ -4,12 +4,14 @@
   color: colors.$charcoal100;
 }
 
-.link--inline {
+.link--plain {
   @extend .link;
-  display: inline-block;
 }
 
-.link--block {
+.link--underlineOnHover {
   @extend .link;
-  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

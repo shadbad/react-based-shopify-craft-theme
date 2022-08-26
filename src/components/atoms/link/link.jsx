@@ -18,13 +18,13 @@ Link.propTypes = {
     onClick: PropTypes.func,
     href: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    variant: PropTypes.oneOf(['inline', 'block'])
+    variant: PropTypes.oneOf(['plain', 'underlineOnHover'])
 };
 
 Link.defaultProps = {
     className: '',
     onClick: null,
-    variant: 'inline'
+    variant: 'plain'
 };
 
 export { Link };
