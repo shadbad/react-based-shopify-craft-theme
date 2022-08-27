@@ -144,3 +144,112 @@
     }
   }
 }
+
+.menu-list--stack {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+
+  // #region shared
+
+  .menu-list__link,
+  .menu-list__sub-list-link,
+  .menu-list__button {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 0.0625rem;
+    font-size: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: colors.$charcoal500;
+    }
+  }
+
+  // #endregion
+
+  .menu-list__item {
+    .menu-list__button {
+      position: relative;
+
+      .menu-list__button-icon {
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
+        height: 1rem;
+        width: 1rem;
+
+        path {
+          fill: colors.$charcoal200;
+        }
+      }
+    }
+  }
+
+  .menu-list__sub-wrapper {
+    .menu-list__sub-list {
+      background-color: colors.$charcoal600;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s linear 0.3s, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+      .menu-list__sub-list-item {
+        .menu-list__sub-list-back {
+          padding: 0 1.5rem 0 3rem;
+          text-align: left;
+          position: relative;
+          width: 100%;
+          background-color: colors.$charcoal500;
+          height: 2rem;
+          box-sizing: border-box;
+          margin: 0;
+          overflow: hidden;
+          border-bottom: 0.0625rem solid colors.$charcoal600;
+
+          span {
+            display: block;
+            width: 100%;
+            height: 2rem;
+            line-height: 2rem;
+          }
+
+          .menu-list__sub-list-back-icon {
+            position: absolute;
+            left: 1.5rem;
+            height: 1rem;
+            width: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    &.expand {
+      .menu-list__sub-list {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+    }
+  }
+}

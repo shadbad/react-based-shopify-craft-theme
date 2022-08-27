@@ -1,6 +1,11 @@
 @use "/src/assets/styles/colors.scss";
 @use "/src/assets/styles/shared.scss";
 
+.nav-bar {
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
 .nav-bar__menu {
   @extend .wrapper;
   overflow: visible;

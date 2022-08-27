@@ -1,6 +1,7 @@
 import React from 'react';
 import { MenuList } from 'components/molecules';
 import { useSelector } from 'react-redux';
+
 import './nav-bar.scss';
 
 const NavBar = React.memo(function () {

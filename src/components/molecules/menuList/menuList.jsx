@@ -21,7 +21,7 @@ const MenuList = React.memo(function ({ className, links, variant }) {
             {
                 links.map((item) => {
 
-                    if (item.subs && item.subs.length > 0) return MenuList.renderSubMenu(item);
+                    if (item.subs && item.subs.length > 0) return MenuList.renderSubMenu(variant, item);
 
                     return (
 
@@ -71,15 +71,16 @@ MenuList.defaultProps = {
     variant: 'metro'
 };
 
-MenuList.renderSubMenu = function (rootItem) {
+MenuList.renderSubMenu = function (variant, rootItem) {
 
-    const handleRootItemClick = useCallback(({ target }) => {
+    const handleSubmenuSwitchClick = useCallback(({ target }) => {
 
         const container = target.closest('menu[class^="menu-list"]');
+
         const currentItem = target.closest('.menu-list__item');
 
         Array
-            .from(container.querySelectorAll('.menu-list__item.expand'))
+            .from(container.querySelectorAll('.menu-list__sub-wrapper.expand'))
             .forEach((item) => {
 
                 if (item !== currentItem) item.classList.remove('expand');
@@ -90,18 +91,49 @@ MenuList.renderSubMenu = function (rootItem) {
 
     });
 
+    const handleSubmenuBackButtonClick = useCallback(({ target }) => {
+
+        target.closest('.menu-list__sub-wrapper').classList.remove('expand');
+
+    });
+
     return (
 
-        <li key={rootItem.id} className="menu-list__item">
+        <li key={rootItem.id} className="menu-list__item menu-list__sub-wrapper">
 
-            <Button className="menu-list__button" onClick={handleRootItemClick} variant="plain">
+            <Button className="menu-list__button" onClick={handleSubmenuSwitchClick} variant="plain">
                 <span>{rootItem.title}</span>
-                <Icon className="menu-list__button-icon down" name="chevron-down" />
-                <Icon className="menu-list__button-icon up" name="chevron-up" />
+                {
+                    (variant === 'metro') && (
+                        <>
+                            <Icon className="menu-list__button-icon down" name="chevron-down" />
+                            <Icon className="menu-list__button-icon up" name="chevron-up" />
+                        </>
+                    )
+                }
+
+                {
+                    (variant === 'stack') && (
+                        <Icon className="menu-list__button-icon" name="arrow-right" />
+                    )
+                }
             </Button>
 
             <ul className="menu-list__sub-list">
+
                 {
+                    (variant === 'stack') && (
+                        <li className="menu-list__sub-list-item">
+                            <Button className="menu-list__sub-list-back" variant="plain" onClick={handleSubmenuBackButtonClick}>
+                                <Icon className="menu-list__sub-list-back-icon" name="arrow-left" />
+                                <span>{rootItem.title}</span>
+                            </Button>
+                        </li>
+                    )
+                }
+
+                {
+
                     rootItem.subs.map((item) => (
 
                         <li key={item.id} className="menu-list__sub-list-item">
