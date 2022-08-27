@@ -8,7 +8,10 @@ const uiSlice = createSlice({
     initialState: {
 
         isMenuDrawerOpen: false,
-        isSearchBarVisible: false
+        search: {
+            isVisible: false,
+            query: ''
+        }
 
     },
 
@@ -26,15 +29,21 @@ const uiSlice = createSlice({
 
         },
 
-        toggleSearchBarVisibility: (state) => {
+        toggleSearchVisibility: (state) => {
 
-            state.isSearchBarVisible = !state.isSearchBarVisible;
+            state.search.isVisible = !state.search.isVisible;
 
         },
 
-        setSearchBarVisibility: (state, action) => {
+        setSearchVisibility: (state, action) => {
 
-            state.isSearchBarVisible = action.payload;
+            state.search.isVisible = action.payload;
+
+        },
+
+        setSearchQuery: (state, action) => {
+
+            state.search.query = action.payload;
 
         }
 

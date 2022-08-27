@@ -33,7 +33,7 @@ const AppBar = React.memo(function () {
                     className="app-bar__search"
                     iconName="search"
                     variant="expandOnHover"
-                    onClick={() => dispatch(uiActions.toggleSearchBarVisibility())}
+                    onClick={() => dispatch(uiActions.toggleSearchVisibility())}
                 />
 
                 <ButtonIcon
