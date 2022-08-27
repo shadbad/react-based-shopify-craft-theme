@@ -1,16 +1,24 @@
 import { useLayoutEffect } from 'react';
 
-const useOutsideClickDetector = function (surfaceSelector, handler, dependencies = []) {
+const useOutsideClickDetector = function (surfaceSelectors, handler, dependencies = []) {
 
     useLayoutEffect(() => {
 
         const bodyClickHandler = ({ target }) => {
 
-            const surface = document.querySelector(surfaceSelector);
+            const surfaces = Array.from(document.querySelectorAll(surfaceSelectors));
 
-            if (!surface) return;
+            let isOutside = true;
 
-            if (!surface.contains(target)) handler();
+            if (!surfaces || surfaces.length === 0) return;
+
+            surfaces.forEach((surface) => {
+
+                if (surface.contains(target)) isOutside = false;
+
+            });
+
+            if (isOutside) handler();
 
         };
 
