@@ -20,9 +20,21 @@ const uiSlice = createSlice({
 
         },
 
-        toggleSearchBar: (state) => {
+        setMenuDrawerStatus: (state, action) => {
+
+            state.isMenuDrawerOpen = action.payload;
+
+        },
+
+        toggleSearchBarVisibility: (state) => {
 
             state.isSearchBarVisible = !state.isSearchBarVisible;
+
+        },
+
+        setSearchBarVisibility: (state, action) => {
+
+            state.isSearchBarVisible = action.payload;
 
         }
 
