@@ -2,42 +2,55 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import './text-field.scss';
 
-const TextField = function ({ className, type, label, error, onChange, onEnterPress }) {
+const TextField = function ({ className, value, type, label, error, onChange, onEnterPress }) {
 
     const id = label.replace(' ', '_');
 
-    const [hasValue, setHasValue] = useState(false);
+    const [hasValue, setHasValue] = useState(() => value !== '');
 
     const [isFocused, setIsFocused] = useState(false);
 
-    const handleClick = useCallback(({ target }) => {
+    const handle = {
 
-        const container = target.closest('.text-field');
-        container.querySelector('.text-field__input').focus();
+        click: useCallback(({ target }) => {
 
-    });
+            const container = target.closest('.text-field');
+            container.querySelector('.text-field__input').focus();
 
-    const handleKeyUp = useCallback((event) => {
+        }),
 
-        const { target, key } = event;
+        keyUp: useCallback((event) => {
 
-        if (target.value.trim() === '') setHasValue(() => false);
-        else setHasValue(() => true);
+            const { target } = event;
 
-        if (key === 'Enter') onEnterPress();
+            if (target.value.trim() === '') setHasValue(() => false);
+            else setHasValue(() => true);
 
-    });
+        }),
 
-    const handleFocus = useCallback(() => setIsFocused(() => true));
+        keyDown: useCallback((event) => {
 
-    const handleBlur = useCallback(() => setIsFocused(() => false));
+            if (event.key === 'Enter') {
+
+                event.preventDefault();
+                onEnterPress();
+
+            }
+
+        }),
+
+        focus: useCallback(() => setIsFocused(() => true)),
+
+        blur: useCallback(() => setIsFocused(() => false))
+
+    };
 
     return (
 
         <div
             className={`text-field ${hasValue ? 'with-value' : ''} ${isFocused ? 'focused' : ''} ${className}`}
-            onClick={handleClick}
-            onKeyDown={handleClick}
+            onClick={handle.click}
+            onKeyDown={handle.click}
             role="textbox"
             tabIndex={-1}
         >
@@ -46,10 +59,12 @@ const TextField = function ({ className, type, label, error, onChange, onEnterPr
                 className="text-field__input"
                 id={id}
                 type={type}
+                value={value}
                 onChange={onChange}
-                onKeyUp={handleKeyUp}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
+                onKeyUp={handle.keyUp}
+                onKeyDown={handle.keyDown}
+                onFocus={handle.focus}
+                onBlur={handle.blur}
             />
 
             <label className="text-field__label" htmlFor={id}>{label}</label>
@@ -64,6 +79,7 @@ const TextField = function ({ className, type, label, error, onChange, onEnterPr
 
 TextField.propTypes = {
     className: PropTypes.string,
+    value: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
     label: PropTypes.string.isRequired,
     error: PropTypes.string,
@@ -73,6 +89,7 @@ TextField.propTypes = {
 
 TextField.defaultProps = {
     className: '',
+    value: '',
     error: '',
     onChange: null,
     onEnterPress: null
