@@ -1,5 +1,3 @@
-export { Header } from './header/header';
-
 export { UniversalBanner } from './universalBanner/universalBanner';
 export { AppBar } from './appBar/appBar';
 export { NavBar } from './navBar/navBar';
