@@ -8,6 +8,8 @@ const TextField = function ({ className, type, label, error, onChange, onEnterPr
 
     const [hasValue, setHasValue] = useState(false);
 
+    const [isFocused, setIsFocused] = useState(false);
+
     const handleClick = useCallback(({ target }) => {
 
         const container = target.closest('.text-field');
@@ -15,28 +17,40 @@ const TextField = function ({ className, type, label, error, onChange, onEnterPr
 
     });
 
-    const handleKeyDown = useCallback((event) => {
+    const handleKeyUp = useCallback((event) => {
 
         const { target, key } = event;
 
-        if (target.value === '') setHasValue(() => false);
+        if (target.value.trim() === '') setHasValue(() => false);
         else setHasValue(() => true);
 
         if (key === 'Enter') onEnterPress();
 
     });
 
+    const handleFocus = useCallback(() => setIsFocused(() => true));
+
+    const handleBlur = useCallback(() => setIsFocused(() => false));
+
     return (
 
         <div
-            className={`text-field ${hasValue ? 'with-value' : ''} ${className}`}
+            className={`text-field ${hasValue ? 'with-value' : ''} ${isFocused ? 'focused' : ''} ${className}`}
             onClick={handleClick}
             onKeyDown={handleClick}
             role="textbox"
             tabIndex={-1}
         >
 
-            <input className="text-field__input" id={id} type={type} onChange={onChange} onKeyDown={handleKeyDown} />
+            <input
+                className="text-field__input"
+                id={id}
+                type={type}
+                onChange={onChange}
+                onKeyUp={handleKeyUp}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+            />
 
             <label className="text-field__label" htmlFor={id}>{label}</label>
 

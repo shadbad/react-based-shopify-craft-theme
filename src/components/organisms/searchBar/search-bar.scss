@@ -34,14 +34,48 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  width: 100%;
+  overflow: visible;
+}
+
+.search-bar__form {
   max-width: 30rem;
   width: 100%;
+  margin: auto;
+  position: relative;
+}
 
-  .search_bar__button-close {
-    width: 3rem;
-    height: 3rem;
-    float: right;
+.search-bar__input {
+  width: calc(100% - 3rem);
+  float: left;
+  padding-right: 4rem;
+}
+
+.search_bar__button-submit,
+.search_bar__button-close {
+  width: 3rem;
+  height: 3rem;
+
+  path {
+    fill: colors.$charcoal300;
+    transition: fill 0.3s ease-in-out;
   }
+
+  &:hover {
+    path {
+      fill: colors.$charcoal100;
+    }
+  }
+}
+
+.search_bar__button-submit {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+}
+
+.search_bar__button-close {
+  float: right;
 }
 
 .search-bar.visible {

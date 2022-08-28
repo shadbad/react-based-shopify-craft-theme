@@ -18,6 +18,14 @@
       transform: translateY(0) scale(0.66);
     }
   }
+
+  &:hover {
+    border-color: colors.$charcoal300;
+  }
+
+  &.focused {
+    border-color: colors.$charcoal100;
+  }
 }
 
 .text-field__input {
