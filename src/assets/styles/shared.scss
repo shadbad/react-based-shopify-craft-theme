@@ -1,3 +1,4 @@
+@use "/src/assets/styles/colors.scss";
 .wrapper {
   max-width: 80rem;
   width: 100%;
@@ -7,4 +8,37 @@
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: auto;
+}
+
+@keyframes loading {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+.loading-animation {
+  position: relative;
+  background-color: colors.$charcoal500;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    bottom: 0;
+    background: linear-gradient(to right, transparent 5%, colors.$charcoal700, transparent 95%);
+    animation: loading infinite linear 1.5s;
+  }
 }

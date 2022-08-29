@@ -1,4 +1,4 @@
-import { Header, Footer } from 'components/organisms';
+import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar } from 'components/organisms';
 
 import 'assets/styles/globals.scss';
 
@@ -6,15 +6,23 @@ const LandingTemplate = function () {
 
     return (
         <>
-            <Header />
+            <header>
+
+                <UniversalBanner />
+
+                <AppBar />
+
+                <NavBar />
+
+            </header>
 
             <main>
-                <div className="wrapper">
-                    <h1>This is the landing page</h1>
-                </div>
+                <div className="wrapper" />
             </main>
 
-            <Footer />
+            <NavDrawer />
+
+            <SearchBar />
         </>
     );
 

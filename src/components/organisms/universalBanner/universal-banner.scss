@@ -1,0 +1,37 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.universal-banner {
+  text-align: center;
+  background-color: colors.$charcoal100;
+  color: colors.$charcoal700;
+  box-sizing: border-box;
+}
+
+.universal-banner--loading {
+  min-height: 2rem;
+  @extend .loading-animation;
+}
+
+.universal-banner--error {
+  display: none;
+}
+
+.universal-banner__wrapper {
+  @extend .wrapper;
+  padding: 0.25rem 1.5rem;
+}
+
+.universal-banner__link,
+.universal-banner__text {
+  display: inline-block;
+  color: colors.$charcoal700;
+  line-height: 1.5em;
+  font-size: 1rem;
+}
+
+.universal-banner__link {
+  svg path {
+    fill: colors.$charcoal700;
+  }
+}

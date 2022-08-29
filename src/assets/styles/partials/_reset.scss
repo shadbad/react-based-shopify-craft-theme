@@ -46,6 +46,7 @@ dt,
 dd,
 ol,
 ul,
+menu,
 li,
 fieldset,
 form,
@@ -108,7 +109,8 @@ section {
 }
 
 ol,
-ul {
+ul,
+menu {
   list-style: none;
 }
 

@@ -1,0 +1,17 @@
+@use "/src/assets/styles/colors.scss";
+
+.link {
+  color: colors.$charcoal100;
+}
+
+.link--plain {
+  @extend .link;
+}
+
+.link--underlineOnHover {
+  @extend .link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

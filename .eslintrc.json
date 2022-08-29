@@ -33,6 +33,7 @@
         "react"
     ],
     "rules": {
+        "import/no-cycle": 0,
         "jsx-a11y/control-has-associated-label": 0,
         "dot-notation": 0,
         "prefer-arrow-callback": 0,

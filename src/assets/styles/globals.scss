@@ -2,7 +2,6 @@
 @use "/src/assets/styles/typography.scss";
 @import "/src/assets/styles/partials/reset";
 @import "/src/assets/styles/partials/fonts";
-@import "/src/assets/styles/partials/icons";
 
 :root {
   font: 400 16px/1.62em typography.$body;
@@ -28,6 +27,16 @@
   &::-webkit-scrollbar-thumb {
     background-color: colors.$charcoal400;
   }
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font-family: typography.$body !important;
 }
 
 ::selection {
