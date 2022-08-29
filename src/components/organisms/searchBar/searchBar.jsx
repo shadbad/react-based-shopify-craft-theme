@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useWindowResizeEffect, useOutsideClickDetector } from 'hooks';
+import { useWindowResizeEffect, useOutsideClickDetector, useBodyLocker } from 'hooks';
 import { actions as uiActions } from 'store/slices/ui.slice';
 import { ButtonIcon } from 'components/molecules';
 import { SearchForm } from 'components/organisms';
@@ -12,6 +12,8 @@ const SearchBar = function () {
     const dispatch = useDispatch();
 
     const isSearchBarVisible = useSelector((state) => state.ui.search.isVisible);
+
+    useBodyLocker(isSearchBarVisible);
 
     const [topPosition, setTopPosition] = useState(0);
 
