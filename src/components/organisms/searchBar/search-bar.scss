@@ -36,14 +36,16 @@
   z-index: 2;
   width: 100%;
   overflow: visible;
-  max-width: 30rem;
+  max-width: 33rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
   opacity: 0;
   clip-path: inset(0 0 100% 0);
   transition: opacity 0.3s ease-in-out, clip-path 0.3s ease-in-out;
 }
 
 .search-bar__form.search-form {
-  max-width: 27rem;
+  max-width: calc(100% - 3rem);
   width: 100%;
   float: left;
 }
