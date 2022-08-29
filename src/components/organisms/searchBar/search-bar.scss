@@ -37,6 +37,9 @@
   width: 100%;
   overflow: visible;
   max-width: 30rem;
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+  transition: opacity 0.3s ease-in-out, clip-path 0.3s ease-in-out;
 }
 
 .search-bar__form.search-form {
@@ -71,5 +74,11 @@
     transition: opacity 0.3s ease-in-out, clip-path 0.3s ease-in-out;
     opacity: 1;
     clip-path: inset(0 0 0 0);
+  }
+
+  .search-bar__wrapper {
+    transition: opacity 0.3s ease-in-out 0.1s, clip-path 0.3s ease-in-out 0.1s;
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
   }
 }

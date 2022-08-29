@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { TextField } from 'components/atoms';
-import { ButtonIcon } from 'components/molecules';
-import { SearchPredictiveResult } from 'components/organisms';
+import { ButtonIcon, SearchPredictiveResult } from 'components/molecules';
 import { actions as uiActions } from 'store/slices/ui.slice';
 import './search-form.scss';
 
@@ -15,6 +14,19 @@ const SearchForm = React.memo(function ({ className }) {
     const navigate = useNavigate();
 
     const query = useSelector((state) => state.ui.search.query);
+
+    const products = useSelector((state) => state.product.list);
+
+    const helpers = {
+
+        filterProducts: useCallback(() => {
+
+            const keywords = query.toLowerCase().split(' ').filter((item) => item !== '');
+            return products.filter((item) => keywords.some((keyword) => item.title.toLowerCase().includes(keyword))).slice(0, 4);
+
+        })
+
+    };
 
     const handle = {
 
@@ -32,8 +44,10 @@ const SearchForm = React.memo(function ({ className }) {
 
     };
 
+    const filteredProducts = helpers.filterProducts(query, products);
+
     return (
-        <form className={`search-form ${className}`}>
+        <form className={`search-form ${filteredProducts.length > 0 ? 'with-result' : ''} ${className}`}>
 
             <TextField
                 className="search-form__input"
@@ -50,7 +64,7 @@ const SearchForm = React.memo(function ({ className }) {
                 onClick={handle.submit}
             />
 
-            <SearchPredictiveResult className="search-form__result" />
+            <SearchPredictiveResult className="search-form__result" query={query} filteredProducts={filteredProducts} />
 
         </form>
     );

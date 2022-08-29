@@ -11,6 +11,13 @@
 .search-form__input {
   width: 100%;
   padding-right: 4rem;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+.search-form__result {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+  transition: opacity 0.2s ease-in-out, clip-path 0.2s ease-in-out;
 }
 
 .search-form__button-submit {
@@ -29,5 +36,16 @@
     path {
       fill: colors.$charcoal100;
     }
+  }
+}
+
+.search-form.with-result {
+  .search-form__input {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .search-form__result {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
   }
 }
