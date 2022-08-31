@@ -10,21 +10,21 @@ $breakPoint2: 500px;
 
 .app-bar__wrapper {
   @extend .wrapper;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem;
 }
 
 .app-bar__cart {
-  position: absolute;
-  top: 50%;
-  right: 1.5rem;
-  transform: translateY(-50%);
+  order: 4;
 }
 
 .app-bar__company {
   display: block;
   height: 6rem;
   width: 6rem;
-  margin: auto;
+  order: 2;
 
   svg {
     width: 100%;
@@ -44,22 +44,21 @@ $breakPoint2: 500px;
 
 .app-bar__menu,
 .app-bar__search {
-  position: absolute !important;
-  top: 50%;
-  left: 1.5rem;
-  transform: translateY(-50%);
+  order: 1;
 }
 
 .app-bar__search {
   @media (max-width: $breakPoint) {
-    left: auto;
+    order: 3;
+    position: absolute;
+    top: 50%;
     right: 4rem;
+    transform: translateY(-50%);
   }
 }
 
 .app-bar__menu {
   display: none !important;
-
   @media (max-width: $breakPoint) {
     display: block !important;
   }
