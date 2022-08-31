@@ -1,0 +1,56 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+$breakPoint: 800px;
+
+.category-group {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-areas:
+    "one two two"
+    "three four five";
+
+  @media (max-width: $breakPoint) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-areas:
+      "one two"
+      "three three"
+      "four five";
+  }
+}
+
+.category-group-list-item {
+  &:nth-of-type(5n + 1) {
+    grid-area: one;
+  }
+
+  &:nth-of-type(5n + 2) {
+    grid-area: two;
+
+    .category-group-link {
+      padding-bottom: calc((100% - 1.5rem) / 2 * 1.5);
+
+      @media (max-width: $breakPoint) {
+        padding-bottom: calc(100% * 1.5);
+      }
+    }
+  }
+
+  &:nth-of-type(5n + 3) {
+    grid-area: three;
+  }
+
+  &:nth-of-type(5n + 4) {
+    grid-area: four;
+  }
+
+  &:nth-of-type(5n + 5) {
+    grid-area: five;
+  }
+}
