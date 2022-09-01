@@ -24,3 +24,8 @@
   @extend .text-heading;
   font-size: 1.5rem;
 }
+
+.text-heading-4 {
+  @extend .text-heading;
+  font-size: 1.25rem;
+}
