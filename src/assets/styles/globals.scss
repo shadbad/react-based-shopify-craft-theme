@@ -58,3 +58,9 @@ body.lock {
   padding: 0 1.5rem;
   height: auto;
 }
+
+#root {
+  & > main {
+    padding: 4rem 0;
+  }
+}

@@ -1,0 +1,26 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+
+.text-heading {
+  font-family: typography.$heading;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  color: colors.$charcoal100;
+  margin-bottom: 2rem;
+}
+
+.text-heading-1 {
+  @extend .text-heading;
+  font-size: 2.125rem;
+}
+
+.text-heading-2 {
+  @extend .text-heading;
+  font-size: 1.75rem;
+}
+
+.text-heading-3 {
+  @extend .text-heading;
+  font-size: 1.5rem;
+}

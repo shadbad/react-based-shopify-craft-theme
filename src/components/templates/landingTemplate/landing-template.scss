@@ -2,15 +2,7 @@
 @use "/src/assets/styles/typography.scss";
 @use "/src/assets/styles/shared.scss";
 
-main {
-  h1 {
-    padding: 4rem 0;
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: 0.0625rem;
-    font-weight: 400;
-    line-height: 1.6em;
-    font-family: typography.$heading;
-    margin: auto;
-  }
+.main-heading {
+  text-align: center;
+  margin: auto;
 }

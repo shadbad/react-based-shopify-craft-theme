@@ -1,3 +1,4 @@
+import { TextHeading } from 'components/atoms';
 import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar, CategoryGroup } from 'components/organisms';
 
 import 'assets/styles/globals.scss';
@@ -20,11 +21,11 @@ const LandingTemplate = function () {
             <main>
                 <div className="wrapper">
 
-                    <h1>
+                    <TextHeading type={1} className="main-heading">
                         Sustainably crafted goods to elevate
                         <br />
                         your everyday.
-                    </h1>
+                    </TextHeading>
 
                     <CategoryGroup />
                 </div>
