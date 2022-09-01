@@ -53,4 +53,17 @@ $breakPoint: 800px;
   &:nth-of-type(5n + 5) {
     grid-area: five;
   }
+
+  .link-image__title {
+    @media (max-width: 500px) {
+      font-size: 0.875rem;
+      padding: 1rem;
+    }
+  }
+
+  .link-image__image {
+    @media (max-width: 500px) {
+      bottom: 3.5rem;
+    }
+  }
 }
