@@ -49,7 +49,7 @@ body.lock {
 }
 
 .wrapper {
-  max-width: 80rem;
+  max-width: 75rem;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -57,4 +57,10 @@ body.lock {
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: auto;
+}
+
+#root {
+  & > main {
+    padding: 4rem 0;
+  }
 }

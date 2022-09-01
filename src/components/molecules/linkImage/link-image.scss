@@ -1,0 +1,76 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.link-image {
+  display: block;
+  box-sizing: border-box;
+  border: 0.0625rem solid colors.$charcoal500;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(100% * 1.5);
+
+  &:hover {
+    .link-image__image {
+      transform: scale(1.05);
+    }
+
+    .link-image__title-icon {
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+.link-image__image {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 4.5rem;
+}
+
+.link-image__title {
+  display: block;
+  background-color: colors.$charcoal600;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  font-family: typography.$heading;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-image__title-text {
+  display: inline;
+  vertical-align: top;
+}
+
+.link-image__title-icon {
+  display: inline;
+  vertical-align: top;
+  margin-left: 0.125rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.2rem;
+  transition: margin 0.3s ease-in-out;
+  path {
+    fill: colors.$charcoal200;
+  }
+}
