@@ -2,7 +2,27 @@
 @use "/src/assets/styles/typography.scss";
 @use "/src/assets/styles/shared.scss";
 
-.main-heading {
+.landing__wrapper {
+  @extend .wrapper;
+}
+
+.landing__heading {
   text-align: center;
   margin: 0 auto 4rem auto;
+}
+
+.landing__category-group {
+  margin-bottom: 4rem;
+}
+
+.landing__authority {
+  margin-bottom: 4rem;
+}
+
+.landing__testimonials {
+  margin-bottom: 4rem;
+}
+
+.landing__testimonials-heading {
+  text-align: center;
 }
