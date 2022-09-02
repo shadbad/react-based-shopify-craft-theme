@@ -4,15 +4,20 @@ const useWindowResizeEffect = function (callback) {
 
     useLayoutEffect(() => {
 
-        setTimeout(() => {
+        callback();
+        let timer;
 
-            callback();
+        const debouncedCallback = function () {
 
-            window.addEventListener('resize', callback);
+            if (timer) clearTimeout(timer);
 
-            return () => window.removeEventListener('resize', callback);
+            timer = setTimeout(callback, 500);
 
-        }, 50);
+        };
+
+        window.addEventListener('resize', debouncedCallback);
+
+        return () => window.removeEventListener('resize', debouncedCallback);
 
     }, []);
 
