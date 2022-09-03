@@ -8,9 +8,7 @@ const Collage = React.memo(function ({ className, children }) {
     const tmp = children.flat();
     const items = tmp.length > 4 ? tmp.slice(0, 5) : tmp.slice(0, 3);
 
-    // if (items.length !== 3 && items.length !== 5) throw new Error('Collage supports either 5 or 3 pieces.');
-
-    console.log(items);
+    if (items.length !== 3 && items.length !== 5) throw new Error('Collage supports either 5 or 3 pieces.');
 
     return (
 
