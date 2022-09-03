@@ -8,21 +8,49 @@
 
 .landing__heading {
   text-align: center;
+  max-width: 50rem;
   margin: 0 auto 4rem auto;
 }
 
-.landing__category-group {
+$collageBreakPoint: 800px;
+
+.landing__multi-link-collage {
+  margin-bottom: 4rem;
+
+  .collage__item-wrapper {
+    &:nth-of-type(5n + 2) {
+      .landing__multi-link-collage-item {
+        padding-bottom: calc((100% - 1.5rem) / 2 * 1.5);
+
+        @media (max-width: $collageBreakPoint) {
+          padding-bottom: calc(100% * 1.5);
+        }
+      }
+    }
+
+    .link-image__title {
+      @media (max-width: 500px) {
+        font-size: 0.875rem;
+        padding: 1rem;
+      }
+    }
+
+    .link-image__image {
+      @media (max-width: 500px) {
+        bottom: 3.5rem;
+      }
+    }
+  }
+}
+
+.landing__video {
   margin-bottom: 4rem;
 }
 
-.landing__authority {
+.landing__testimonies {
   margin-bottom: 4rem;
 }
 
-.landing__testimonials {
-  margin-bottom: 4rem;
-}
-
-.landing__testimonials-heading {
+.landing__testimonies-heading {
   text-align: center;
 }

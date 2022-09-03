@@ -1,0 +1,78 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.carousel {
+  width: 100%;
+}
+
+.carousel__tray-wrapper {
+  overflow: hidden;
+}
+
+.carousel__tray {
+  position: relative;
+  left: 0;
+  transition: left 0.5s linear;
+
+  text-align: left;
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+.carousel__item {
+  overflow: hidden;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.62em;
+  white-space: initial;
+  width: calc((100% - 3rem) / 3);
+  vertical-align: top;
+}
+
+.carousel__pagination {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.carousel__page-number {
+  margin: 0 0.5rem;
+  display: flex;
+}
+
+.carousel__current-page-number,
+.carousel__total-pages-count {
+  height: 2rem;
+  line-height: 2rem;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  color: colors.$charcoal300;
+}
+
+.carousel__page-number-separator {
+  height: 2rem;
+  line-height: 2rem;
+  min-width: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: colors.$charcoal300;
+}
+
+.carousel__prev-button,
+.carousel__next-button {
+  transition: opacity 0.3s ease-in-out;
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    path {
+      fill: colors.$charcoal200;
+    }
+  }
+
+  &.disable {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

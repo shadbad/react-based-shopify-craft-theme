@@ -4,7 +4,7 @@
 
 $breakPoint: 800px;
 
-.category-group {
+.collage {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
@@ -25,21 +25,13 @@ $breakPoint: 800px;
   }
 }
 
-.category-group-list-item {
+.collage__item-wrapper {
   &:nth-of-type(5n + 1) {
     grid-area: one;
   }
 
   &:nth-of-type(5n + 2) {
     grid-area: two;
-
-    .category-group-link {
-      padding-bottom: calc((100% - 1.5rem) / 2 * 1.5);
-
-      @media (max-width: $breakPoint) {
-        padding-bottom: calc(100% * 1.5);
-      }
-    }
   }
 
   &:nth-of-type(5n + 3) {
@@ -52,18 +44,5 @@ $breakPoint: 800px;
 
   &:nth-of-type(5n + 5) {
     grid-area: five;
-  }
-
-  .link-image__title {
-    @media (max-width: 500px) {
-      font-size: 0.875rem;
-      padding: 1rem;
-    }
-  }
-
-  .link-image__image {
-    @media (max-width: 500px) {
-      bottom: 3.5rem;
-    }
   }
 }
