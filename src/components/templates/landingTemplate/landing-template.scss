@@ -15,7 +15,7 @@
 $collageBreakPoint: 800px;
 
 .landing__multi-link-collage {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 
   .collage__item-wrapper {
     &:nth-of-type(5n + 2) {
@@ -44,13 +44,41 @@ $collageBreakPoint: 800px;
 }
 
 .landing__video {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .landing__testimonies {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .landing__testimonies-heading {
   text-align: center;
+  margin-bottom: 5rem;
+}
+
+.landing__single-link-collage {
+  margin-bottom: 5rem;
+
+  .collage__item-wrapper {
+    &:nth-of-type(3n + 1) {
+      .link-image {
+        padding-bottom: calc(100% * 3 / 4);
+      }
+    }
+
+    &:nth-of-type(3n + 2),
+    &:nth-of-type(3n + 3) {
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 0.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }

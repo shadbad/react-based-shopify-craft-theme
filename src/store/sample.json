@@ -171,11 +171,14 @@
                 ]
             },
             "singleLinkCollage": {
-                "id": "7822bf5f-9353-4616-9595-ad4f6575797e",
-                "title": "Bundles",
-                "url": "/collections/bundles",
+                "title": "Discover our bundled collections",
+                "link": {
+                    "id": "7822bf5f-9353-4616-9595-ad4f6575797e",
+                    "title": "Bundles",
+                    "url": "/collections/bundles",
+                    "image": "/images/categories/bundles.webp"
+                },
                 "images": [
-                    "/images/categories/bundles.webp",
                     "/images/categories/bundles-2.webp",
                     "/images/categories/bundles-3.webp"
                 ]

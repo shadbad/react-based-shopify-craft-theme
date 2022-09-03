@@ -1,3 +1,4 @@
+import { nanoid } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
 import { TextHeading } from 'components/atoms';
 import { Video, Carousel, CardQuote, Collage, LinkImage } from 'components/molecules';
@@ -58,7 +59,7 @@ const LandingTemplate = function () {
 
                             <div className="landing__testimonies">
 
-                                <TextHeading type={3} className="landing__testimonies-heading">{landingContent.testimonies.title}</TextHeading>
+                                <TextHeading type={4} className="landing__testimonies-heading">{landingContent.testimonies.title}</TextHeading>
 
                                 <Carousel className="landing_testimonies-carousel" gap={4 * 16} columnMin={200} columnMax={400}>
 
@@ -68,6 +69,34 @@ const LandingTemplate = function () {
 
                                 </Carousel>
 
+                            </div>
+
+                            <div className="landing__single-link-collage">
+                                <TextHeading type={4} className="landing__single-link-collage-heading">
+                                    {landingContent.singleLinkCollage.title}
+                                </TextHeading>
+
+                                <Collage className="landing__single-link-collage">
+
+                                    <LinkImage
+                                        className="landing__multi-link-collage-item"
+                                        title={landingContent.singleLinkCollage.link.title}
+                                        imageUrl={landingContent.singleLinkCollage.link.image}
+                                        href={landingContent.singleLinkCollage.link.url}
+                                    />
+
+                                    {
+                                        landingContent.singleLinkCollage.images.map((image) => (
+
+                                            <span
+                                                key={nanoid()}
+                                                style={{ backgroundImage: `url(${image})` }}
+                                            />
+
+                                        ))
+                                    }
+
+                                </Collage>
                             </div>
 
                         </div>

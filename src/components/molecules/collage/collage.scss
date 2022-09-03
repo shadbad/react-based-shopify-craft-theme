@@ -7,10 +7,14 @@ $breakPoint: 800px;
 .collage {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   column-gap: 1.5rem;
   row-gap: 1.5rem;
+}
+
+.collage--5-piece {
+  @extend .collage;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "one two two"
     "three four five";
@@ -23,26 +27,59 @@ $breakPoint: 800px;
       "three three"
       "four five";
   }
+
+  .collage__item-wrapper {
+    &:nth-of-type(5n + 1) {
+      grid-area: one;
+    }
+
+    &:nth-of-type(5n + 2) {
+      grid-area: two;
+    }
+
+    &:nth-of-type(5n + 3) {
+      grid-area: three;
+    }
+
+    &:nth-of-type(5n + 4) {
+      grid-area: four;
+    }
+
+    &:nth-of-type(5n + 5) {
+      grid-area: five;
+    }
+  }
 }
 
-.collage__item-wrapper {
-  &:nth-of-type(5n + 1) {
-    grid-area: one;
+.collage--3-piece {
+  @extend .collage;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "one two"
+    "one three";
+
+  @media (max-width: $breakPoint) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas:
+      "one one"
+      "two three";
   }
 
-  &:nth-of-type(5n + 2) {
-    grid-area: two;
-  }
+  .collage__item-wrapper {
+    position: relative;
 
-  &:nth-of-type(5n + 3) {
-    grid-area: three;
-  }
+    &:nth-of-type(3n + 1) {
+      grid-area: one;
+    }
 
-  &:nth-of-type(5n + 4) {
-    grid-area: four;
-  }
+    &:nth-of-type(3n + 2) {
+      grid-area: two;
+    }
 
-  &:nth-of-type(5n + 5) {
-    grid-area: five;
+    &:nth-of-type(3n + 3) {
+      grid-area: three;
+    }
   }
 }
