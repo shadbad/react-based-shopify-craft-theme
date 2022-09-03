@@ -8,3 +8,4 @@ export { Video } from './video/video';
 export { Carousel } from './carousel/carousel';
 export { CardQuote } from './cardQuote/cardQuote';
 export { Collage } from './collage/collage';
+export { CardInfo } from './cardInfo/cardInfo';

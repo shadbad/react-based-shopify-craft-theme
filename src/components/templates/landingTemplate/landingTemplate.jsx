@@ -1,7 +1,7 @@
 import { nanoid } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
 import { TextHeading } from 'components/atoms';
-import { Video, Carousel, CardQuote, Collage, LinkImage } from 'components/molecules';
+import { Video, Carousel, CardQuote, Collage, LinkImage, CardInfo } from 'components/molecules';
 import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar } from 'components/organisms';
 
 import 'assets/styles/globals.scss';
@@ -97,6 +97,24 @@ const LandingTemplate = function () {
                                     }
 
                                 </Collage>
+                            </div>
+
+                            <div className="landing__info">
+
+                                {
+                                    landingContent.info.map((item) => (
+
+                                        <CardInfo
+                                            key={nanoid()}
+                                            className="landing__info-item"
+                                            image={item.image}
+                                            title={item.title}
+                                            description={item.description}
+                                        />
+
+                                    ))
+                                }
+
                             </div>
 
                         </div>
