@@ -31,7 +31,7 @@ const Video = React.memo(function ({ className, source, cover }) {
 
         <div className="video" style={{ backgroundImage: `url(${cover})` }}>
 
-            <video className={`video__player ${className}`} controls controlsList="nofullscreen nodownload" onEnded={handle.videoEnded}>
+            <video className={`video__player ${className}`} preload="none" controls controlsList="nofullscreen nodownload" onEnded={handle.videoEnded}>
                 <source src={source} type="video/mp4" />
                 Sorry, your browser doesn&rsquo; t support embedded videos.
             </video>
