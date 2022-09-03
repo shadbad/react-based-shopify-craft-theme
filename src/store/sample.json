@@ -182,7 +182,29 @@
                     "/images/categories/bundles-2.webp",
                     "/images/categories/bundles-3.webp"
                 ]
-            }
+            },
+            "info": [
+                {
+                    "title": "Responsible Design",
+                    "description": "Designed with integrity and durably crafted for everyday use.",
+                    "image": "/images/info/responsible-design.webp"
+                },
+                {
+                    "title": "Transparent Pricing",
+                    "description": "We believe in accessible pricing and full transparency. Our pricing model is an open book.",
+                    "image": "/images/info/transparent-pricing.webp"
+                },
+                {
+                    "title": "Sustainable Sourcing",
+                    "description": "We only partner with people who put the earth, and its people, first.",
+                    "image": "/images/info/sustainable-sourcing.webp"
+                },
+                {
+                    "title": "Giving Back",
+                    "description": "Thanks to Mealshare, every purchase directly donates a meal to a youth in need.",
+                    "image": "/images/info/giving-back.webp"
+                }
+            ]
         }
     }
 }

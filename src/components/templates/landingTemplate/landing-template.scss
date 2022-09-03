@@ -2,6 +2,8 @@
 @use "/src/assets/styles/typography.scss";
 @use "/src/assets/styles/shared.scss";
 
+$breakPoint: 1000px;
+
 .landing__wrapper {
   @extend .wrapper;
 }
@@ -80,5 +82,27 @@ $collageBreakPoint: 800px;
         background-repeat: no-repeat;
       }
     }
+  }
+}
+
+$infoBreakPoint: 600px;
+
+.landing__info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.landing__info-item {
+  width: calc((100% - 12rem) / 4);
+
+  @media (max-width: $breakPoint) {
+    width: calc((100% - 4rem) / 2);
+  }
+
+  @media (max-width: $infoBreakPoint) {
+    width: 100%;
   }
 }
