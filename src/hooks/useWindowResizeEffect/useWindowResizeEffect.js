@@ -11,7 +11,7 @@ const useWindowResizeEffect = function (callback) {
 
             if (timer) clearTimeout(timer);
 
-            timer = setTimeout(callback, 500);
+            timer = setTimeout(callback, 200);
 
         };
 
