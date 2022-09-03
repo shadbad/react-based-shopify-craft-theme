@@ -1,11 +1,15 @@
+import { useSelector } from 'react-redux';
 import { TextHeading } from 'components/atoms';
-import { Video } from 'components/molecules';
-import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar, CategoryGroup } from 'components/organisms';
+import { Video, Carousel, CardQuote, Collage, LinkImage } from 'components/molecules';
+import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar } from 'components/organisms';
 
 import 'assets/styles/globals.scss';
 import './landing-template.scss';
 
 const LandingTemplate = function () {
+
+    const content = useSelector((state) => state.content);
+    const landingContent = content.data.landing;
 
     return (
         <>
@@ -19,39 +23,59 @@ const LandingTemplate = function () {
 
             </header>
 
-            <main className="landing">
+            {
+                !content.isLoading && content.error === '' && (
 
-                <div className="landing__wrapper">
+                    <main className="landing">
 
-                    <TextHeading type={1} className="landing__heading">
-                        Sustainably crafted goods to elevate
-                        <br />
-                        your everyday.
-                    </TextHeading>
+                        <div className="landing__wrapper">
 
-                    <CategoryGroup className="landing__category-group" />
+                            <TextHeading type={1} className="landing__heading">{landingContent.heading}</TextHeading>
 
-                    <div className="landing__authority">
+                            <Collage className="landing__multi-link-collage">
 
-                        <TextHeading type={3} className="landing__authority-heading">
-                            The details matter
-                        </TextHeading>
+                                {
+                                    landingContent.multiLinkCollage.map((item) => (
+                                        <LinkImage
+                                            className="landing__multi-link-collage-item"
+                                            key={item.id}
+                                            title={item.title}
+                                            imageUrl={item.image}
+                                            href={item.url}
+                                        />
+                                    ))
+                                }
 
-                        <Video className="landing__authority-video" source="/videos/about.mp4" cover="/videos/about-cover.webp" />
+                            </Collage>
 
-                    </div>
+                            <div className="landing__video">
 
-                    <div className="landing__testimonials">
+                                <TextHeading type={3} className="landing__video-heading">{landingContent.videoPromotion.title}</TextHeading>
 
-                        <TextHeading type={3} className="landing__testimonials-heading">
-                            We believe in simple, timeless, and responsible designs.
-                        </TextHeading>
+                                <Video className="landing__video-player" source={landingContent.videoPromotion.video} cover={landingContent.videoPromotion.cover} />
 
-                    </div>
+                            </div>
 
-                </div>
+                            <div className="landing__testimonies">
 
-            </main>
+                                <TextHeading type={3} className="landing__testimonies-heading">{landingContent.testimonies.title}</TextHeading>
+
+                                <Carousel className="landing_testimonies-carousel" gap={4 * 16} columnMin={200} columnMax={400}>
+
+                                    {
+                                        landingContent.testimonies.items.map((item) => <CardQuote key={item.id} quote={item.quote} author={item.author} />)
+                                    }
+
+                                </Carousel>
+
+                            </div>
+
+                        </div>
+
+                    </main>
+
+                )
+            }
 
             <NavDrawer />
 
