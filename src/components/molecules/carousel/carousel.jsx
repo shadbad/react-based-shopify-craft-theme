@@ -31,7 +31,7 @@ const Carousel = React.memo(function ({ className, children, gap, columnMin, col
 
         }),
 
-        trayLeft: useCallback((page, viewWidth, gapSize) => ((page - 1) * viewWidth * -1) - (gapSize * page)),
+        trayLeft: useCallback((page, viewWidth, gapSize) => ((page - 1) * viewWidth * -1) - (gapSize * (page - 1))),
 
         columnCount: useCallback((width, gapSize, min, max) => {
 
@@ -123,7 +123,7 @@ const Carousel = React.memo(function ({ className, children, gap, columnMin, col
 
             <div className="carousel__tray-wrapper">
 
-                <ul className="carousel__tray" style={{ left: `${state.trayLeft}px` }}>
+                <ul className="carousel__tray" style={{ left: `${state.trayLeft}px`, columnGap: `${gap}px` }}>
                     {
 
                         children.map((item, index) => (
@@ -132,7 +132,6 @@ const Carousel = React.memo(function ({ className, children, gap, columnMin, col
                                 className="carousel__item"
                                 key={`item-${index}`}
                                 style={{
-                                    marginLeft: `${gap}px`,
                                     width: `calc((100% - ${(state.columnCount - 1) * gap}px)/ ${state.columnCount})`
                                 }}
                             >

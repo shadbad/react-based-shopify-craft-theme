@@ -1,0 +1,77 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+
+.card-post {
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid colors.$charcoal500;
+  padding-bottom: 2.5rem;
+
+  &:hover {
+    .card-post__cover {
+      &::before {
+        transform: scale(1.1);
+      }
+    }
+
+    .card-post__title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card-post__cover {
+  width: 100%;
+  display: block;
+  padding-bottom: calc(100% * 9 / 16);
+  margin-bottom: 2rem;
+  background-size: 0;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.card-post__title {
+  display: block;
+  padding: 0 1.5rem;
+  font-family: typography.$heading;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+  line-height: 1.62em;
+}
+
+.card-post__date {
+  display: block;
+  padding: 0 1.5rem;
+  font-family: typography.$heading;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.0625rem;
+}
+
+.card-post__summary {
+  display: block;
+  padding: 0 1.5rem;
+  color: colors.$charcoal300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 2em;
+}

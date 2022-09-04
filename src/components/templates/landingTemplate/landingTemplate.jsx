@@ -1,7 +1,7 @@
 import { nanoid } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
 import { TextHeading } from 'components/atoms';
-import { Video, Carousel, CardQuote, Collage, LinkImage, CardInfo } from 'components/molecules';
+import { Video, Carousel, CardQuote, Collage, LinkImage, CardInfo, CardPost } from 'components/molecules';
 import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar } from 'components/organisms';
 
 import 'assets/styles/globals.scss';
@@ -10,6 +10,7 @@ import './landing-template.scss';
 const LandingTemplate = function () {
 
     const content = useSelector((state) => state.content);
+    const posts = useSelector((state) => state.blog.posts);
     const landingContent = content.data.landing;
 
     return (
@@ -117,6 +118,32 @@ const LandingTemplate = function () {
 
                             </div>
 
+                            <div className="landing__posts">
+
+                                <TextHeading type={3} className="landing__posts-heading">{landingContent.blog.title}</TextHeading>
+
+                                <Carousel className="landing__posts-carousel" gap={1.5 * 16} columnMin={400} columnMax={500}>
+
+                                    {
+
+                                        posts.map((item) => (
+
+                                            <CardPost
+                                                key={nanoid()}
+                                                title={item.title}
+                                                href={item.url}
+                                                date={item.date}
+                                                summary={item.summary}
+                                                cover={item.cover}
+                                            />
+
+                                        ))
+
+                                    }
+
+                                </Carousel>
+
+                            </div>
                         </div>
 
                     </main>
