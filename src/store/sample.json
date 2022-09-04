@@ -206,5 +206,31 @@
                 }
             ]
         }
-    }
+    },
+    "BLOG": [
+        {
+            "title": "Sweet & Savory Comfort Food Recipes",
+            "slug": "sweet-savory-comfort-food-recipes",
+            "date": 1637094600000,
+            "cover": "/images/posts/sweet-savory-comfort-food-recipes.webp",
+            "summary": "Comfort food doesn't always look like mac 'n cheese—it often looks like a memory in meal form, passed down from someone special. This Mother's Day, we're honouring all the women who have lent strength, guidance, and delicious recipes to our lives—from mothers, grandmothers, aunts, and sisters, to our chosen family of godmothers and close friends. To celebrate them all, our team has gathered together four favorite family recipes from special women in our lives.",
+            "body": ""
+        },
+        {
+            "title": "Bringing Joy to Every Table",
+            "slug": "fable-s-mission-is-simple-bring-joy-to-every-table",
+            "date": 1637008200000,
+            "cover": "/images/posts/fable-s-mission-is-simple-bring-joy-to-every-table.webp",
+            "summary": "For many, it has become a daily routine to prepare nutritious meals for our families and friends, served on carefully chosen dinnerware. The food we eat becomes merely a second thought to the presentation and experience of our meals.",
+            "body": ""
+        },
+        {
+            "title": "Preparing a Dinner Table for Success",
+            "slug": "preparing-a-dinner-table-for-success",
+            "date": 1637008200000,
+            "cover": "/images/posts/preparing-a-dinner-table-for-success.webp",
+            "summary": "Decorating your dinner table is a fun task that can make or break your dinner party. Everyone who sits down for a meal is going to enjoy a beautifully decorated table. Whether you're hanging out on bar stools in a breakfast nook or you're serving up a meal on an antique, solid wood dining table (that just so happens to match your coffee table), these home decor tips can take your table from everyday to stylish.",
+            "body": ""
+        }
+    ]
 }
