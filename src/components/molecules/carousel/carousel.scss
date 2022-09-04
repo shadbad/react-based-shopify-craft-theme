@@ -13,11 +13,13 @@
   position: relative;
   left: 0;
   transition: left 0.5s linear;
-
   text-align: left;
   font-size: 0;
   line-height: 0;
   white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .carousel__item {
@@ -26,8 +28,9 @@
   font-size: 1rem;
   line-height: 1.62em;
   white-space: initial;
-  width: calc((100% - 3rem) / 3);
   vertical-align: top;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .carousel__pagination {
