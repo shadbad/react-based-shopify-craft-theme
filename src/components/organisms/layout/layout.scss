@@ -1,0 +1,21 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.layout__main {
+  padding: 4rem 0;
+}
+
+.layout__main-wrapper {
+  @extend .wrapper;
+}
+
+.layout__footer {
+  background-color: colors.$charcoal100;
+  color: colors.$charcoal500;
+  padding: 4rem 0;
+}
+
+.layout__footer-wrapper {
+  @extend .wrapper;
+}
