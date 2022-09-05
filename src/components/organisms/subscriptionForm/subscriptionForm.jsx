@@ -1,8 +1,10 @@
 import React, { useCallback, useState } from 'react';
+import PropTypes from 'prop-types';
 import { TextHeading, TextField } from 'components/atoms';
 import { ButtonIcon } from 'components/molecules';
+import './subscription-form.scss';
 
-const SubscriptionForm = React.memo(function () {
+const SubscriptionForm = React.memo(function ({ className, theme }) {
 
     const [email, setEmail] = useState('');
 
@@ -19,7 +21,7 @@ const SubscriptionForm = React.memo(function () {
     };
 
     return (
-        <div className="subscription-form">
+        <div className={`subscription-form--${theme} ${className}`}>
 
             <TextHeading type={2} className="subscription-form__heading">
                 Don&lsquo;t miss out
@@ -29,21 +31,32 @@ const SubscriptionForm = React.memo(function () {
                 Subscribe to our mailing list for insider news, product launches, and more.
             </p>
 
-            <TextField
-                className="subscription-form__text-field"
-                type="email"
-                label="Email"
-                value={email}
-                error="Please enter a valid email address"
-                onChange={handle.change}
-                onEnterPress={handle.submit}
-            />
+            <div className="subscription-form__wrapper">
 
-            <ButtonIcon iconName="arrow-right" variant="basic" onClick={handle.submit} />
+                <TextField
+                    className="subscription-form__text-field"
+                    type="email"
+                    label="Email"
+                    value={email}
+                    onChange={handle.change}
+                    onEnterPress={handle.submit}
+                />
 
+                <ButtonIcon className="subscription-form__submit-button" iconName="arrow-right" variant="basic" onClick={handle.submit} />
+            </div>
         </div>
     );
 
 });
+
+SubscriptionForm.propTypes = {
+    className: PropTypes.string,
+    theme: PropTypes.oneOf(['light', 'dark'])
+};
+
+SubscriptionForm.defaultProps = {
+    className: '',
+    theme: 'light'
+};
 
 export { SubscriptionForm };

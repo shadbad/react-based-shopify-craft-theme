@@ -1,2 +1,76 @@
 @use "/src/assets/styles/colors.scss";
 @use "/src/assets/styles/shared.scss";
+
+.subscription-form {
+  max-width: 40rem;
+  text-align: center;
+}
+
+.subscription-form__description {
+  margin-bottom: 1.5rem;
+}
+
+.subscription-form__wrapper {
+  max-width: 25rem;
+  margin: auto;
+  position: relative;
+}
+
+.subscription-form__submit-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.subscription-form--light {
+  @extend .subscription-form;
+}
+
+.subscription-form--dark {
+  @extend .subscription-form;
+  color: colors.$charcoal500;
+
+  .subscription-form__heading {
+    color: colors.$charcoal500;
+  }
+
+  .subscription-form__text-field {
+    border-color: colors.$charcoal300;
+    background-color: transparent;
+
+    &.focused {
+      border-color: colors.$charcoal700;
+    }
+
+    &:hover {
+      border-color: colors.$charcoal500;
+    }
+
+    .text-field__label {
+      color: colors.$charcoal400;
+    }
+
+    .text-field__input {
+      color: colors.$charcoal500;
+      padding: 0 3rem 0 1rem;
+    }
+  }
+
+  .subscription-form__submit-button {
+    path {
+      fill: colors.$charcoal300;
+    }
+
+    &:hover {
+      path {
+        fill: colors.$charcoal500;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @use "/src/assets/styles/shared.scss";
 
 .layout__main {
+  min-height: 100vh;
   padding: 4rem 0;
 }
 
@@ -18,4 +19,8 @@
 
 .layout__footer-wrapper {
   @extend .wrapper;
+}
+
+.layout__subscription-form {
+  margin: auto;
 }

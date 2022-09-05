@@ -32,7 +32,9 @@ const Layout = React.memo(function ({ children }) {
             <footer className="layout__footer">
 
                 <div className="layout__footer-wrapper">
-                    <SubscriptionForm />
+
+                    <SubscriptionForm className="layout__subscription-form" theme="dark" />
+
                 </div>
 
             </footer>

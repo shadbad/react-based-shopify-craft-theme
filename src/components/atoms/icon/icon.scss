@@ -6,5 +6,6 @@
 }
 
 .icon__path {
+  transition: fill 0.3s ease-in-out;
   fill: colors.$charcoal100;
 }

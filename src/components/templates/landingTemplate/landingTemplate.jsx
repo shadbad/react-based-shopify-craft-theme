@@ -2,7 +2,6 @@ import { nanoid } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
 import { TextHeading } from 'components/atoms';
 import { Video, Carousel, CardQuote, Collage, LinkImage, CardInfo, CardPost } from 'components/molecules';
-import { Layout } from 'components/organisms';
 import './landing-template.scss';
 
 const LandingTemplate = function () {
@@ -11,133 +10,133 @@ const LandingTemplate = function () {
     const posts = useSelector((state) => state.blog.posts);
     const landingContent = content.data.landing;
 
-    return (
+    if (!content.isLoading && content.error === '') {
 
-        <Layout>
-            {
-                !content.isLoading && content.error === '' && (
+        return (
 
-                    <>
-                        <TextHeading type={1} className="landing__heading">{landingContent.heading}</TextHeading>
+            <>
+                <TextHeading type={1} className="landing__heading">{landingContent.heading}</TextHeading>
 
-                        <Collage className="landing__multi-link-collage">
+                <Collage className="landing__multi-link-collage">
 
-                            {
-                                landingContent.multiLinkCollage.map((item) => (
-                                    <LinkImage
-                                        className="landing__multi-link-collage-item"
-                                        key={item.id}
-                                        title={item.title}
-                                        imageUrl={item.image}
-                                        href={item.url}
-                                    />
-                                ))
-                            }
+                    {
+                        landingContent.multiLinkCollage.map((item) => (
+                            <LinkImage
+                                className="landing__multi-link-collage-item"
+                                key={item.id}
+                                title={item.title}
+                                imageUrl={item.image}
+                                href={item.url}
+                            />
+                        ))
+                    }
 
-                        </Collage>
+                </Collage>
 
-                        <div className="landing__video">
+                <div className="landing__video">
 
-                            <TextHeading type={3} className="landing__video-heading">{landingContent.videoPromotion.title}</TextHeading>
+                    <TextHeading type={3} className="landing__video-heading">{landingContent.videoPromotion.title}</TextHeading>
 
-                            <Video className="landing__video-player" source={landingContent.videoPromotion.video} cover={landingContent.videoPromotion.cover} />
+                    <Video className="landing__video-player" source={landingContent.videoPromotion.video} cover={landingContent.videoPromotion.cover} />
 
-                        </div>
+                </div>
 
-                        <div className="landing__testimonies">
+                <div className="landing__testimonies">
 
-                            <TextHeading type={4} className="landing__testimonies-heading">{landingContent.testimonies.title}</TextHeading>
+                    <TextHeading type={4} className="landing__testimonies-heading">{landingContent.testimonies.title}</TextHeading>
 
-                            <Carousel className="landing_testimonies-carousel" gap={4 * 16} columnMin={200} columnMax={400}>
+                    <Carousel className="landing_testimonies-carousel" gap={4 * 16} columnMin={200} columnMax={400}>
 
-                                {
-                                    landingContent.testimonies.items.map((item) => <CardQuote key={item.id} quote={item.quote} author={item.author} />)
-                                }
+                        {
+                            landingContent.testimonies.items.map((item) => <CardQuote key={item.id} quote={item.quote} author={item.author} />)
+                        }
 
-                            </Carousel>
+                    </Carousel>
 
-                        </div>
+                </div>
 
-                        <div className="landing__single-link-collage">
-                            <TextHeading type={4} className="landing__single-link-collage-heading">
-                                {landingContent.singleLinkCollage.title}
-                            </TextHeading>
+                <div className="landing__single-link-collage">
+                    <TextHeading type={4} className="landing__single-link-collage-heading">
+                        {landingContent.singleLinkCollage.title}
+                    </TextHeading>
 
-                            <Collage className="landing__single-link-collage">
+                    <Collage className="landing__single-link-collage">
 
-                                <LinkImage
-                                    className="landing__multi-link-collage-item"
-                                    title={landingContent.singleLinkCollage.link.title}
-                                    imageUrl={landingContent.singleLinkCollage.link.image}
-                                    href={landingContent.singleLinkCollage.link.url}
+                        <LinkImage
+                            className="landing__multi-link-collage-item"
+                            title={landingContent.singleLinkCollage.link.title}
+                            imageUrl={landingContent.singleLinkCollage.link.image}
+                            href={landingContent.singleLinkCollage.link.url}
+                        />
+
+                        {
+                            landingContent.singleLinkCollage.images.map((image) => (
+
+                                <span
+                                    key={nanoid()}
+                                    style={{ backgroundImage: `url(${image})` }}
                                 />
 
-                                {
-                                    landingContent.singleLinkCollage.images.map((image) => (
+                            ))
+                        }
 
-                                        <span
-                                            key={nanoid()}
-                                            style={{ backgroundImage: `url(${image})` }}
-                                        />
+                    </Collage>
+                </div>
 
-                                    ))
-                                }
+                <div className="landing__info">
 
-                            </Collage>
-                        </div>
+                    {
+                        landingContent.info.map((item) => (
 
-                        <div className="landing__info">
+                            <CardInfo
+                                key={nanoid()}
+                                className="landing__info-item"
+                                image={item.image}
+                                title={item.title}
+                                description={item.description}
+                            />
 
-                            {
-                                landingContent.info.map((item) => (
+                        ))
+                    }
 
-                                    <CardInfo
-                                        key={nanoid()}
-                                        className="landing__info-item"
-                                        image={item.image}
-                                        title={item.title}
-                                        description={item.description}
-                                    />
+                </div>
 
-                                ))
-                            }
+                <div className="landing__posts">
 
-                        </div>
+                    <TextHeading type={3} className="landing__posts-heading">{landingContent.blog.title}</TextHeading>
 
-                        <div className="landing__posts">
+                    <Carousel className="landing__posts-carousel" gap={1.5 * 16} columnMin={400} columnMax={500}>
 
-                            <TextHeading type={3} className="landing__posts-heading">{landingContent.blog.title}</TextHeading>
+                        {
 
-                            <Carousel className="landing__posts-carousel" gap={1.5 * 16} columnMin={400} columnMax={500}>
+                            posts.map((item) => (
 
-                                {
+                                <CardPost
+                                    key={nanoid()}
+                                    title={item.title}
+                                    href={item.url}
+                                    date={item.date}
+                                    summary={item.summary}
+                                    cover={item.cover}
+                                />
 
-                                    posts.map((item) => (
+                            ))
 
-                                        <CardPost
-                                            key={nanoid()}
-                                            title={item.title}
-                                            href={item.url}
-                                            date={item.date}
-                                            summary={item.summary}
-                                            cover={item.cover}
-                                        />
+                        }
 
-                                    ))
+                    </Carousel>
 
-                                }
+                </div>
 
-                            </Carousel>
+            </>
 
-                        </div>
+        );
 
-                    </>
+    }
 
-                )
-            }
-        </Layout>
+    // TODO: add loading skeleton
 
-    );
+    return <div />;
 
 };
 
