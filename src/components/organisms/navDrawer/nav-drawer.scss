@@ -35,3 +35,21 @@
     display: block;
   }
 }
+
+.nav-drawer__body-cover {
+  position: fixed;
+  z-index: 19;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(colors.$charcoal300, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+
+  &.expand {
+    transition: visibility 0s linear, opacity 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+  }
+}

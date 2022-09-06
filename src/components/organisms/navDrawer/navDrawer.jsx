@@ -47,12 +47,15 @@ const NavDrawer = React.memo(function () {
 
     return (
 
-        <aside className={`nav-drawer ${isMenuDrawerOpen ? 'expand' : ''}`} style={{ top: `${topPosition}px` }}>
+        <>
+            <aside className={`nav-drawer ${isMenuDrawerOpen ? 'expand' : ''}`} style={{ top: `${topPosition}px` }}>
 
-            <MenuList className="nav-drawer__menu" variant="stack" links={categories.list} />
+                <MenuList className="nav-drawer__menu" variant="stack" links={categories.list} />
 
-        </aside>
+            </aside>
 
+            <span className={`nav-drawer__body-cover ${isMenuDrawerOpen ? 'expand' : ''}`} style={{ top: `${topPosition}px` }} />
+        </>
     );
 
 });
