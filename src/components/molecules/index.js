@@ -10,3 +10,4 @@ export { CardQuote } from './cardQuote/cardQuote';
 export { Collage } from './collage/collage';
 export { CardInfo } from './cardInfo/cardInfo';
 export { CardPost } from './cardPost/cardPost';
+export { Sitemap } from './sitemap/sitemap';

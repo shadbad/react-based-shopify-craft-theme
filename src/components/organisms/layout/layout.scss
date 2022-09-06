@@ -10,17 +10,3 @@
 .layout__main-wrapper {
   @extend .wrapper;
 }
-
-.layout__footer {
-  background-color: colors.$charcoal100;
-  color: colors.$charcoal500;
-  padding: 4rem 0;
-}
-
-.layout__footer-wrapper {
-  @extend .wrapper;
-}
-
-.layout__subscription-form {
-  margin: auto;
-}

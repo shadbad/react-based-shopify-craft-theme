@@ -5,4 +5,6 @@ export { NavDrawer } from './navDrawer/navDrawer';
 export { SearchBar } from './searchBar/searchBar';
 export { SearchForm } from './searchForm/searchForm';
 export { SubscriptionForm } from './subscriptionForm/subscriptionForm';
+export { AppFooter } from './appFooter/appFooter';
+export { AppHeader } from './appHeader/appHeader';
 export { Layout } from './layout/layout';

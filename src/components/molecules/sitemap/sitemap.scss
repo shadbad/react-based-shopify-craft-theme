@@ -1,0 +1,47 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.sitemap {
+}
+
+.sitemap__heading {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+}
+
+.sitemap__list {
+}
+
+.sitemap__list-item {
+  margin-bottom: 0.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.sitemap__link {
+  white-space: nowrap;
+}
+
+.sitemap--light {
+  @extend .sitemap;
+}
+
+.sitemap--dark {
+  @extend .sitemap;
+
+  .sitemap__heading {
+    color: colors.$charcoal500;
+  }
+
+  .sitemap__link {
+    color: colors.$charcoal300;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: colors.$charcoal500;
+    }
+  }
+}

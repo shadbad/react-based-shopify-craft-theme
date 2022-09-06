@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { UniversalBanner, AppBar, NavBar, NavDrawer, SearchBar, SubscriptionForm } from 'components/organisms';
+import { NavDrawer, SearchBar, AppFooter, AppHeader } from 'components/organisms';
 
 import 'assets/styles/globals.scss';
 import './layout.scss';
@@ -9,15 +9,7 @@ const Layout = React.memo(function ({ children }) {
 
     return (
         <>
-            <header className="layout__header">
-
-                <UniversalBanner />
-
-                <AppBar />
-
-                <NavBar />
-
-            </header>
+            <AppHeader />
 
             <main className="layout__main">
 
@@ -29,15 +21,7 @@ const Layout = React.memo(function ({ children }) {
 
             </main>
 
-            <footer className="layout__footer">
-
-                <div className="layout__footer-wrapper">
-
-                    <SubscriptionForm className="layout__subscription-form" theme="dark" />
-
-                </div>
-
-            </footer>
+            <AppFooter />
 
             <NavDrawer />
 
