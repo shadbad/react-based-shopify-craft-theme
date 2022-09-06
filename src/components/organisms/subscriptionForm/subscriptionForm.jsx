@@ -19,10 +19,14 @@ const SubscriptionForm = React.memo(function ({ className, theme }) {
 
         },
 
-        submit: useCallback(() => {
+        submit: useCallback(({ target }) => {
 
-            // TODO: validate the form
-            dispatch(userActions.sync());
+            target
+                .closest('.subscription-form__wrapper')
+                .querySelector('input')
+                .reportValidity();
+
+            if (user.info.email.trim() !== '') dispatch(userActions.sync());
 
         })
 
