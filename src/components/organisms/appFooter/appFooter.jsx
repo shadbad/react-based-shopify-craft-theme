@@ -38,7 +38,7 @@ const AppFooter = React.memo(function () {
                             creditCards.map((item) => (
 
                                 <li key={nanoid()} className="app-footer__credit-card-item">
-                                    <img width={0} height={0} src={`/images/credit-cards/${item}.svg`} alt={item} />
+                                    <img width={0} height={0} src={`/react-based-shopify-craft-theme/images/credit-cards/${item}.svg`} alt={item} />
                                 </li>
 
                             ))

@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
     <Provider store={store}>
-        <Router>
+        <Router basename="/react-based-shopify-craft-theme/">
             <Layout>
                 <Routes>
                     <Route path="/" element={<Landing />} />
