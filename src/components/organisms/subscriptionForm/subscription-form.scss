@@ -26,6 +26,26 @@
     width: 1.25rem;
     height: 1.25rem;
   }
+
+  &.spinner {
+    animation: spinner 1s linear 0s infinite forwards;
+  }
+}
+
+.subscription-form__text-field {
+  margin-bottom: 1rem;
+}
+
+.subscription-form__message {
+  display: block;
+  clip-path: inset(0 50% 0 50%);
+  transition: clip-path 0.5s ease-in-out;
+  line-height: 1.25em;
+  font-size: 0.875rem;
+
+  &.visible {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .subscription-form--light {
@@ -72,5 +92,15 @@
         fill: colors.$charcoal500;
       }
     }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
   }
 }

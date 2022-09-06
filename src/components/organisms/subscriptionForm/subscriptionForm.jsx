@@ -1,20 +1,28 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { actions as userActions } from 'store/slices/user.slice';
 import { TextHeading, TextField } from 'components/atoms';
 import { ButtonIcon } from 'components/molecules';
 import './subscription-form.scss';
 
 const SubscriptionForm = React.memo(function ({ className, theme }) {
 
-    const [email, setEmail] = useState('');
+    const dispatch = useDispatch();
+    const user = useSelector((state) => state.user);
 
     const handle = {
 
-        change: useCallback(({ target }) => setEmail(target.value)),
+        change: ({ target }) => {
+
+            dispatch(userActions.setEmail(target.value));
+
+        },
 
         submit: useCallback(() => {
 
-            console.log('submit');
+            // TODO: validate the form
+            dispatch(userActions.sync());
 
         })
 
@@ -37,12 +45,21 @@ const SubscriptionForm = React.memo(function ({ className, theme }) {
                     className="subscription-form__text-field"
                     type="email"
                     label="Email"
-                    value={email}
+                    required
+                    value={user.info.email}
                     onChange={handle.change}
                     onEnterPress={handle.submit}
                 />
 
-                <ButtonIcon className="subscription-form__submit-button" iconName="arrow-right" variant="basic" onClick={handle.submit} />
+                <ButtonIcon
+                    className={`subscription-form__submit-button ${user.isSyncing ? 'spinner' : ''}`}
+                    iconName={user.isSyncing ? 'refresh' : 'arrow-right'}
+                    variant="basic"
+                    onClick={handle.submit}
+                />
+
+                <span className={`subscription-form__message ${user.synced && user.error === '' ? 'visible' : ''}`}>Thanks for subscribing :D</span>
+
             </div>
         </div>
     );
