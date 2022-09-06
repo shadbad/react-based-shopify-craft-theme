@@ -37,7 +37,7 @@ const TextField = function ({ className, value, type, label, required, error, on
             if (event.key === 'Enter') {
 
                 event.preventDefault();
-                onEnterPress();
+                onEnterPress(event);
 
             }
 
