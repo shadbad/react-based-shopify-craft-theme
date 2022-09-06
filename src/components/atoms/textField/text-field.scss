@@ -56,7 +56,14 @@
   transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
 }
 
+.text-field__error {
+  display: none;
+}
+
 .text-field__input:focus + .text-field__label {
   top: 0.25rem;
   transform: translateY(0) scale(0.66);
+}
+
+.text-field__input:invalid + .text-field__error {
 }
