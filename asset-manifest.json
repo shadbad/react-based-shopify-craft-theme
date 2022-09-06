@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfbcec88.css",
-    "main.js": "/static/js/main.5ebd6c7f.js",
-    "static/js/634.f812f8aa.chunk.js": "/static/js/634.f812f8aa.chunk.js",
-    "static/js/881.e1d07ffa.chunk.js": "/static/js/881.e1d07ffa.chunk.js",
-    "static/js/787.a4266475.chunk.js": "/static/js/787.a4266475.chunk.js",
-    "static/media/quattrocento-sans-italic.woff": "/static/media/quattrocento-sans-italic.cca30a4ecab849faf87e.woff",
-    "static/media/quattrocento-sans-boldItalic.woff": "/static/media/quattrocento-sans-boldItalic.a1eb4e82d30ce6f82858.woff",
-    "static/media/quattrocento-sans-bold.woff": "/static/media/quattrocento-sans-bold.caa2dc116fbdd4fa6d4f.woff",
-    "static/media/quattrocento-sans-regular.woff": "/static/media/quattrocento-sans-regular.a7237605615c02180505.woff",
-    "static/media/quattrocento-sans-italic.woff2": "/static/media/quattrocento-sans-italic.31e303b1ba244c5b143c.woff2",
-    "static/media/quattrocento-sans-boldItalic.woff2": "/static/media/quattrocento-sans-boldItalic.0621ccab79ae8baa502d.woff2",
-    "static/media/quattrocento-sans-regular.woff2": "/static/media/quattrocento-sans-regular.b2e6ded2d167ad6a0228.woff2",
-    "static/media/quattrocento-sans-bold.woff2": "/static/media/quattrocento-sans-bold.c6aee54a6b68bcd226dd.woff2",
-    "static/media/americana-regular.woff": "/static/media/americana-regular.cc666167e51ce8392f62.woff",
-    "static/media/americana-regular.woff2": "/static/media/americana-regular.9230191c475d3feb9fb0.woff2",
-    "index.html": "/index.html",
-    "main.dfbcec88.css.map": "/static/css/main.dfbcec88.css.map",
-    "main.5ebd6c7f.js.map": "/static/js/main.5ebd6c7f.js.map",
-    "787.a4266475.chunk.js.map": "/static/js/787.a4266475.chunk.js.map"
+    "main.css": "/react-based-shopify-craft-theme/static/css/main.7db44472.css",
+    "main.js": "/react-based-shopify-craft-theme/static/js/main.174e3a65.js",
+    "static/js/634.f812f8aa.chunk.js": "/react-based-shopify-craft-theme/static/js/634.f812f8aa.chunk.js",
+    "static/js/881.b39696da.chunk.js": "/react-based-shopify-craft-theme/static/js/881.b39696da.chunk.js",
+    "static/js/787.a4266475.chunk.js": "/react-based-shopify-craft-theme/static/js/787.a4266475.chunk.js",
+    "static/media/quattrocento-sans-italic.woff": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-italic.cca30a4ecab849faf87e.woff",
+    "static/media/quattrocento-sans-boldItalic.woff": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-boldItalic.a1eb4e82d30ce6f82858.woff",
+    "static/media/quattrocento-sans-bold.woff": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-bold.caa2dc116fbdd4fa6d4f.woff",
+    "static/media/quattrocento-sans-regular.woff": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-regular.a7237605615c02180505.woff",
+    "static/media/quattrocento-sans-italic.woff2": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-italic.31e303b1ba244c5b143c.woff2",
+    "static/media/quattrocento-sans-boldItalic.woff2": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-boldItalic.0621ccab79ae8baa502d.woff2",
+    "static/media/quattrocento-sans-regular.woff2": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-regular.b2e6ded2d167ad6a0228.woff2",
+    "static/media/quattrocento-sans-bold.woff2": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-bold.c6aee54a6b68bcd226dd.woff2",
+    "static/media/americana-regular.woff": "/react-based-shopify-craft-theme/static/media/americana-regular.cc666167e51ce8392f62.woff",
+    "static/media/americana-regular.woff2": "/react-based-shopify-craft-theme/static/media/americana-regular.9230191c475d3feb9fb0.woff2",
+    "index.html": "/react-based-shopify-craft-theme/index.html",
+    "main.7db44472.css.map": "/react-based-shopify-craft-theme/static/css/main.7db44472.css.map",
+    "main.174e3a65.js.map": "/react-based-shopify-craft-theme/static/js/main.174e3a65.js.map",
+    "787.a4266475.chunk.js.map": "/react-based-shopify-craft-theme/static/js/787.a4266475.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfbcec88.css",
-    "static/js/main.5ebd6c7f.js"
+    "static/css/main.7db44472.css",
+    "static/js/main.174e3a65.js"
   ]
 }
