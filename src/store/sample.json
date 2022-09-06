@@ -111,6 +111,25 @@
         }
     ],
     "CONTENT": {
+        "layout": {
+            "mission": {
+                "title": "Our Mission",
+                "description": "We create products that are as enjoyable as they are ethical."
+            },
+            "pageList": {
+                "title": "Get to know Craft",
+                "links": [
+                    {
+                        "title": "About",
+                        "url": "/about"
+                    },
+                    {
+                        "title": "Magazine",
+                        "url": "/blog"
+                    }
+                ]
+            }
+        },
         "landing": {
             "heading": "Sustainably crafted goods to elevate your everyday.",
             "multiLinkCollage": [
