@@ -9,13 +9,9 @@ const fetch = createAsyncThunk('blog/fetch', async (args, thunkAPI) => {
 
     if (blog.posts.length === 0) {
 
-        if (process.env.NODE_ENV !== 'production') {
+        const { BLOG: data } = await import('../sample.json');
 
-            const { BLOG: data } = await import('../sample.json');
-
-            return data;
-
-        }
+        return data;
 
         // TODO: complete the http request
 

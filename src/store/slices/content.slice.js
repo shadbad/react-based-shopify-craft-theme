@@ -9,13 +9,9 @@ const fetch = createAsyncThunk('content/fetch', async (arg, thunkAPI) => {
 
     if (Object.keys(content.data).length === 0) {
 
-        if (process.env.NODE_ENV !== 'production') {
+        const { CONTENT: data } = await import('../sample.json');
 
-            const { CONTENT: data } = await import('../sample.json');
-
-            return data;
-
-        }
+        return data;
 
         // TODO: complete the http request
 

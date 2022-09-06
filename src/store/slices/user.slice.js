@@ -10,13 +10,6 @@ const sync = createAsyncThunk('user', (arg, thunkAPI) => {
 
     if (user.info.email === '') return {};
 
-    if (process.env.NODE_ENV === 'production') {
-
-        const url = `${process.env.REACT_APP_API_BASE}/user`;
-        return axios.post(url, user.info);
-
-    }
-
     return new Promise((resolve) => {
 
         setTimeout(() => resolve(1), 3000);
