@@ -4,3 +4,5 @@ export { NavBar } from './navBar/navBar';
 export { NavDrawer } from './navDrawer/navDrawer';
 export { SearchBar } from './searchBar/searchBar';
 export { SearchForm } from './searchForm/searchForm';
+export { SubscriptionForm } from './subscriptionForm/subscriptionForm';
+export { Layout } from './layout/layout';

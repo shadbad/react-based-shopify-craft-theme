@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import './text-field.scss';
 
-const TextField = function ({ className, value, type, label, error, onChange, onEnterPress }) {
+const TextField = function ({ className, value, type, label, required, error, onChange, onEnterPress }) {
 
     const id = label.replace(' ', '_');
 
@@ -25,6 +25,10 @@ const TextField = function ({ className, value, type, label, error, onChange, on
 
             if (target.value.trim() === '') setHasValue(() => false);
             else setHasValue(() => true);
+
+            target.setCustomValidity(error);
+            target.checkValidity();
+            target.reportValidity();
 
         }),
 
@@ -60,6 +64,7 @@ const TextField = function ({ className, value, type, label, error, onChange, on
                 id={id}
                 type={type}
                 value={value}
+                required={required}
                 onChange={onChange}
                 onKeyUp={handle.keyUp}
                 onKeyDown={handle.keyDown}
@@ -80,7 +85,8 @@ const TextField = function ({ className, value, type, label, error, onChange, on
 TextField.propTypes = {
     className: PropTypes.string,
     value: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'number']).isRequired,
+    type: PropTypes.oneOf(['text', 'search', 'password', 'email']).isRequired,
+    required: PropTypes.bool,
     label: PropTypes.string.isRequired,
     error: PropTypes.string,
     onChange: PropTypes.func,
@@ -90,6 +96,7 @@ TextField.propTypes = {
 TextField.defaultProps = {
     className: '',
     value: '',
+    required: false,
     error: '',
     onChange: null,
     onEnterPress: null
