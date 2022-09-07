@@ -122,11 +122,20 @@
             "discount": 0.1,
             "slug": "glassware-set",
             "content": "<p>Glassware essentials for everyday use that look just as good on the table as they do on your kitchen shelves.</p><ul><li>Scratch resistant, lead-free, and long lasting</li><li>Crafted in Japan using an ion-toughening technique for durability</li><li>The Tall Glasses nest neatly into the Short Glasses for easy storage</li><li>Comes in a set of 4 Tall Glasses and 4 Short Glasses</li></ul><p>Don't be fooled by its delicate look and lightweight feel. Our premium Japanese soda-lime glassware is treated with a special technique to give it near-shatterproof strength.</p>",
-            "spec": {
-                "Materials": "Lead-free soda-lime glass",
-                "Bundle Specs": "Short: 3.15 in. diameter, 3.15 in. height. Holds 11.8oz. Tall: 3 in. diameter, 5.6 in. height. Holds 18oz",
-                "Care information": "Our dishwasher safe glassware is highly durable and easy to care for."
-            }
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Lead-free soda-lime glass"
+                },
+                {
+                    "key": "Bundle Specs",
+                    "value": "Short: 3.15 in. diameter, 3.15 in. height. Holds 11.8oz. Tall: 3 in. diameter, 5.6 in. height. Holds 18oz"
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our dishwasher safe glassware is highly durable and easy to care for."
+                }
+            ]
         },
         {
             "id": "0401def7-5713-410f-b0d1-2cd5c9f5b44a",
@@ -152,11 +161,20 @@
             "discount": 0,
             "slug": "the-short-glasses",
             "content": "<p>From iced coffee in the morning to a slow sip in the evening, our soda-lime glassware does it all. It's lightweight and ultra thin, yet highly durable and perfect for everyday use.</p><p>Don't be fooled by its delicate look and lightweight feel. Our premium Japanese soda-lime glassware is treated with a special technique to give it near-shatterproof strength.</p><p>Comes in a set of 4.</p>",
-            "spec": {
-                "Materials": "Lead-free soda-lime glass. Strengthened with an ion-toughening technique. Crafted in Japan",
-                "Dimensions": "3.15 in. diameter, 3.15 in. height. Holds 11.8oz. 1.1mm rim thickness",
-                "Care information": "Our dishwasher safe glassware is highly durable and easy to care for."
-            }
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Lead-free soda-lime glass. Strengthened with an ion-toughening technique. Crafted in Japan"
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3.15 in. diameter, 3.15 in. height. Holds 11.8oz. 1.1mm rim thickness"
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our dishwasher safe glassware is highly durable and easy to care for."
+                }
+            ]
         },
         {
             "id": "6812b7ab-1544-4784-8a27-c898ba1462f1",
@@ -182,11 +200,20 @@
             "discount": 0,
             "slug": "the-tall-glasses",
             "content": "<p>An everyday essential, whether it's for a tall drink of water or a dressed-up cocktail. Our soda-lime glasses are lightweight and ultra thin, yet highly durable and perfect for everyday use.</p><p>Don't be fooled by its delicate look and lightweight feel. Our premium Japanese soda-lime glassware is treated with a special technique to give it near-shatterproof strength.</p><p>Comes in a set of 4.</p>",
-            "spec": {
-                "Materials": "Lead-free soda-lime glass. Strengthened with an ion-toughening technique. Crafted in Japan",
-                "Dimensions": "3 in. diameter, 5.6 in. height. Holds 18oz. 1.1mm rim thickness",
-                "Care information": "Our dishwasher safe glassware is highly durable and easy to care for."
-            }
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Lead-free soda-lime glass. Strengthened with an ion-toughening technique. Crafted in Japan"
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3 in. diameter, 5.6 in. height. Holds 18oz. 1.1mm rim thickness"
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our dishwasher safe glassware is highly durable and easy to care for."
+                }
+            ]
         }
     ],
     "CONTENT": {

@@ -1,142 +1,225 @@
+import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux';
 import { TextHeading } from 'components/atoms';
 import { Video, Carousel, CardQuote, Collage, LinkImage, CardInfo, CardPost } from 'components/molecules';
 import './landing-template.scss';
 
-const LandingTemplate = function () {
+const LandingTemplate = function ({ content, posts }) {
 
-    const content = useSelector((state) => state.content);
-    const posts = useSelector((state) => state.blog.posts);
-    const landingContent = content.data.landing;
+    return (
 
-    if (!content.isLoading && content.error === '') {
+        <>
+            <TextHeading type={1} className="landing__heading">{content.heading}</TextHeading>
 
-        return (
+            <Collage className="landing__multi-link-collage">
 
-            <>
-                <TextHeading type={1} className="landing__heading">{landingContent.heading}</TextHeading>
+                {
+                    content.multiLinkCollage.map((item) => (
+                        <LinkImage
+                            className="landing__multi-link-collage-item"
+                            key={item.id}
+                            title={item.title}
+                            imageUrl={item.image}
+                            href={item.url}
+                        />
+                    ))
+                }
 
-                <Collage className="landing__multi-link-collage">
+            </Collage>
+
+            <div className="landing__video">
+
+                <TextHeading type={3} className="landing__video-heading">{content.videoPromotion.title}</TextHeading>
+
+                <Video className="landing__video-player" source={content.videoPromotion.video} cover={content.videoPromotion.cover} />
+
+            </div>
+
+            <div className="landing__testimonies">
+
+                <TextHeading type={4} className="landing__testimonies-heading">{content.testimonies.title}</TextHeading>
+
+                <Carousel className="landing_testimonies-carousel" gap={4 * 16} columnMin={200} columnMax={400}>
 
                     {
-                        landingContent.multiLinkCollage.map((item) => (
-                            <LinkImage
-                                className="landing__multi-link-collage-item"
-                                key={item.id}
-                                title={item.title}
-                                imageUrl={item.image}
-                                href={item.url}
+                        content.testimonies.items.map((item) => <CardQuote key={item.id} quote={item.quote} author={item.author} />)
+                    }
+
+                </Carousel>
+
+            </div>
+
+            <div className="landing__single-link-collage">
+                <TextHeading type={4} className="landing__single-link-collage-heading">
+                    {content.singleLinkCollage.title}
+                </TextHeading>
+
+                <Collage className="landing__single-link-collage">
+
+                    <LinkImage
+                        className="landing__multi-link-collage-item"
+                        title={content.singleLinkCollage.link.title}
+                        imageUrl={content.singleLinkCollage.link.image}
+                        href={content.singleLinkCollage.link.url}
+                    />
+
+                    {
+                        content.singleLinkCollage.images.map((image) => (
+
+                            <span
+                                key={nanoid()}
+                                style={{ backgroundImage: `url(${image})` }}
                             />
+
                         ))
                     }
 
                 </Collage>
+            </div>
 
-                <div className="landing__video">
+            <div className="landing__info">
 
-                    <TextHeading type={3} className="landing__video-heading">{landingContent.videoPromotion.title}</TextHeading>
+                {
+                    content.info.map((item) => (
 
-                    <Video className="landing__video-player" source={landingContent.videoPromotion.video} cover={landingContent.videoPromotion.cover} />
-
-                </div>
-
-                <div className="landing__testimonies">
-
-                    <TextHeading type={4} className="landing__testimonies-heading">{landingContent.testimonies.title}</TextHeading>
-
-                    <Carousel className="landing_testimonies-carousel" gap={4 * 16} columnMin={200} columnMax={400}>
-
-                        {
-                            landingContent.testimonies.items.map((item) => <CardQuote key={item.id} quote={item.quote} author={item.author} />)
-                        }
-
-                    </Carousel>
-
-                </div>
-
-                <div className="landing__single-link-collage">
-                    <TextHeading type={4} className="landing__single-link-collage-heading">
-                        {landingContent.singleLinkCollage.title}
-                    </TextHeading>
-
-                    <Collage className="landing__single-link-collage">
-
-                        <LinkImage
-                            className="landing__multi-link-collage-item"
-                            title={landingContent.singleLinkCollage.link.title}
-                            imageUrl={landingContent.singleLinkCollage.link.image}
-                            href={landingContent.singleLinkCollage.link.url}
+                        <CardInfo
+                            key={nanoid()}
+                            className="landing__info-item"
+                            image={item.image}
+                            title={item.title}
+                            description={item.description}
                         />
 
-                        {
-                            landingContent.singleLinkCollage.images.map((image) => (
+                    ))
+                }
 
-                                <span
-                                    key={nanoid()}
-                                    style={{ backgroundImage: `url(${image})` }}
-                                />
+            </div>
 
-                            ))
-                        }
+            <div className="landing__posts">
 
-                    </Collage>
-                </div>
+                <TextHeading type={3} className="landing__posts-heading">{content.blog.title}</TextHeading>
 
-                <div className="landing__info">
+                <Carousel className="landing__posts-carousel" gap={1.5 * 16} columnMin={400} columnMax={500}>
 
                     {
-                        landingContent.info.map((item) => (
 
-                            <CardInfo
+                        posts.map((item) => (
+
+                            <CardPost
                                 key={nanoid()}
-                                className="landing__info-item"
-                                image={item.image}
                                 title={item.title}
-                                description={item.description}
+                                href={item.url}
+                                date={item.date}
+                                summary={item.summary}
+                                cover={item.cover}
                             />
 
                         ))
+
                     }
 
-                </div>
+                </Carousel>
 
-                <div className="landing__posts">
+            </div>
 
-                    <TextHeading type={3} className="landing__posts-heading">{landingContent.blog.title}</TextHeading>
+        </>
 
-                    <Carousel className="landing__posts-carousel" gap={1.5 * 16} columnMin={400} columnMax={500}>
+    );
 
-                        {
+};
 
-                            posts.map((item) => (
+LandingTemplate.propTypes = {
 
-                                <CardPost
-                                    key={nanoid()}
-                                    title={item.title}
-                                    href={item.url}
-                                    date={item.date}
-                                    summary={item.summary}
-                                    cover={item.cover}
-                                />
+    content: PropTypes.shape({
 
-                            ))
+        heading: PropTypes.string,
 
-                        }
+        multiLinkCollage: PropTypes.arrayOf(PropTypes.shape({
 
-                    </Carousel>
+            id: PropTypes.string,
+            title: PropTypes.string,
+            url: PropTypes.string,
+            image: PropTypes.string
 
-                </div>
+        })),
 
-            </>
+        videoPromotion: PropTypes.shape({
 
-        );
+            title: PropTypes.string,
+            cover: PropTypes.string,
+            video: PropTypes.string
 
-    }
+        }),
 
-    // TODO: add loading skeleton
+        testimonies: PropTypes.shape({
 
-    return <div />;
+            title: PropTypes.string,
+
+            items: PropTypes.arrayOf(PropTypes.shape({
+
+                id: PropTypes.string,
+
+                quote: PropTypes.string,
+
+                author: PropTypes.string
+
+            }))
+
+        }),
+
+        singleLinkCollage: PropTypes.shape({
+
+            title: PropTypes.string,
+
+            link: PropTypes.shape({
+
+                id: PropTypes.string,
+
+                title: PropTypes.string,
+
+                url: PropTypes.string,
+
+                image: PropTypes.string
+
+            }),
+
+            images: PropTypes.arrayOf(PropTypes.string)
+
+        }),
+
+        info: PropTypes.arrayOf(PropTypes.shape({
+
+            title: PropTypes.string,
+
+            description: PropTypes.string,
+
+            image: PropTypes.string
+
+        })),
+
+        blog: PropTypes.shape({
+
+            title: PropTypes.string
+
+        })
+
+    }).isRequired,
+
+    posts: PropTypes.arrayOf(PropTypes.shape({
+
+        title: PropTypes.string,
+
+        url: PropTypes.string,
+
+        date: PropTypes.number,
+
+        cover: PropTypes.string,
+
+        summary: PropTypes.string,
+
+        body: PropTypes.string
+
+    })).isRequired
 
 };
 

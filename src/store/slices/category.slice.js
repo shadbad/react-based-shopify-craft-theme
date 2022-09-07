@@ -9,11 +9,17 @@ const fetch = createAsyncThunk('category/fetch', async (args, thunkAPI) => {
 
     if (category.list.length === 0) {
 
-        const { CATEGORIES: data } = await import('../sample.json');
+        return new Promise((resolve) => {
 
-        return data;
+            setTimeout(async () => {
 
-        // TODO: complete the http request
+                const { CATEGORIES: data } = await import('../sample.json');
+
+                resolve(data);
+
+            }, 100); // if you want to simulate network delay increase this timer
+
+        });
 
     }
 
