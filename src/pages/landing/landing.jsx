@@ -8,14 +8,14 @@ const Landing = function () {
 
     if (content.error !== '') throw new Error(content.error);
 
-    const posts = useSelector((state) => state.blog.posts);
+    const blog = useSelector((state) => state.blog);
 
-    if (posts.error !== '') throw new Error(posts.error);
+    if (blog.error !== '') throw new Error(blog.error);
 
-    if (content.isLoading || posts.isLoading) return <div />; // TODO: add skeleton templates here
+    if (content.isLoading || blog.isLoading) return <div />; // TODO: add skeleton templates here
 
     return (
-        <LandingTemplate content={content.data.landing} posts={posts} />
+        <LandingTemplate content={content.data.landing} posts={blog.posts} />
     );
 
 };
