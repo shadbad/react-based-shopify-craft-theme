@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TextHeading } from 'components/atoms';
+import './collection-template.scss';
 
 const CollectionTemplate = React.memo(function ({ category, products }) {
 
     return (
         <>
             <div className="collection__header">
-                <h1 className="collection__title">{category.title}</h1>
+
+                <TextHeading className="collection__title" type={1}>{category.title}</TextHeading>
+
                 <p className="collection__description">{category.description}</p>
             </div>
 
