@@ -1,0 +1,13 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.collection__header {
+  margin-bottom: 4rem;
+}
+.collection__description {
+  max-width: 40rem;
+  font-size: 1.125rem;
+  color: colors.$charcoal200;
+  line-height: 1.62em;
+}

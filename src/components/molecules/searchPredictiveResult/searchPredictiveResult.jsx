@@ -19,11 +19,11 @@ const SearchPredictiveResult = function ({ className, query, filteredProducts })
 
                         <li key={item.id} className="search-predictive-result__list-item">
 
-                            <Link className="search-predictive-result__list-item-link" to={item.url}>
+                            <Link className="search-predictive-result__list-item-link" to={`/products/${item.slug}`}>
 
                                 <img
                                     className="search-predictive-result__list-item-image"
-                                    src={item.image}
+                                    src={item.images[0]}
                                     alt={item.title}
                                 />
 
