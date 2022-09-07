@@ -5,9 +5,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const fetch = createAsyncThunk('product/fetch', async (arg, thunkAPI) => {
 
     const { getState } = thunkAPI;
-    const { category } = getState();
+    const { product } = getState();
 
-    if (category.list.length === 0) {
+    if (product.list.length === 0) {
 
         const { PRODUCTS: data } = await import('../sample.json');
 

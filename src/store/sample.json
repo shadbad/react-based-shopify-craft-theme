@@ -5,61 +5,72 @@
     },
     "CATEGORIES": [
         {
-            "id": "58a5f831-92af-4df9-8780-977b89dc4c7a",
-            "title": "Glassware",
-            "url": "/collections/glassware"
-        },
-        {
             "id": "f58bdafc-4531-4799-9557-6aa0b33f394f",
             "title": "Dinnerware",
             "url": "/collections/dinnerware",
+            "description": "Hand-finished in the Tagus Valley region of Portugal with locally sourced and recycled clays that are fired twice to create everyday durability.",
             "subs": [
                 {
                     "id": "f6181b0f-837e-4918-b81f-5fc8d1fc18a7",
                     "title": "Speckled White",
-                    "url": "/collections/speckled-white"
+                    "url": "/collections/speckled-white",
+                    "description": "Classic speckled white dinnerware that's hand-finished in the Tagus Valley region of Portugal. Made with locally sourced and recycled clays that are fired twice to create everyday durability."
                 },
                 {
                     "id": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
                     "title": "Dove Gray",
-                    "url": "/collections/dove-gray"
+                    "url": "/collections/dove-gray",
+                    "description": "Timeless, soft gray dinnerware that's hand-finished in the Tagus Valley region of Portugal. Made with locally sourced and recycled clays that are fired twice to create everyday durability."
                 },
                 {
                     "id": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
                     "title": "Blush Pink",
-                    "url": "/collections/blush-pink"
+                    "url": "/collections/blush-pink",
+                    "description": "Pale, soft pink dinnerware that's hand-finished in the Tagus Valley region of Portugal. Made with locally sourced and recycled clays that are fired twice to create everyday durability."
                 },
                 {
                     "id": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
                     "title": "Beachgrass Green",
-                    "url": "/collections/beachgrass-green"
+                    "url": "/collections/beachgrass-green",
+                    "description": "Natural-toned green dinnerware that's hand-finished in the Tagus Valley region of Portugal. Made with locally sourced and recycled clays that are fired twice to create everyday durability."
                 },
                 {
                     "id": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
                     "title": "Midnight Blue",
-                    "url": "/collections/midnight-blue"
+                    "url": "/collections/midnight-blue",
+                    "description": "Deep, rich indigo colored dinnerware that's hand-finished in the Tagus Valley region of Portugal. Made with locally sourced and recycled clays that are fired twice to create everyday durability."
                 }
             ]
         },
         {
+            "id": "58a5f831-92af-4df9-8780-977b89dc4c7a",
+            "title": "Glassware",
+            "url": "/collections/glassware",
+            "description": "Made in Japan, our soda-lime glassware is lightweight, scratch-resistant, and durable enough for everyday use—and complements any table setting without stealing the show."
+        },
+        {
             "id": "dd7faa9c-877c-4221-95c4-7faa98652e4a",
             "title": "Serveware",
-            "url": "/collections/serveware"
+            "url": "/collections/serveware",
+            "description": "Durably crafted and made to last, our serveware adds a refined look to weeknight dinners and special occasions alike."
         },
         {
             "id": "ec53ca6b-150e-41da-8078-e929b0782649",
             "title": "Flatware",
-            "url": "/collections/flatware"
+            "url": "/collections/flatware",
+            "description": "Crafted by the Herdmar family in the Porto region of Portugal, our flatware is restaurant quality and treated to last for years of dishwasher cycles."
         },
         {
             "id": "f7b1b493-df81-4e6a-83f2-3b8cf114ff23",
             "title": "Textiles",
-            "url": "/collections/textiles"
+            "url": "/collections/textiles",
+            "description": "Our textiles are woven in Belgium from 100% pure linen, and make a beautiful (and long-lasting) addition to any tabletop."
         },
         {
             "id": "7822bf5f-9353-4616-9595-ad4f6575797e",
             "title": "Bundles",
-            "url": "/collections/bundles"
+            "url": "/collections/bundles",
+            "description": "Looking to make the perfect set, but don't know where to start? Look no further. We've bundled our collections to make it easy to set your table and save."
         }
     ],
     "SOCIAL_PLATFORMS": [
@@ -79,35 +90,93 @@
     "PRODUCTS": [
         {
             "id": "0d07dad1-1ac0-463d-a606-1cc939995c77",
-            "title": "Test Product A",
-            "image": "https://picsum.photos/id/1018/60/90",
-            "price": 28,
+            "categoryId": "58a5f831-92af-4df9-8780-977b89dc4c7a",
+            "caption": "Fable Home",
+            "title": "Glassware Set",
+            "subtitle": "",
+            "tags": [
+                "Bundles"
+            ],
+            "stock": 10,
+            "sales": 50,
+            "date": 1283283000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/glassware-set/glassware-set-01.webp",
+                "/react-based-shopify-craft-theme/images/products/glassware-set/glassware-set-02.webp",
+                "/react-based-shopify-craft-theme/images/products/glassware-set/glassware-set-03.webp",
+                "/react-based-shopify-craft-theme/images/products/glassware-set/glassware-set-04.webp",
+                "/react-based-shopify-craft-theme/images/products/glassware-set/glassware-set-05.webp",
+                "/react-based-shopify-craft-theme/images/products/glassware-set/glassware-set-06.webp"
+            ],
+            "price": 109,
             "discount": 0.1,
-            "url": "/products/product_a"
+            "slug": "glassware-set",
+            "content": "<p>Glassware essentials for everyday use that look just as good on the table as they do on your kitchen shelves.</p><ul><li>Scratch resistant, lead-free, and long lasting</li><li>Crafted in Japan using an ion-toughening technique for durability</li><li>The Tall Glasses nest neatly into the Short Glasses for easy storage</li><li>Comes in a set of 4 Tall Glasses and 4 Short Glasses</li></ul><p>Don't be fooled by its delicate look and lightweight feel. Our premium Japanese soda-lime glassware is treated with a special technique to give it near-shatterproof strength.</p>",
+            "spec": {
+                "Materials": "Lead-free soda-lime glass",
+                "Bundle Specs": "Short: 3.15 in. diameter, 3.15 in. height. Holds 11.8oz. Tall: 3 in. diameter, 5.6 in. height. Holds 18oz",
+                "Care information": "Our dishwasher safe glassware is highly durable and easy to care for."
+            }
         },
         {
             "id": "0401def7-5713-410f-b0d1-2cd5c9f5b44a",
-            "title": "Test Product B",
-            "image": "https://picsum.photos/id/1018/60/90",
-            "price": 20.4,
-            "discount": 0.15,
-            "url": "/products/product_b"
+            "categoryId": "58a5f831-92af-4df9-8780-977b89dc4c7a",
+            "caption": "",
+            "title": "The Short Glasses",
+            "subtitle": "Dishwasher Safe",
+            "tags": [
+                "Glassware"
+            ],
+            "stock": 5,
+            "sales": 20,
+            "date": 1325363400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-short-glasses/the-short-glasses-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-short-glasses/the-short-glasses-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-short-glasses/the-short-glasses-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-short-glasses/the-short-glasses-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-short-glasses/the-short-glasses-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-short-glasses/the-short-glasses-06.webp"
+            ],
+            "price": 51.0,
+            "discount": 0,
+            "slug": "the-short-glasses",
+            "content": "<p>From iced coffee in the morning to a slow sip in the evening, our soda-lime glassware does it all. It's lightweight and ultra thin, yet highly durable and perfect for everyday use.</p><p>Don't be fooled by its delicate look and lightweight feel. Our premium Japanese soda-lime glassware is treated with a special technique to give it near-shatterproof strength.</p><p>Comes in a set of 4.</p>",
+            "spec": {
+                "Materials": "Lead-free soda-lime glass. Strengthened with an ion-toughening technique. Crafted in Japan",
+                "Dimensions": "3.15 in. diameter, 3.15 in. height. Holds 11.8oz. 1.1mm rim thickness",
+                "Care information": "Our dishwasher safe glassware is highly durable and easy to care for."
+            }
         },
         {
             "id": "6812b7ab-1544-4784-8a27-c898ba1462f1",
-            "title": "Test Product C",
-            "image": "https://picsum.photos/id/1018/60/90",
-            "price": 48.99,
-            "discount": 0.2,
-            "url": "/products/product_c"
-        },
-        {
-            "id": "a36ff6f4-b4ca-4048-b739-e52563ed53c2",
-            "title": "Test Product D",
-            "image": "https://picsum.photos/id/1018/60/90",
-            "price": 8.2,
+            "categoryId": "58a5f831-92af-4df9-8780-977b89dc4c7a",
+            "caption": "",
+            "title": "The Tall Glasses",
+            "subtitle": "Dishwasher Safe",
+            "tags": [
+                "Glassware"
+            ],
+            "stock": 20,
+            "sales": 60,
+            "date": 1600198200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-tall-glasses/the-tall-glasses-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tall-glasses/the-tall-glasses-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tall-glasses/the-tall-glasses-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tall-glasses/the-tall-glasses-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tall-glasses/the-tall-glasses-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tall-glasses/the-tall-glasses-06.webp"
+            ],
+            "price": 59.00,
             "discount": 0,
-            "url": "/products/product_d"
+            "slug": "the-tall-glasses",
+            "content": "<p>An everyday essential, whether it's for a tall drink of water or a dressed-up cocktail. Our soda-lime glasses are lightweight and ultra thin, yet highly durable and perfect for everyday use.</p><p>Don't be fooled by its delicate look and lightweight feel. Our premium Japanese soda-lime glassware is treated with a special technique to give it near-shatterproof strength.</p><p>Comes in a set of 4.</p>",
+            "spec": {
+                "Materials": "Lead-free soda-lime glass. Strengthened with an ion-toughening technique. Crafted in Japan",
+                "Dimensions": "3 in. diameter, 5.6 in. height. Holds 18oz. 1.1mm rim thickness",
+                "Care information": "Our dishwasher safe glassware is highly durable and easy to care for."
+            }
         }
     ],
     "CONTENT": {
