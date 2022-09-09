@@ -71,3 +71,34 @@
 .button--disabled {
   pointer-events: none;
 }
+
+.button--link {
+  @extend .button;
+  height: auto;
+  line-height: 1;
+  border-radius: 0;
+  padding: 0;
+  transform: scale(1);
+  white-space: nowrap;
+  position: relative;
+  color: colors.$charcoal200;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: colors.$charcoal200;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: colors.$charcoal100;
+
+    &::after {
+      background-color: colors.$charcoal100;
+    }
+  }
+}
