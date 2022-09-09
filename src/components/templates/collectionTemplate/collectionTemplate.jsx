@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TextHeading } from 'components/atoms';
+import { ListProduct } from 'components/organisms';
 import './collection-template.scss';
 
-const CollectionTemplate = React.memo(function ({ category, products }) {
+const CollectionTemplate = function ({ category, products }) {
 
     return (
         <>
@@ -14,21 +15,11 @@ const CollectionTemplate = React.memo(function ({ category, products }) {
                 <p className="collection__description">{category.description}</p>
             </div>
 
-            <ul>
-                {
-                    products.map((product) => (
-
-                        <li key={product.id}>
-                            {product.title}
-                        </li>
-
-                    ))
-                }
-            </ul>
+            <ListProduct products={products} />
         </>
     );
 
-});
+};
 
 CollectionTemplate.propTypes = {
 

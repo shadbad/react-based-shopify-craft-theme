@@ -1,4 +1,3 @@
-/* eslint-disable no-unreachable */
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { CollectionTemplate } from 'components/templates';
