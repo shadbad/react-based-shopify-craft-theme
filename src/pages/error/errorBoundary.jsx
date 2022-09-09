@@ -1,5 +1,6 @@
 import React from 'react';
 import PropType from 'prop-types';
+import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading } from 'components/atoms';
 import 'assets/styles/globals.scss';
 import './error-boundary.scss';
@@ -51,7 +52,7 @@ class ErrorBoundary extends React.Component {
                                     .filter((x) => x !== '')
                                     .map((x) => (
 
-                                        <li className="error-boundary__details-item">{x}</li>
+                                        <li key={nanoid()} className="error-boundary__details-item">{x}</li>
 
                                     ))
                             }

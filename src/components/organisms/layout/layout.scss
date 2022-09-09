@@ -3,10 +3,10 @@
 @use "/src/assets/styles/shared.scss";
 
 .layout__main {
-  min-height: 100vh;
   padding: 4rem 0;
 }
 
 .layout__main-wrapper {
   @extend .wrapper;
+  min-height: 100vh;
 }

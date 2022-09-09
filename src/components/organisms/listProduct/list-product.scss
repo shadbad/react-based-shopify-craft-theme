@@ -1,0 +1,67 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.list-product__toolbox {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list-product__filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  margin-right: auto;
+}
+
+.list-product__filters-title {
+  margin-right: 1.5rem;
+  white-space: nowrap;
+  color: colors.$charcoal200;
+}
+
+.list-product__filters-item {
+  margin-right: 1.5rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.list-product__sort {
+  overflow: visible;
+  display: flex;
+}
+
+.list-product__sort-title {
+  margin-right: 1.5rem;
+  white-space: nowrap;
+  color: colors.$charcoal200;
+}
+
+.list-product__sort-options {
+  .select-box__list {
+    left: auto;
+    right: 0;
+  }
+}
+
+.list-product__count {
+  margin-left: 1.5rem;
+  color: colors.$charcoal300;
+}
+
+.list-product__list {
+  display: flex;
+  gap: 1.5rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.list-product__list-item-wrapper {
+  width: calc((100% - 3rem) / 3);
+  overflow: hidden;
+}
