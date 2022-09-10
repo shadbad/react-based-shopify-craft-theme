@@ -214,6 +214,204 @@
                     "value": "Our dishwasher safe glassware is highly durable and easy to care for."
                 }
             ]
+        },
+        {
+            "id": "66ca1eb2-d0df-4abf-a6e6-680528f9864d",
+            "categoryId": "dd7faa9c-877c-4221-95c4-7faa98652e4a",
+            "caption": "",
+            "title": "The Serving Bowl",
+            "subtitle": "Speckled White",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 5,
+            "sales": 24,
+            "date": 1581712200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/serving-bowl/serving-bowl-01.webp",
+                "/react-based-shopify-craft-theme/images/products/serving-bowl/serving-bowl-02.webp",
+                "/react-based-shopify-craft-theme/images/products/serving-bowl/serving-bowl-03.webp",
+                "/react-based-shopify-craft-theme/images/products/serving-bowl/serving-bowl-04.webp",
+                "/react-based-shopify-craft-theme/images/products/serving-bowl/serving-bowl-05.webp",
+                "/react-based-shopify-craft-theme/images/products/serving-bowl/serving-bowl-06.webp"
+            ],
+            "price": 39,
+            "discount": 0,
+            "slug": "serving-bowl",
+            "content": "<p>Our low-profile serving bowl plays for keeps. It's equally suited for hosting a special occasion and holding popcorn for a late-night snack.</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "409669f5-b204-489d-993f-5e4c4225403a",
+            "categoryId": "dd7faa9c-877c-4221-95c4-7faa98652e4a",
+            "caption": "",
+            "title": "The Carafe",
+            "subtitle": "Speckled White",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 20,
+            "sales": 8,
+            "date": 1586892600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe/ceramic-carafe-01.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe/ceramic-carafe-02.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe/ceramic-carafe-03.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe/ceramic-carafe-04.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe/ceramic-carafe-05.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe/ceramic-carafe-06.webp"
+            ],
+            "price": 40,
+            "discount": 0,
+            "slug": "ceramic-carafe",
+            "content": "<p>An elegant replacement for any bottle or carton on the table, this stoneware carafe is as practical as it is beautiful. From water to juice to wine, use this versatile vessel to elevate every pour.</p><ul><li>Each Carafe is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3 in. diameter (top), 3.75 in. diameter (bottom), 8.25 in. height, 1.6 lb. each. Holds 30 oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our dinnerware is durable and easy to care for. Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "6aa88b44-0ae6-478d-a089-0bd4f4a597b2",
+            "categoryId": "dd7faa9c-877c-4221-95c4-7faa98652e4a",
+            "caption": "FABLE HOME",
+            "title": "Ceramic Carafe Set",
+            "subtitle": "",
+            "tags": [
+                "Bundles"
+            ],
+            "stock": 10,
+            "sales": 100,
+            "date": 1613334600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-01.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-02.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-03.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-04.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-05.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-06.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-07.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-08.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-carafe-set/ceramic-carafe-set-09.webp"
+            ],
+            "price": 95,
+            "discount": 0.1,
+            "slug": "ceramic-carafe-set",
+            "content": "<p>Pour, sip, repeat. Whether it's juice on the breakfast bar, water on the table, or wine on the sideboard, this stoneware set makes every refill smooth—and looks great while doing it.</p><p>When it comes to serving drinks, let this set do the heavy lifting.</p><p>Comes with The Carafe and set of 4 Cups.</p>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Bundle Specs",
+                    "value": "The Carafe: 3 in. diameter (top), 3.75 in. diameter (bottom), 8.25 in. height , 1.6 lb. each. Holds 30 oz. The Cups: 3 in. diameter (top), 3.6 in. diameter (middle), 3.6 in. height, 0.64 lb. each. Holds 11 oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our dinnerware is durable and easy to care for. Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "8105c929-c66c-4b00-92fb-a7a152673d5c",
+            "categoryId": "f7b1b493-df81-4e6a-83f2-3b8cf114ff23",
+            "caption": "",
+            "title": "The Tablecloth",
+            "subtitle": "Oatmeal",
+            "tags": [
+                "Textiles"
+            ],
+            "stock": 0,
+            "sales": 8,
+            "date": 1403206200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-tablecloth/the-tablecloth-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tablecloth/the-tablecloth-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tablecloth/the-tablecloth-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tablecloth/the-tablecloth-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tablecloth/the-tablecloth-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-tablecloth/the-tablecloth-06.webp"
+            ],
+            "price": 179,
+            "discount": 0,
+            "slug": "the-tablecloth",
+            "content": "<p>Dress the table in pure, high quality Belgian linen. Equal parts elevated, laid-back, and long-lasting, it's durable enough to love for years—and gets softer (and better) with each use.</p><ul><li>Naturally durable and made to last</li><li>Fits comfortably over a 6-8 person table top</li><li>Woven in Belgium from fine European flax</li><li>Absorbent, lint-free, and machine washable</li><li>Comes with one piece</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "100% linen. 100% cotton label."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "108 in. x 69 in."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our linen is highly durable and easy to care for. Machine wash at a maximum of 104°F (40°C). Dry on medium heat, and iron slightly damp linen with steam as needed."
+                }
+            ]
+        },
+        {
+            "id": "779e211f-ddac-4965-9ed9-a43f6b3c0ce3",
+            "categoryId": "f7b1b493-df81-4e6a-83f2-3b8cf114ff23",
+            "caption": "",
+            "title": "The Napkins",
+            "subtitle": "Oatmeal",
+            "tags": [
+                "Textiles"
+            ],
+            "stock": 13,
+            "sales": 8,
+            "date": 1397935800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-napkins/the-napkins-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-napkins/the-napkins-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-napkins/the-napkins-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-napkins/the-napkins-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-napkins/the-napkins-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-napkins/the-napkins-06.webp"
+            ],
+            "price": 75,
+            "discount": 0,
+            "slug": "the-napkins",
+            "content": "<p>Pure linen napkins in a natural hue to dress up or down with any table setting. Not too big, not too small—just right for everyday use.</p><ul><li>Naturally durable and made to last</li><li>Woven in Belgium from fine European flax</li><li>Absorbent, lint-free, and machine washable</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "100% linen. 100% cotton label."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "18 in. x 18 in."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Our linen is highly durable and easy to care for. Machine wash at a maximum of 104°F (40°C). Dry on medium heat, and iron slightly damp linen with steam as needed."
+                }
+            ]
         }
     ],
     "CONTENT": {
