@@ -15,3 +15,4 @@ export { Sitemap } from './sitemap/sitemap';
 export { ButtonIconText } from './buttonIconText/buttonIconText';
 export { SelectBox } from './selectBox/selectBox';
 export { SelectBoxMulti } from './selectBoxMulti/selectBoxMulti';
+export { ListProduct } from './listProduct/listProduct';

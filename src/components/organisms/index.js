@@ -8,4 +8,3 @@ export { SubscriptionForm } from './subscriptionForm/subscriptionForm';
 export { AppFooter } from './appFooter/appFooter';
 export { AppHeader } from './appHeader/appHeader';
 export { Layout } from './layout/layout';
-export { ListProduct } from './listProduct/listProduct';
