@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { SelectBoxMulti, SelectBox, LinkProduct } from 'components/molecules';
 import './list-product.scss';
@@ -13,10 +13,6 @@ const ListProduct = function ({ products }) {
 
     const config = {
         sortOptions: [
-            {
-                key: 'feature',
-                title: 'Feature'
-            },
             {
                 key: 'sales',
                 title: 'Best selling',
@@ -153,8 +149,6 @@ const ListProduct = function ({ products }) {
 
             const sortConfig = config.sortOptions.find((item) => item.key === sortKey);
 
-            if (!sortConfig || !sortConfig.compare) return products;
-
             return list.sort(sortConfig.compare);
 
         })
@@ -170,8 +164,6 @@ const ListProduct = function ({ products }) {
 
             setSelectedFilters(() => clonedSelectedFilters);
 
-            setItems(() => [...apply.sorter(selectedSortOption, apply.filters(clonedSelectedFilters))]);
-
         },
 
         filterResetClick: (optionKeys) => {
@@ -179,18 +171,18 @@ const ListProduct = function ({ products }) {
             const clonedSelectedFilters = new Set(selectedFilters);
             optionKeys.forEach((key) => clonedSelectedFilters.delete(key));
             setSelectedFilters(() => clonedSelectedFilters);
-            setItems(() => [...apply.sorter(selectedSortOption, apply.filters(clonedSelectedFilters))]);
 
         },
 
-        sortOptionClick: (optionKey) => {
+        sortOptionClick: (optionKey) => setSelectedSortOption(() => optionKey)
 
-            setSelectedSortOption(() => optionKey);
-
-            setItems(() => [...apply.sorter(optionKey, Array.from(items))]);
-
-        }
     };
+
+    useEffect(() => {
+
+        setItems(() => [...apply.sorter(selectedSortOption, apply.filters(selectedFilters))]);
+
+    }, [selectedFilters, selectedSortOption]);
 
     return (
 
