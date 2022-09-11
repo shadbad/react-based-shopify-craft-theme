@@ -6,7 +6,10 @@ const useOutsideClickDetector = function (surfaceSelectors, handler, dependencie
 
         const bodyClickHandler = ({ target }) => {
 
-            const surfaces = Array.from(document.querySelectorAll(surfaceSelectors));
+            const surfaces = typeof surfaceSelectors === 'string' ?
+                Array.from(document.querySelectorAll(surfaceSelectors))
+                :
+                surfaceSelectors.map((item) => item.current);
 
             let isOutside = true;
 
