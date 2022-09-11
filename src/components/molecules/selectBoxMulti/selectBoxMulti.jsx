@@ -1,7 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'components/atoms';
 import { ButtonIconText } from 'components/molecules';
+import { useOutsideClickDetector } from 'hooks';
 import './select-box-multi.scss';
 
 const SelectBoxMulti = React.memo(function ({ className, title, options, onResetClick, onOptionClick }) {
@@ -9,6 +10,10 @@ const SelectBoxMulti = React.memo(function ({ className, title, options, onReset
     const [isExpanded, setIsExpanded] = useState(false);
 
     const [selectedOptions, setSelectedOptions] = useState(new Set());
+
+    const wrapperRef = useRef();
+
+    useOutsideClickDetector([wrapperRef], () => setIsExpanded(() => false));
 
     const handle = {
 
@@ -39,7 +44,7 @@ const SelectBoxMulti = React.memo(function ({ className, title, options, onReset
 
     return (
 
-        <div className={`select-box-multi ${className}`}>
+        <div className={`select-box-multi ${className}`} ref={wrapperRef}>
 
             <ButtonIconText
                 className="select-box-multi__button"
