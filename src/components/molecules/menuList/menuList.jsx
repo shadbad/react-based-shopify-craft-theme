@@ -4,7 +4,7 @@ import { Link, Button, Icon } from 'components/atoms';
 import { useOutsideClickDetector } from 'hooks';
 import './menu-list.scss';
 
-const MenuList = React.memo(function ({ className, links, variant }) {
+const MenuList = React.memo(function ({ className, links, variant, onItemClick }) {
 
     const linkVariant = variant === 'metro' ? 'underlineOnHover' : 'plain';
 
@@ -21,7 +21,7 @@ const MenuList = React.memo(function ({ className, links, variant }) {
             {
                 links.map((item) => {
 
-                    if (item.subs && item.subs.length > 0) return MenuList.renderSubMenu(variant, item);
+                    if (item.subs && item.subs.length > 0) return MenuList.renderSubMenu(variant, item, onItemClick);
 
                     return (
 
@@ -31,6 +31,7 @@ const MenuList = React.memo(function ({ className, links, variant }) {
                                 className="menu-list__link"
                                 href={item.url}
                                 variant={linkVariant}
+                                onClick={onItemClick}
                             >
 
                                 {item.title}
@@ -62,16 +63,19 @@ MenuList.propTypes = {
         url: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired
 
-    })).isRequired
+    })).isRequired,
+
+    onItemClick: PropTypes.func
 
 };
 
 MenuList.defaultProps = {
     className: '',
-    variant: 'metro'
+    variant: 'metro',
+    onItemClick: null
 };
 
-MenuList.renderSubMenu = function (variant, rootItem) {
+MenuList.renderSubMenu = function (variant, rootItem, onItemClick) {
 
     const handleSubmenuSwitchClick = useCallback(({ target }) => {
 
@@ -94,6 +98,16 @@ MenuList.renderSubMenu = function (variant, rootItem) {
     const handleSubmenuBackButtonClick = useCallback(({ target }) => {
 
         target.closest('.menu-list__sub-wrapper').classList.remove('expand');
+
+    });
+
+    const handleItemClick = useCallback((event) => {
+
+        const { target } = event;
+
+        target.closest('.menu-list__sub-wrapper').classList.remove('expand');
+
+        if (onItemClick) onItemClick(event);
 
     });
 
@@ -142,6 +156,7 @@ MenuList.renderSubMenu = function (variant, rootItem) {
                                 className="menu-list__sub-list-link"
                                 href={item.url}
                                 variant="plain"
+                                onClick={handleItemClick}
                             >
 
                                 {item.title}

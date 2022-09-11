@@ -33,6 +33,10 @@ const NavDrawer = React.memo(function () {
 
     useBodyLocker(isMenuDrawerOpen);
 
+    const handle = {
+        itemClick: () => dispatch(uiActions.setMenuDrawerStatus(false))
+    };
+
     if (categories.isLoading) return <aside className="nav-drawer--loading" />;
 
     if (!categories.isLoading && categories.error !== '') {
@@ -50,7 +54,7 @@ const NavDrawer = React.memo(function () {
         <>
             <aside className={`nav-drawer ${isMenuDrawerOpen ? 'expand' : ''}`} style={{ top: `${topPosition}px` }}>
 
-                <MenuList className="nav-drawer__menu" variant="stack" links={categories.list} />
+                <MenuList className="nav-drawer__menu" variant="stack" links={categories.list} onItemClick={handle.itemClick} />
 
             </aside>
 
