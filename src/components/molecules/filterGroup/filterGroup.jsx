@@ -1,7 +1,8 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { SelectBoxMulti, SelectOption } from 'components/molecules';
+import { Button } from 'components/atoms';
+import { SelectBoxMulti, SelectOption, Chip } from 'components/molecules';
 import './filter-group.scss';
 
 const FilterGroup = React.memo(function ({ className, collection, setFilteredCollection }) {
@@ -49,6 +50,7 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
     };
 
     const handle = {
+
         filterOptionClick: useCallback((optionKey) => {
 
             const clonedSelectedFilters = new Set(selectedFilters);
@@ -71,12 +73,24 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
 
             setSelectedFilters(() => clonedSelectedFilters);
 
-        })
+        }),
+
+        chipClick: useCallback((optionKey) => {
+
+            const clonedSelectedFilters = new Set(selectedFilters);
+
+            if (clonedSelectedFilters.has(optionKey)) clonedSelectedFilters.delete(optionKey);
+
+            setSelectedFilters(() => clonedSelectedFilters);
+
+        }),
+
+        chipClear: useCallback(() => setSelectedFilters(new Set()))
     };
 
-    const apply = {
+    const helpers = {
 
-        filters: useCallback(() => {
+        applyFilters: useCallback(() => {
 
             const filters = config.filters
                 .map((filterGroup) => filterGroup.items)
@@ -95,48 +109,81 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
 
             return Array.from(filteredProducts);
 
-        })
+        }),
+
+        getFilterConfigs: useCallback(() => config
+            .filters
+            .map((filterGroup) => filterGroup.items)
+            .flat()
+            .filter((f) => selectedFilters.has(f.key)))
     };
 
     useEffect(() => {
 
-        setFilteredCollection(() => [...apply.filters()]);
+        setFilteredCollection(() => [...helpers.applyFilters()]);
 
     }, [selectedFilters]);
 
     return (
         <div className={`filter-group ${className}`}>
 
-            <span className="filter-group__title">Filter:</span>
+            <div className="filter-group__filters">
+
+                <span className="filter-group__filters-title">Filter:</span>
+
+                {
+                    config.filters.map((filter) => (
+
+                        <SelectBoxMulti
+                            key={filter.title}
+                            className="filter-group__filters-item"
+                            title={filter.title}
+                            options={filter.items.map((f) => ({ title: `${f.title} (${f.count})`, key: f.key }))}
+                            onResetClick={() => handle.filterResetClick(filter.key)}
+                        >
+                            {
+                                filter.items.map((f) => (
+                                    <SelectOption
+                                        variant="multi"
+                                        key={f.key}
+                                        keyValue={f.key}
+                                        label={`${f.title} (${f.count})`}
+                                        selected={selectedFilters.has(f.key)}
+                                        onClick={handle.filterOptionClick}
+                                    />
+                                ))
+                            }
+
+                        </SelectBoxMulti>
+
+                    ))
+                }
+
+            </div>
 
             {
-                config.filters.map((filter) => (
+                selectedFilters.size > 0 && (
 
-                    <SelectBoxMulti
-                        key={filter.title}
-                        className="filter-group__item"
-                        title={filter.title}
-                        options={filter.items.map((f) => ({ title: `${f.title} (${f.count})`, key: f.key }))}
-                        onResetClick={() => handle.filterResetClick(filter.key)}
-                    >
+                    <div className="filter-group__chips">
                         {
-                            filter.items.map((f) => (
-                                <SelectOption
-                                    variant="multi"
-                                    key={f.key}
-                                    keyValue={f.key}
-                                    label={`${f.title} (${f.count})`}
-                                    selected={selectedFilters.has(f.key)}
-                                    onClick={handle.filterOptionClick}
+                            helpers.getFilterConfigs().map((item) => (
+
+                                <Chip
+                                    key={item.key}
+                                    className="filter-group__chips-item"
+                                    label={item.title}
+                                    onClick={() => handle.chipClick(item.key)}
                                 />
+
                             ))
                         }
 
-                    </SelectBoxMulti>
-
-                ))
+                        <Button className="filter-group__chips-clear-button" variant="link" onClick={handle.chipClear}>
+                            Clear all
+                        </Button>
+                    </div>
+                )
             }
-
         </div>
     );
 

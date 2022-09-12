@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { LinkProduct, FilterGroup, Sorter } from 'components/molecules';
+import { LinkProduct, FilterGroup, Sorter, ButtonIconText } from 'components/molecules';
 import './list-product.scss';
 
 const ListProduct = function ({ products }) {
@@ -8,11 +8,23 @@ const ListProduct = function ({ products }) {
     const [filteredCollection, setFilteredCollection] = useState(products);
     const [sortedCollection, setSortedCollection] = useState(products);
 
+    const handle = {
+        filterButtonClick: useCallback(() => { })
+    };
+
     return (
 
         <div className="list-product">
 
             <div className="list-product__toolbox">
+
+                <ButtonIconText
+                    className="list-product__filter-sort-button"
+                    leadingIconName="sliders"
+                    label="Filter and sort"
+                    variant="underlineOnHover"
+                    onClick={handle.filterButtonClick}
+                />
 
                 <FilterGroup className="list-product__filters" collection={products} setFilteredCollection={setFilteredCollection} />
 
