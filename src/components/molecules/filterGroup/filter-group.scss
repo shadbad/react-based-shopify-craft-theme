@@ -1,0 +1,25 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.filter-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  margin-right: auto;
+}
+
+.filter-group__title {
+  margin-right: 1.5rem;
+  white-space: nowrap;
+  color: colors.$charcoal200;
+}
+
+.filter-group__item {
+  margin-right: 1.5rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
