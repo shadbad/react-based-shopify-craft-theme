@@ -5,11 +5,9 @@ import { ButtonIconText } from 'components/molecules';
 import { useOutsideClickDetector } from 'hooks';
 import './select-box-multi.scss';
 
-const SelectBoxMulti = React.memo(function ({ className, title, options, onResetClick, onOptionClick }) {
+const SelectBoxMulti = React.memo(function ({ className, title, children, onResetClick }) {
 
     const [isExpanded, setIsExpanded] = useState(false);
-
-    const [selectedOptions, setSelectedOptions] = useState(new Set());
 
     const wrapperRef = useRef();
 
@@ -17,28 +15,13 @@ const SelectBoxMulti = React.memo(function ({ className, title, options, onReset
 
     const handle = {
 
-        buttonClick: useCallback(() => setIsExpanded(() => !isExpanded)),
+        buttonClick: useCallback(() => setIsExpanded(() => !isExpanded))
 
-        resetClick: useCallback(() => {
+    };
 
-            setSelectedOptions(() => new Set());
+    const helpers = {
 
-            if (onResetClick) onResetClick(options.map((item) => item.key));
-
-        }),
-
-        optionClick: useCallback((optionKey) => {
-
-            const clonedSelectedOptions = new Set(selectedOptions);
-
-            if (clonedSelectedOptions.has(optionKey)) clonedSelectedOptions.delete(optionKey);
-            else clonedSelectedOptions.add(optionKey);
-
-            setSelectedOptions(() => clonedSelectedOptions);
-
-            if (onOptionClick) onOptionClick(optionKey);
-
-        })
+        getSelectedOptionsCount: () => children.filter((x) => x.props.selected).length
 
     };
 
@@ -59,13 +42,13 @@ const SelectBoxMulti = React.memo(function ({ className, title, options, onReset
                 <div className="select-box-multi__list-header">
 
                     <span className="select-box-multi__count">
-                        {`${selectedOptions.size} selected`}
+                        {`${helpers.getSelectedOptionsCount()} selected`}
                     </span>
 
                     <Button
                         className="select-box-multi__reset-button"
                         variant="link"
-                        onClick={handle.resetClick}
+                        onClick={onResetClick}
                     >
 
                         Reset
@@ -74,21 +57,7 @@ const SelectBoxMulti = React.memo(function ({ className, title, options, onReset
 
                 </div>
 
-                <div className="select-box-multi__list">
-                    {
-                        options.map((option) => (
-
-                            <ButtonIconText
-                                key={option.key}
-                                className="select-box-multi__list-item"
-                                leadingIconName={selectedOptions.has(option.key) ? 'check-square' : 'square'}
-                                label={option.title}
-                                onClick={() => handle.optionClick(option.key)}
-                            />
-
-                        ))
-                    }
-                </div>
+                <div className="select-box-multi__list">{children}</div>
 
             </div>
 
@@ -102,21 +71,14 @@ SelectBoxMulti.propTypes = {
 
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
-    options: PropTypes.arrayOf(PropTypes.shape({
-
-        key: PropTypes.string,
-        title: PropTypes.string
-
-    })).isRequired,
-    onResetClick: PropTypes.func,
-    onOptionClick: PropTypes.func
+    children: PropTypes.arrayOf(PropTypes.node).isRequired,
+    onResetClick: PropTypes.func
 
 };
 
 SelectBoxMulti.defaultProps = {
     className: '',
-    onResetClick: null,
-    onOptionClick: null
+    onResetClick: null
 };
 
 export { SelectBoxMulti };
