@@ -2,24 +2,36 @@
 @use "/src/assets/styles/typography.scss";
 @use "/src/assets/styles/shared.scss";
 
-.filter-group {
+.filter-group__filters {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
-  margin-right: auto;
 }
 
-.filter-group__title {
+.filter-group__filters-title {
   margin-right: 1.5rem;
   white-space: nowrap;
   color: colors.$charcoal200;
 }
 
-.filter-group__item {
+.filter-group__filters-item {
   margin-right: 1.5rem;
 
   &:last-of-type {
     margin-right: 0;
   }
+}
+
+.filter-group__chips {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filter-group__chips-clear-button {
+  font-size: 0.75rem;
 }
