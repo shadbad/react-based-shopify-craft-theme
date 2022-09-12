@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { SelectBoxMulti, SelectBox, LinkProduct } from 'components/molecules';
+import { SelectBoxMulti, SelectBox, SelectOption, LinkProduct } from 'components/molecules';
 import './list-product.scss';
 
 const ListProduct = function ({ products }) {
@@ -94,6 +94,7 @@ const ListProduct = function ({ products }) {
 
         filters: [
             {
+                key: 'availability',
                 title: 'Availability',
                 items: [
                     {
@@ -112,6 +113,7 @@ const ListProduct = function ({ products }) {
             },
 
             {
+                key: 'product-type',
                 title: 'Product Type',
                 items: [...new Set(products.map((product) => product.tags).flat())]
                     .sort()
@@ -166,15 +168,31 @@ const ListProduct = function ({ products }) {
 
         },
 
-        filterResetClick: (optionKeys) => {
+        filterResetClick: (filterKey) => {
 
             const clonedSelectedFilters = new Set(selectedFilters);
-            optionKeys.forEach((key) => clonedSelectedFilters.delete(key));
+
+            config.filters
+                .find((filter) => filter.key === filterKey)
+                .items
+                .forEach((item) => clonedSelectedFilters.delete(item.key));
+
             setSelectedFilters(() => clonedSelectedFilters);
 
         },
 
         sortOptionClick: (optionKey) => setSelectedSortOption(() => optionKey)
+
+    };
+
+    const helper = {
+
+        getFilterCount: (filterKey) => {
+
+            const filter = config.filters.map((filterGroup) => filterGroup.items).flat().find((f) => f.key === filterKey);
+            return products.filter(filter.filterFunction).length;
+
+        }
 
     };
 
@@ -202,9 +220,22 @@ const ListProduct = function ({ products }) {
                                 className="list-product__filters-item"
                                 title={filter.title}
                                 options={filter.items.map((f) => ({ title: `${f.title} (${f.count})`, key: f.key }))}
-                                onResetClick={handle.filterResetClick}
-                                onOptionClick={handle.filterOptionClick}
-                            />
+                                onResetClick={() => handle.filterResetClick(filter.key)}
+                            >
+                                {
+                                    filter.items.map((f) => (
+                                        <SelectOption
+                                            variant="multi"
+                                            key={f.key}
+                                            keyValue={f.key}
+                                            label={`${f.title} (${helper.getFilterCount(f.key)})`}
+                                            selected={selectedFilters.has(f.key)}
+                                            onClick={handle.filterOptionClick}
+                                        />
+                                    ))
+                                }
+
+                            </SelectBoxMulti>
 
                         ))
                     }
@@ -216,10 +247,25 @@ const ListProduct = function ({ products }) {
                     <span className="list-product__sort-title">Sort by:</span>
 
                     <SelectBox
+                        title={config.sortOptions.find((item) => item.key === selectedSortOption).title}
                         className="list-product__sort-options"
-                        options={config.sortOptions.map((item) => ({ key: item.key, title: item.title }))}
-                        onOptionClick={handle.sortOptionClick}
-                    />
+                    >
+
+                        {
+                            config.sortOptions.map((item) => (
+
+                                <SelectOption
+                                    key={item.key}
+                                    keyValue={item.key}
+                                    label={item.title}
+                                    selected={selectedSortOption === item.key}
+                                    onClick={handle.sortOptionClick}
+                                />
+
+                            ))
+                        }
+
+                    </SelectBox>
 
                 </div>
 
