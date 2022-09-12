@@ -5,7 +5,7 @@ import { LinkArrow } from 'components/molecules';
 import { TextPrice } from 'components/atoms';
 import './search-predictive-result.scss';
 
-const SearchPredictiveResult = function ({ className, query, filteredProducts }) {
+const SearchPredictiveResult = function ({ className, query, filteredProducts, onClick }) {
 
     return (
 
@@ -19,7 +19,7 @@ const SearchPredictiveResult = function ({ className, query, filteredProducts })
 
                         <li key={item.id} className="search-predictive-result__list-item">
 
-                            <Link className="search-predictive-result__list-item-link" to={`/products/${item.slug}`}>
+                            <Link className="search-predictive-result__list-item-link" to={`/products/${item.slug}`} onClick={onClick}>
 
                                 <img
                                     className="search-predictive-result__list-item-image"
@@ -39,7 +39,7 @@ const SearchPredictiveResult = function ({ className, query, filteredProducts })
                 }
             </ul>
 
-            <LinkArrow className="search-predictive-result-search-for-link" href={`/search/${query}`}>
+            <LinkArrow className="search-predictive-result-search-for-link" href={`/search/${query}`} onClick={onClick}>
                 {`Search for "${query}"`}
             </LinkArrow>
 
@@ -60,13 +60,15 @@ SearchPredictiveResult.propTypes = {
         price: PropTypes.number,
         discount: PropTypes.number,
         url: PropTypes.string
-    })).isRequired
+    })).isRequired,
+    onClick: PropTypes.func
 
 };
 
 SearchPredictiveResult.defaultProps = {
 
-    className: ''
+    className: '',
+    onClick: null
 
 };
 

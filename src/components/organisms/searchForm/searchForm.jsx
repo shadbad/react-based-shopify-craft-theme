@@ -40,7 +40,9 @@ const SearchForm = React.memo(function ({ className }) {
 
             dispatch(uiActions.setSearchQuery(target.value));
 
-        })
+        }),
+
+        searchLinkClick: useCallback(() => dispatch(uiActions.setSearchVisibility(false)))
 
     };
 
@@ -64,7 +66,12 @@ const SearchForm = React.memo(function ({ className }) {
                 onClick={handle.submit}
             />
 
-            <SearchPredictiveResult className="search-form__result" query={query} filteredProducts={filteredProducts} />
+            <SearchPredictiveResult
+                className="search-form__result"
+                query={query}
+                filteredProducts={filteredProducts}
+                onClick={handle.searchLinkClick}
+            />
 
         </form>
     );

@@ -1,0 +1,45 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/shared.scss";
+
+.chip {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid colors.$charcoal400;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: colors.$charcoal600;
+  color: colors.$charcoal200;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &:hover {
+    color: colors.$charcoal100;
+    border-color: colors.$charcoal200;
+    path {
+      fill: colors.$charcoal200;
+    }
+  }
+}
+
+.chip__label {
+  white-space: nowrap;
+  margin-right: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+  height: 1rem;
+}
+
+.chip__icon {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  path {
+    fill: colors.$charcoal300;
+    transition: fill 0.3s ease-in-out;
+  }
+}

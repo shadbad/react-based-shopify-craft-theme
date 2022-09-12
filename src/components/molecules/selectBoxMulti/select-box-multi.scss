@@ -63,14 +63,3 @@
 .select-box-multi__list {
   padding: 1rem 1.5rem;
 }
-
-.select-box-multi__list-item {
-  width: 100%;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  outline: none;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
