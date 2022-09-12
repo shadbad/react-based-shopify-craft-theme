@@ -1,0 +1,54 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.select-option--single {
+  text-align: left;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  white-space: nowrap;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    bottom: 0.5rem;
+    width: 0.25rem;
+    background-color: colors.$charcoal500;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transform: scaleY(0);
+    border-top-right-radius: 0.125rem;
+    border-bottom-right-radius: 0.125rem;
+  }
+
+  &.selected {
+    &::after {
+      transform: scaleY(1);
+    }
+
+    &:hover {
+      &::after {
+        background-color: colors.$charcoal600;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: colors.$charcoal500;
+  }
+}
+
+.select-option--multi {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  outline: none;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

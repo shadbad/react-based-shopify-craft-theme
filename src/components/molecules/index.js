@@ -17,3 +17,4 @@ export { SelectBox } from './selectBox/selectBox';
 export { SelectBoxMulti } from './selectBoxMulti/selectBoxMulti';
 export { ListProduct } from './listProduct/listProduct';
 export { Chip } from './chip/chip';
+export { SelectOption } from './selectOption/selectOption';
