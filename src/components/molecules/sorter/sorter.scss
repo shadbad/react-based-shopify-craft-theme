@@ -1,0 +1,19 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.sorter {
+  overflow: visible;
+  display: flex;
+
+  .select-box__list {
+    left: auto;
+    right: 0;
+  }
+}
+
+.sorter__title {
+  margin-right: 1.5rem;
+  white-space: nowrap;
+  color: colors.$charcoal200;
+}
