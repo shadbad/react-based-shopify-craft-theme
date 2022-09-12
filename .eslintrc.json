@@ -35,6 +35,8 @@
     "rules": {
         "import/no-cycle": 0,
         "jsx-a11y/control-has-associated-label": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
         "dot-notation": 0,
         "prefer-arrow-callback": 0,
         "import/prefer-default-export": 0,
