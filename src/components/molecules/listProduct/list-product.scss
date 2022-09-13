@@ -2,62 +2,14 @@
 @use "/src/assets/styles/typography.scss";
 @use "/src/assets/styles/shared.scss";
 
-.list-product__toolbox {
-  margin-bottom: 2rem;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-
-  @media (max-width: 1000px) {
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  }
-
-  .list-product__sort {
-    @media (max-width: 1000px) {
-      display: none;
-    }
-  }
-
-  .filter-group__filters {
-    @media (max-width: 1000px) {
-      display: none;
-    }
-  }
-}
-
-.list-product__filter-sort-button {
-  display: none;
-
-  @media (max-width: 1000px) {
-    display: flex;
-    margin-right: auto;
-  }
-}
-
-.list-product__filters {
-  margin-right: auto;
-
-  @media (max-width: 1000px) {
-    order: 3;
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-.list-product__count {
-  margin-left: 1.5rem;
-  color: colors.$charcoal300;
-}
-
-.list-product__list {
+.list-product {
   display: flex;
   gap: 1.5rem;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
 
-.list-product__list-item-wrapper {
+.list-product__item-wrapper {
   width: calc((100% - 3rem) / 3);
   overflow: hidden;
 

@@ -11,3 +11,41 @@
   color: colors.$charcoal200;
   line-height: 1.62em;
 }
+
+.collection__tools {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.collection__tools__filter-sort-button {
+  display: none;
+}
+
+.collection__tools__filters {
+  margin-right: auto;
+}
+
+.collection__tools__sort {
+  order: 3;
+}
+
+.collection__tools__count {
+  order: 4;
+  margin-left: 1.5rem;
+  color: colors.$charcoal300;
+}
+
+.collection__tools--mobile {
+  @extend .collection__tools;
+  .collection__tools__filter-sort-button {
+    display: flex;
+    margin-right: auto;
+  }
+}
+
+.collection__filter-chips {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
