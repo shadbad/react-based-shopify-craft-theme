@@ -19,7 +19,7 @@ const Collection = function () {
 
     return (
 
-        <CollectionTemplate category={category} products={products} />
+        <CollectionTemplate category={category} products={products} key={category.slug} />
 
     );
 
