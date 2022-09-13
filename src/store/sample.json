@@ -710,6 +710,115 @@
                     "value": "Dishwasher safe. We recommend avoiding loading too much flatware into any one basket, and to use a Rinse Aid to prevent water spots."
                 }
             ]
+        },
+        {
+            "id": "248321f6-d912-421e-bf33-9e08eb063ef1",
+            "categoryId": "7822bf5f-9353-4616-9595-ad4f6575797e",
+            "caption": "FABLE HOME",
+            "title": "Dinnerware Set",
+            "subtitle": "",
+            "tags": [
+                "Bundles"
+            ],
+            "stock": 13,
+            "sales": 7,
+            "date": 1524166200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/ceramic-bundle/ceramic-bundle-01.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-bundle/ceramic-bundle-02.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-bundle/ceramic-bundle-03.webp",
+                "/react-based-shopify-craft-theme/images/products/ceramic-bundle/ceramic-bundle-04.webp"
+            ],
+            "price": 215,
+            "discount": 0.15,
+            "slug": "ceramic-bundle",
+            "content": "<p>From breakfast cereal to an elaborate homemade pasta night, this bundle will help make every meal at home special.</p><p>16 piece set includes Dinner Plates, Salad Plates, Pasta Bowls, and Breakfast Bowls.</p>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Bundle Specs",
+                    "value": "16 piece set includes Dinner Plates, Salad Plates, Pasta Bowls, and Breakfast Bowls."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "65b8b439-8291-435b-b24b-1c483f39f27e",
+            "categoryId": "7822bf5f-9353-4616-9595-ad4f6575797e",
+            "caption": "FABLE HOME",
+            "title": "Dining Essentials",
+            "subtitle": "",
+            "tags": [
+                "Bundles"
+            ],
+            "stock": 2,
+            "sales": 22,
+            "date": 1529436600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-dining-essentials/the-dining-essentials-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dining-essentials/the-dining-essentials-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dining-essentials/the-dining-essentials-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dining-essentials/the-dining-essentials-04.webp"
+            ],
+            "price": 525,
+            "discount": 0.1,
+            "slug": "the-dining-essentials",
+            "content": "<p>Be the host with the most. This bundle includes our favorite essentials. We make dining in style easy with beautiful flatware and high quality hand-finished ceramics.</p><ul><li>16 piece ceramics set of Dinner Plates, Salad Plates, Pasta Bowls, and Breakfast Bowls</li><li>20 piece flatware set made in Portugal with premium 18/10 stainless steel</li><li>8 piece set of durable soda-lime glassware in two sizes, crafted in Japan</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware, 18/10 stainless steel, soda-lime glassware."
+                },
+                {
+                    "key": "Bundle Specs",
+                    "value": "Includes a 16 piece ceramics set, 20 piece flatware set, and 8 piece glassware set."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Ceramics are dishwasher, microwave, and oven safe up to 450ºF. Flatware and glassware are dishwasher safe."
+                }
+            ]
+        },
+        {
+            "id": "b4861c1b-8d94-40fc-89e0-d9a49a80784a",
+            "categoryId": "7822bf5f-9353-4616-9595-ad4f6575797e",
+            "caption": "FABLE HOME",
+            "title": "Serving Set",
+            "subtitle": "",
+            "tags": [
+                "Bundles"
+            ],
+            "stock": 13,
+            "sales": 50,
+            "date": 1537385400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/serving-bundle/serving-bundle-01.webp",
+                "/react-based-shopify-craft-theme/images/products/serving-bundle/serving-bundle-02.webp"
+            ],
+            "price": 118,
+            "discount": 0.05,
+            "slug": "serving-bundle",
+            "content": "<p>Perfect for hosting friends (or just treating yourself) this bundle makes it easy to dine family-style, in style.</p><p>Comes with The Serving Bowl and The Serving Spoons. </p>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware, 18/10 stainless steel."
+                },
+                {
+                    "key": "Bundle Specs",
+                    "value": "Includes The Serving Bowl and The Serving Spoons."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Ceramics are dishwasher, microwave, and oven safe up to 450ºF. Flatware is dishwasher safe."
+                }
+            ]
         }
     ],
     "CONTENT": {
