@@ -225,7 +225,7 @@ const CollectionTemplate = function ({ category, products }) {
                 />
             )}
 
-            <ListProduct products={sortedCollection} key={category.slug} />
+            <ListProduct products={sortedCollection} />
         </>
     );
 
