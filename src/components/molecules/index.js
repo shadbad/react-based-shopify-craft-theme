@@ -20,3 +20,4 @@ export { Chip } from './chip/chip';
 export { SelectOption } from './selectOption/selectOption';
 export { FilterGroup } from './filterGroup/filterGroup';
 export { Sorter } from './sorter/sorter';
+export { FilterChips } from './filterChips/filterChips';

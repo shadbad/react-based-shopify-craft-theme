@@ -1,81 +1,32 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { LinkProduct, FilterGroup, Sorter, ButtonIconText } from 'components/molecules';
+import { LinkProduct } from 'components/molecules';
 import './list-product.scss';
 
 const ListProduct = function ({ products }) {
 
-    const [filteredCollection, setFilteredCollection] = useState(products);
-    const [selectedFilters, setSelectedFilters] = useState(new Set());
-
-    const [sortedCollection, setSortedCollection] = useState(products);
-    const [selectedSortOption, setSelectedSortOption] = useState('sales');
-
-    const handle = {
-        filterButtonClick: useCallback(() => { })
-    };
-
     return (
 
-        <div className="list-product">
+        <ul className="list-product">
+            {
+                products.map((product) => (
 
-            <div className="list-product__toolbox">
+                    <li className="list-product__item-wrapper" key={product.id}>
 
-                <ButtonIconText
-                    className="list-product__filter-sort-button"
-                    leadingIconName="sliders"
-                    label="Filter and sort"
-                    variant="underlineOnHover"
-                    onClick={handle.filterButtonClick}
-                />
+                        <LinkProduct
+                            className="list-product__item"
+                            title={product.title}
+                            price={product.price}
+                            discount={product.discount}
+                            slug={product.slug}
+                            images={product.images}
+                        />
 
-                <FilterGroup
-                    className="list-product__filters"
-                    collection={products}
-                    setFilteredCollection={setFilteredCollection}
-                    selectedFilters={selectedFilters}
-                    setSelectedFilters={setSelectedFilters}
-                />
+                    </li>
 
-                <Sorter
-                    className="list-product__sort"
-                    collection={filteredCollection}
-                    setSortedCollection={setSortedCollection}
-                    selectedSortOption={selectedSortOption}
-                    setSelectedSortOption={setSelectedSortOption}
-                />
-
-                <span className="list-product__count">
-
-                    {filteredCollection.length !== products.length && <span>{`${filteredCollection.length} of `}</span>}
-
-                    <span>{`${products.length} products`}</span>
-
-                </span>
-
-            </div>
-
-            <ul className="list-product__list">
-                {
-                    sortedCollection.map((product) => (
-
-                        <li className="list-product__list-item-wrapper" key={product.id}>
-
-                            <LinkProduct
-                                className="list-product__list-item"
-                                title={product.title}
-                                price={product.price}
-                                discount={product.discount}
-                                slug={product.slug}
-                                images={product.images}
-                            />
-
-                        </li>
-
-                    ))
-                }
-            </ul>
-        </div>
+                ))
+            }
+        </ul>
 
     );
 

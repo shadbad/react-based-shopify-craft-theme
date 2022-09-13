@@ -1,6 +1,9 @@
 @use "/src/assets/styles/colors.scss";
-@use "/src/assets/styles/typography.scss";
-@use "/src/assets/styles/shared.scss";
+
+.filter-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
 
 .filter-group__filters {
   display: flex;
@@ -21,17 +24,4 @@
   &:last-of-type {
     margin-right: 0;
   }
-}
-
-.filter-group__chips {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1rem;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.filter-group__chips-clear-button {
-  font-size: 0.75rem;
 }

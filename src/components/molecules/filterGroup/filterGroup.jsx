@@ -1,51 +1,10 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'components/atoms';
-import { SelectBoxMulti, SelectOption, Chip } from 'components/molecules';
+import { SelectBoxMulti, SelectOption } from 'components/molecules';
 import './filter-group.scss';
 
-const FilterGroup = React.memo(function ({ className, collection, setFilteredCollection, selectedFilters, setSelectedFilters }) {
-
-    const config = {
-
-        filters: [
-            {
-                key: 'availability',
-                title: 'Availability',
-                type: 'multi-select',
-                items: [
-                    {
-                        key: 'inStock',
-                        title: 'In stock',
-                        filterFunction: (item) => item.stock > 0,
-                        count: collection.filter((item) => item.stock > 0).length
-                    },
-                    {
-                        key: 'outOfStock',
-                        title: 'Out of stock',
-                        filterFunction: (item) => item.stock === 0,
-                        count: collection.filter((item) => item.stock === 0).length
-                    }
-                ]
-            },
-
-            {
-                key: 'product-type',
-                title: 'Product Type',
-                type: 'multi-select',
-                items: [...new Set(collection.map((product) => product.tags).flat())]
-                    .sort()
-                    .map((item) => ({
-                        key: item.toLowerCase().replace(' ', '_'),
-                        title: item,
-                        filterFunction: (product) => product.tags.includes(item),
-                        count: collection.filter((product) => product.tags.includes(item)).length
-                    }))
-            }
-
-        ]
-    };
+const FilterGroup = React.memo(function ({ className, collection, config, setFilteredCollection, selectedFilters, setSelectedFilters }) {
 
     const handle = {
 
@@ -64,33 +23,21 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
 
             const clonedSelectedFilters = new Set(selectedFilters);
 
-            config.filters
+            config
                 .find((filter) => filter.key === filterKey)
                 .items
                 .forEach((item) => clonedSelectedFilters.delete(item.key));
 
             setSelectedFilters(() => clonedSelectedFilters);
 
-        }),
-
-        chipClick: useCallback((optionKey) => {
-
-            const clonedSelectedFilters = new Set(selectedFilters);
-
-            if (clonedSelectedFilters.has(optionKey)) clonedSelectedFilters.delete(optionKey);
-
-            setSelectedFilters(() => clonedSelectedFilters);
-
-        }),
-
-        chipClear: useCallback(() => setSelectedFilters(new Set()))
+        })
     };
 
     const helpers = {
 
         applyFilters: useCallback(() => {
 
-            const filters = config.filters
+            const filters = config
                 .map((filterGroup) => filterGroup.items)
                 .flat()
                 .filter((f) => selectedFilters.has(f.key));
@@ -107,13 +54,7 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
 
             return Array.from(filteredProducts);
 
-        }),
-
-        getFilterConfigs: useCallback(() => config
-            .filters
-            .map((filterGroup) => filterGroup.items)
-            .flat()
-            .filter((f) => selectedFilters.has(f.key)))
+        })
     };
 
     useEffect(() => {
@@ -130,7 +71,7 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
                 <span className="filter-group__filters-title">Filter:</span>
 
                 {
-                    config.filters.map((filter) => (
+                    config.map((filter) => (
 
                         <SelectBoxMulti
                             key={filter.title}
@@ -159,29 +100,6 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
 
             </div>
 
-            {
-                selectedFilters.size > 0 && (
-
-                    <div className="filter-group__chips">
-                        {
-                            helpers.getFilterConfigs().map((item) => (
-
-                                <Chip
-                                    key={item.key}
-                                    className="filter-group__chips-item"
-                                    label={item.title}
-                                    onClick={() => handle.chipClick(item.key)}
-                                />
-
-                            ))
-                        }
-
-                        <Button className="filter-group__chips-clear-button" variant="link" onClick={handle.chipClear}>
-                            Clear all
-                        </Button>
-                    </div>
-                )
-            }
         </div>
     );
 
@@ -192,7 +110,18 @@ FilterGroup.propTypes = {
     collection: PropTypes.array.isRequired,
     setFilteredCollection: PropTypes.func.isRequired,
     selectedFilters: PropTypes.instanceOf(Set).isRequired,
-    setSelectedFilters: PropTypes.func.isRequired
+    setSelectedFilters: PropTypes.func.isRequired,
+    config: PropTypes.arrayOf(PropTypes.shape({
+        key: PropTypes.string,
+        title: PropTypes.string,
+        type: PropTypes.string,
+        items: PropTypes.arrayOf(PropTypes.shape({
+            key: PropTypes.string,
+            title: PropTypes.string,
+            filterFunction: PropTypes.func,
+            count: PropTypes.number
+        }))
+    })).isRequired
 };
 
 FilterGroup.defaultProps = {
