@@ -1,13 +1,11 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'components/atoms';
 import { SelectBoxMulti, SelectOption, Chip } from 'components/molecules';
 import './filter-group.scss';
 
-const FilterGroup = React.memo(function ({ className, collection, setFilteredCollection }) {
-
-    const [selectedFilters, setSelectedFilters] = useState(new Set());
+const FilterGroup = React.memo(function ({ className, collection, setFilteredCollection, selectedFilters, setSelectedFilters }) {
 
     const config = {
 
@@ -192,7 +190,9 @@ const FilterGroup = React.memo(function ({ className, collection, setFilteredCol
 FilterGroup.propTypes = {
     className: PropTypes.string,
     collection: PropTypes.array.isRequired,
-    setFilteredCollection: PropTypes.func.isRequired
+    setFilteredCollection: PropTypes.func.isRequired,
+    selectedFilters: PropTypes.instanceOf(Set).isRequired,
+    setSelectedFilters: PropTypes.func.isRequired
 };
 
 FilterGroup.defaultProps = {

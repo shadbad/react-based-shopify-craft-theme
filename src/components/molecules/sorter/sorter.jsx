@@ -1,12 +1,10 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { SelectBox, SelectOption } from 'components/molecules';
 import './sorter.scss';
 
-const Sorter = React.memo(function ({ className, collection, setSortedCollection }) {
-
-    const [selectedSortOption, setSelectedSortOption] = useState('sales');
+const Sorter = React.memo(function ({ className, collection, setSortedCollection, selectedSortOption, setSelectedSortOption }) {
 
     const config = {
         sortOptions: [
@@ -147,7 +145,9 @@ const Sorter = React.memo(function ({ className, collection, setSortedCollection
 Sorter.propTypes = {
     className: PropTypes.string,
     collection: PropTypes.array.isRequired,
-    setSortedCollection: PropTypes.func.isRequired
+    setSortedCollection: PropTypes.func.isRequired,
+    selectedSortOption: PropTypes.string.isRequired,
+    setSelectedSortOption: PropTypes.func.isRequired
 };
 
 Sorter.defaultProps = {

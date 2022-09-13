@@ -6,7 +6,10 @@ import './list-product.scss';
 const ListProduct = function ({ products }) {
 
     const [filteredCollection, setFilteredCollection] = useState(products);
+    const [selectedFilters, setSelectedFilters] = useState(new Set());
+
     const [sortedCollection, setSortedCollection] = useState(products);
+    const [selectedSortOption, setSelectedSortOption] = useState('sales');
 
     const handle = {
         filterButtonClick: useCallback(() => { })
@@ -26,9 +29,21 @@ const ListProduct = function ({ products }) {
                     onClick={handle.filterButtonClick}
                 />
 
-                <FilterGroup className="list-product__filters" collection={products} setFilteredCollection={setFilteredCollection} />
+                <FilterGroup
+                    className="list-product__filters"
+                    collection={products}
+                    setFilteredCollection={setFilteredCollection}
+                    selectedFilters={selectedFilters}
+                    setSelectedFilters={setSelectedFilters}
+                />
 
-                <Sorter className="list-product__sort" collection={filteredCollection} setSortedCollection={setSortedCollection} />
+                <Sorter
+                    className="list-product__sort"
+                    collection={filteredCollection}
+                    setSortedCollection={setSortedCollection}
+                    selectedSortOption={selectedSortOption}
+                    setSelectedSortOption={setSelectedSortOption}
+                />
 
                 <span className="list-product__count">
 
