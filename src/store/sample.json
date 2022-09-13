@@ -420,7 +420,7 @@
             "title": "Serving Spoons",
             "subtitle": "Matte Gold",
             "tags": [
-                "Flatware"
+                "Serving Spoons"
             ],
             "stock": 10,
             "sales": 20,
@@ -456,7 +456,7 @@
             "title": "Serving Spoons",
             "subtitle": "Matte Black",
             "tags": [
-                "Flatware"
+                "Serving Spoons"
             ],
             "stock": 13,
             "sales": 8,
@@ -491,7 +491,7 @@
             "title": "Serving Spoons",
             "subtitle": "Polished Silver",
             "tags": [
-                "Flatware"
+                "Serving Spoons"
             ],
             "stock": 13,
             "sales": 28,
@@ -527,7 +527,7 @@
             "title": "Flatware Set",
             "subtitle": "Matte Gold",
             "tags": [
-                "Flatware"
+                "Flatware Set"
             ],
             "stock": 30,
             "sales": 60,
@@ -566,7 +566,7 @@
             "title": "Flatware Set",
             "subtitle": "Matte Silver",
             "tags": [
-                "Flatware"
+                "Flatware Set"
             ],
             "stock": 13,
             "sales": 50,
@@ -604,7 +604,7 @@
             "title": "Flatware Set",
             "subtitle": "Polished Silver",
             "tags": [
-                "Flatware"
+                "Flatware Set"
             ],
             "stock": 13,
             "sales": 2,
@@ -643,9 +643,9 @@
             "title": "Flatware Set",
             "subtitle": "Matte Black",
             "tags": [
-                "Flatware"
+                "Flatware Set"
             ],
-            "stock": 13,
+            "stock": 0,
             "sales": 14,
             "date": 1466364600000,
             "images": [
@@ -681,7 +681,7 @@
             "title": "Serving Spoons",
             "subtitle": "Gold and White",
             "tags": [
-                "Flatware"
+                "Serving Spoons"
             ],
             "stock": 13,
             "sales": 31,
