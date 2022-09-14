@@ -16,30 +16,28 @@
   margin-bottom: 1.5rem;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
-.collection__tools__filter-sort-button {
+.collection__tools__fs-button {
   display: none;
 }
 
-.collection__tools__filters {
-  margin-right: auto;
-}
-
-.collection__tools__sort {
-  order: 3;
+.collection__tools__fs-wrapper {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .collection__tools__count {
-  order: 4;
   margin-left: 1.5rem;
   color: colors.$charcoal300;
 }
 
 .collection__tools--mobile {
   @extend .collection__tools;
-  .collection__tools__filter-sort-button {
+
+  .collection__tools__fs-button {
     display: flex;
     margin-right: auto;
   }
