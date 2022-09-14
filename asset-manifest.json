@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/react-based-shopify-craft-theme/static/css/main.8f318356.css",
-    "main.js": "/react-based-shopify-craft-theme/static/js/main.dd105443.js",
+    "main.css": "/react-based-shopify-craft-theme/static/css/main.a47ee05f.css",
+    "main.js": "/react-based-shopify-craft-theme/static/js/main.c596d103.js",
     "static/js/634.216fc976.chunk.js": "/react-based-shopify-craft-theme/static/js/634.216fc976.chunk.js",
-    "static/js/881.2395ae69.chunk.js": "/react-based-shopify-craft-theme/static/js/881.2395ae69.chunk.js",
+    "static/js/881.fbfc041e.chunk.js": "/react-based-shopify-craft-theme/static/js/881.fbfc041e.chunk.js",
     "static/js/787.a4266475.chunk.js": "/react-based-shopify-craft-theme/static/js/787.a4266475.chunk.js",
     "static/media/quattrocento-sans-italic.woff": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-italic.cca30a4ecab849faf87e.woff",
     "static/media/quattrocento-sans-boldItalic.woff": "/react-based-shopify-craft-theme/static/media/quattrocento-sans-boldItalic.a1eb4e82d30ce6f82858.woff",
@@ -16,12 +16,12 @@
     "static/media/americana-regular.woff": "/react-based-shopify-craft-theme/static/media/americana-regular.cc666167e51ce8392f62.woff",
     "static/media/americana-regular.woff2": "/react-based-shopify-craft-theme/static/media/americana-regular.9230191c475d3feb9fb0.woff2",
     "index.html": "/react-based-shopify-craft-theme/index.html",
-    "main.8f318356.css.map": "/react-based-shopify-craft-theme/static/css/main.8f318356.css.map",
-    "main.dd105443.js.map": "/react-based-shopify-craft-theme/static/js/main.dd105443.js.map",
+    "main.a47ee05f.css.map": "/react-based-shopify-craft-theme/static/css/main.a47ee05f.css.map",
+    "main.c596d103.js.map": "/react-based-shopify-craft-theme/static/js/main.c596d103.js.map",
     "787.a4266475.chunk.js.map": "/react-based-shopify-craft-theme/static/js/787.a4266475.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f318356.css",
-    "static/js/main.dd105443.js"
+    "static/css/main.a47ee05f.css",
+    "static/js/main.c596d103.js"
   ]
 }
