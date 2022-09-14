@@ -175,36 +175,34 @@ const CollectionTemplate = function ({ category, products }) {
             <div className={`collection__tools${mobileView ? '--mobile' : ''}`}>
 
                 <ButtonIconText
-                    className="collection__tools__filter-sort-button"
+                    className="collection__tools__fs-button"
                     leadingIconName="sliders"
                     label="Filter and sort"
                     variant="underlineOnHover"
                     onClick={handle.filterButtonClick}
                 />
 
-                {
-                    !mobileView && (
-                        <>
-                            <FilterGroup
-                                className="collection__tools__filters"
-                                config={config.filters}
-                                collection={products}
-                                setFilteredCollection={setFilteredCollection}
-                                selectedFilters={selectedFilters}
-                                setSelectedFilters={setSelectedFilters}
-                            />
+                <div className="collection__tools__fs-wrapper">
 
-                            <Sorter
-                                className="collection__tools__sort"
-                                config={config.sortOptions}
-                                collection={filteredCollection}
-                                setSortedCollection={setSortedCollection}
-                                selectedSortOption={selectedSortOption}
-                                setSelectedSortOption={setSelectedSortOption}
-                            />
-                        </>
-                    )
-                }
+                    <FilterGroup
+                        className="collection__tools__fs-wrapper__filters"
+                        config={config.filters}
+                        collection={products}
+                        setFilteredCollection={setFilteredCollection}
+                        selectedFilters={selectedFilters}
+                        setSelectedFilters={setSelectedFilters}
+                    />
+
+                    <Sorter
+                        className="collection__tools__fs-wrapper__sort"
+                        config={config.sortOptions}
+                        collection={filteredCollection}
+                        setSortedCollection={setSortedCollection}
+                        selectedSortOption={selectedSortOption}
+                        setSelectedSortOption={setSelectedSortOption}
+                    />
+
+                </div>
 
                 <span className="collection__tools__count">
 
