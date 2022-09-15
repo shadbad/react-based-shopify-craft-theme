@@ -7,17 +7,45 @@
   gap: 1.5rem;
   flex-flow: row wrap;
   justify-content: flex-start;
+  align-items: stretch;
 }
 
 .list-product__item-wrapper {
-  width: calc((100% - 3rem) / 3);
+  a {
+    height: 100%;
+  }
+}
+
+.list-product__item-wrapper {
+  width: calc((100% - 4.5rem) / 4);
   overflow: hidden;
 
   @media (max-width: 900px) {
+    width: calc((100% - 3rem) / 3);
+  }
+
+  @media (max-width: 750px) {
     width: calc((100% - 1.5rem) / 2);
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 500px) {
     width: 100%;
+  }
+}
+
+.list-product--three-column {
+  @extend .list-product;
+
+  .list-product__item-wrapper {
+    width: calc((100% - 3rem) / 3);
+    overflow: hidden;
+
+    @media (max-width: 750px) {
+      width: calc((100% - 1.5rem) / 2);
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
 }

@@ -7,7 +7,7 @@ const ListProduct = function ({ products }) {
 
     return (
 
-        <ul className="list-product">
+        <ul className={`list-product${products.length > 3 ? '' : '--three-column'}`}>
             {
                 products.map((product) => (
 
