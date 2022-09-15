@@ -6,11 +6,13 @@ const useBodyLocker = function (lock = false) {
 
         if (lock) {
 
-            window.scrollTo({ top: 0 });
+            document.body.setAttribute('data-y', window.scrollY);
             document.body.classList.add('lock');
 
         } else {
 
+            window.scrollTo({ top: document.body.getAttribute('data-y') });
+            document.body.removeAttribute('data-y');
             document.body.classList.remove('lock');
 
         }

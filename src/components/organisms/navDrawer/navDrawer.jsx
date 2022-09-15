@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MenuList } from 'components/molecules';
 import { useSelector, useDispatch } from 'react-redux';
 import { useWindowResizeEffect, useOutsideClickDetector, useBodyLocker } from 'hooks';
@@ -32,6 +32,20 @@ const NavDrawer = React.memo(function () {
     }, []);
 
     useBodyLocker(isMenuDrawerOpen);
+
+    useEffect(() => {
+
+        if (isMenuDrawerOpen) {
+
+            setTimeout(() => {
+
+                window.scrollTo({ top: 0 });
+
+            }, 100);
+
+        }
+
+    }, [isMenuDrawerOpen]);
 
     const handle = {
         itemClick: () => dispatch(uiActions.setMenuDrawerStatus(false))
