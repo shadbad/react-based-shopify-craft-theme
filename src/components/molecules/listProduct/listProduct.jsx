@@ -17,6 +17,7 @@ const ListProduct = function ({ products }) {
                         title={product.title}
                         price={product.price}
                         discount={product.discount}
+                        stock={product.stock}
                         slug={product.slug}
                         images={product.images}
                     />
