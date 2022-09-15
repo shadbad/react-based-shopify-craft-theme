@@ -15,7 +15,7 @@ const Collection = function () {
     if (productSlice.isLoading || categorySlice.isLoading) return <div />; // TODO: add skeleton templates here
 
     const category = Collection.findCategory(categorySlice, slug);
-    const products = Collection.findProducts(productSlice, category.id);
+    const products = Collection.findProducts(productSlice, category);
 
     return (
 
@@ -26,6 +26,8 @@ const Collection = function () {
 };
 
 Collection.findCategory = function (categorySlice, categorySlug) {
+
+    if (categorySlug.toLowerCase() === 'all') return { id: 'root', title: 'Products', url: '/collections/all' };
 
     const flatList = categorySlice.list.flatMap((item) => {
 
@@ -39,9 +41,19 @@ Collection.findCategory = function (categorySlice, categorySlug) {
 
 };
 
-Collection.findProducts = function (productSlice, categoryId) {
+Collection.findProducts = function (productSlice, category) {
 
-    return productSlice.list.filter((item) => item.categoryId === categoryId);
+    if (category.id === 'root') return Array.from(productSlice.list);
+
+    if (category.subs && category.subs.length > 0) {
+
+        const categoryIds = category.subs.map((sub) => sub.id);
+
+        return productSlice.list.filter((item) => categoryIds.includes(item.categoryId));
+
+    }
+
+    return productSlice.list.filter((item) => item.categoryId === category.id);
 
 };
 
