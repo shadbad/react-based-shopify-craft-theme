@@ -1,32 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LinkProduct } from 'components/molecules';
+import { LinkProduct, Paginator } from 'components/molecules';
 import './list-product.scss';
 
 const ListProduct = function ({ products }) {
 
     return (
 
-        <ul className={`list-product${products.length > 3 ? '' : '--three-column'}`}>
+        <Paginator className={`list-product${products.length > 3 ? '' : '--three-column'}`} size={12}>
             {
                 products.map((product) => (
 
-                    <li className="list-product__item-wrapper" key={product.id}>
-
-                        <LinkProduct
-                            className="list-product__item"
-                            title={product.title}
-                            price={product.price}
-                            discount={product.discount}
-                            slug={product.slug}
-                            images={product.images}
-                        />
-
-                    </li>
+                    <LinkProduct
+                        key={product.id}
+                        className="list-product__item"
+                        title={product.title}
+                        price={product.price}
+                        discount={product.discount}
+                        slug={product.slug}
+                        images={product.images}
+                    />
 
                 ))
             }
-        </ul>
+        </Paginator>
 
     );
 
