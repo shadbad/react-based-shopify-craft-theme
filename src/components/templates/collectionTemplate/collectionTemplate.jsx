@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
+import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading } from 'components/atoms';
 import { ListProduct, FilterGroup, Sorter, ButtonIconText, FilterChips, ButtonIcon } from 'components/molecules';
 import { useOutsideClickDetector, useJumpToTop } from 'hooks';
@@ -247,7 +248,7 @@ const CollectionTemplate = function ({ category, products }) {
                 />
             )}
 
-            <ListProduct products={sortedCollection} />
+            <ListProduct products={sortedCollection} key={nanoid()} />
         </>
     );
 
