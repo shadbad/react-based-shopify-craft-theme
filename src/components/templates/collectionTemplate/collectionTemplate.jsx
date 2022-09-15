@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useWindowResizeEffect } from 'hooks';
 import { TextHeading } from 'components/atoms';
-import { ListProduct, FilterGroup, Sorter, ButtonIconText, FilterChips } from 'components/molecules';
+import { ListProduct, FilterGroup, Sorter, ButtonIconText, FilterChips, ButtonIcon } from 'components/molecules';
+import { useOutsideClickDetector } from 'hooks';
 import './collection-template.scss';
 
 const CollectionTemplate = function ({ category, products }) {
@@ -13,9 +13,7 @@ const CollectionTemplate = function ({ category, products }) {
     const [sortedCollection, setSortedCollection] = useState(products);
     const [selectedSortOption, setSelectedSortOption] = useState('sales');
 
-    const [mobileView, setMobileView] = useState(false);
-
-    useWindowResizeEffect(() => setMobileView(parseFloat(window.innerWidth) <= 900));
+    const [isFilterSortMenuExpanded, setIsFilterSortMenuExpanded] = useState(false);
 
     const config = {
 
@@ -138,7 +136,11 @@ const CollectionTemplate = function ({ category, products }) {
     };
 
     const handle = {
-        filterButtonClick: useCallback(() => { }),
+        filterButtonClick: useCallback(() => {
+
+            setIsFilterSortMenuExpanded(() => !isFilterSortMenuExpanded);
+
+        }),
 
         chipClick: useCallback((optionKey) => {
 
@@ -163,6 +165,8 @@ const CollectionTemplate = function ({ category, products }) {
 
     };
 
+    useOutsideClickDetector('.collection__tools__fs-button, .collection__tools__fs-wrapper', () => setIsFilterSortMenuExpanded(false));
+
     return (
         <>
             <div className="collection__header">
@@ -172,7 +176,7 @@ const CollectionTemplate = function ({ category, products }) {
                 <p className="collection__description">{category.description}</p>
             </div>
 
-            <div className={`collection__tools${mobileView ? '--mobile' : ''}`}>
+            <div className={`collection__tools ${isFilterSortMenuExpanded ? 'expand-fs' : ''}`}>
 
                 <ButtonIconText
                     className="collection__tools__fs-button"
@@ -183,6 +187,24 @@ const CollectionTemplate = function ({ category, products }) {
                 />
 
                 <div className="collection__tools__fs-wrapper">
+
+                    <div className="collection__tools__fs-header">
+                        <hgroup>
+                            <h3>Filters and sort</h3>
+                            <h4>
+                                {filteredCollection.length !== products.length && <span>{`${filteredCollection.length} of `}</span>}
+
+                                <span>{`${products.length} products`}</span>
+                            </h4>
+                        </hgroup>
+
+                        <ButtonIcon
+                            className="collection__tools__fs-close-button"
+                            iconName="cross"
+                            variant="expandOnHover"
+                            onClick={handle.filterButtonClick}
+                        />
+                    </div>
 
                     <FilterGroup
                         className="collection__tools__fs-wrapper__filters"
