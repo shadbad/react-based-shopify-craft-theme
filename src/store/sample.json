@@ -844,7 +844,7 @@
             "price": 49,
             "discount": 0,
             "slug": "the-cereal-bowls",
-            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don’t be fooled by this bowl’s size. It is perfect for breakfasts to dinner, salads to soups, yogurt to ice cream!</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't be fooled by this bowl's size. It is perfect for breakfasts to dinner, salads to soups, yogurt to ice cream!</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
             "spec": [
                 {
                     "key": "Materials",
@@ -1109,6 +1109,1244 @@
                 "/react-based-shopify-craft-theme/images/products/the-serving-platter/the-serving-platter-03.webp"
             ],
             "price": 59,
+            "discount": 0,
+            "slug": "the-serving-platter",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>One plate. A million possibilities. Use the Serving Platter for charcuterie, a family-style meal, or breakfast in bed.</p><ul><li>Each Serving Platter is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "737f20d6-8611-4aa1-b309-4efe426b1c62",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Cereal Bowls",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 43,
+            "sales": 55,
+            "date": 1604694600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-beachgrass-green/the-cereal-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-beachgrass-green/the-cereal-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-beachgrass-green/the-cereal-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-beachgrass-green/the-cereal-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-beachgrass-green/the-cereal-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-beachgrass-green/the-cereal-bowls-06.webp"
+            ],
+            "price": 55,
+            "discount": 0,
+            "slug": "the-cereal-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't be fooled by this bowl's size. It is perfect for breakfasts to dinner, salads to soups, yogurt to ice cream!</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "6 in. diameter, 2 in. height, 1.2 lb. each. Holds 16 oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "5f674f46-870d-4d5c-9c1a-7b1deb73e8e0",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Dinner Plates",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 23,
+            "sales": 44,
+            "date": 1604781000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-beachgrass-green/the-dinner-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-beachgrass-green/the-dinner-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-beachgrass-green/the-dinner-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-beachgrass-green/the-dinner-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-beachgrass-green/the-dinner-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-beachgrass-green/the-dinner-plates-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-dinner-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Simple and elegant - our dinner plate can be dressed up or dressed down for every occasion.</p><ul><li>Each plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "10 3/4 in. diameter, 3/4 in. height, 1.6 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "fae16831-7627-4c36-b322-bd4d4f9fbf1c",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Everything Bowls",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 4,
+            "sales": 87,
+            "date": 1604867400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-beachgrass-green/the-everything-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-beachgrass-green/the-everything-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-beachgrass-green/the-everything-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-beachgrass-green/the-everything-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-beachgrass-green/the-everything-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-beachgrass-green/the-everything-bowls-06.webp"
+            ],
+            "price": 45,
+            "discount": 0,
+            "slug": "the-everything-bowls",
+            "content": "<p>Fill this handy little bowl with your favorite snack, or line a few up on the counter to hold diced ingredients as you cook. The Everything Bowl is here for you, whenever you need it.</p><ul><li>Each Everything Bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3.4 in. diameter, 1.4 in. height, 0.23 lbs each. Holds 2.7 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "bcb9ab5e-695c-40b5-a0d5-9f2c6c120b2f",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Mugs",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 43,
+            "sales": 12,
+            "date": 1604953800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-mugs-beachgrass-green/the-mugs-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-beachgrass-green/the-mugs-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-beachgrass-green/the-mugs-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-beachgrass-green/the-mugs-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-beachgrass-green/the-mugs-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-beachgrass-green/the-mugs-06.webp"
+            ],
+            "price": 75,
+            "discount": 0,
+            "slug": "the-mugs",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Find a moment of comfort with our naturally stylish mugs.</p><ul><li>Each mug is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "4 in. diameter, 3 1/2 in. height. Holds 16oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "2ac776f4-6f4b-4b59-bba3-ec52b2a39b6b",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Pasta Bowls",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 44,
+            "sales": 34,
+            "date": 1605040200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-beachgrass-green/the-pasta-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-beachgrass-green/the-pasta-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-beachgrass-green/the-pasta-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-beachgrass-green/the-pasta-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-beachgrass-green/the-pasta-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-beachgrass-green/the-pasta-bowls-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-pasta-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't let the “pasta” throw you off, this bowl is perfect for any occasion. From pasta with friends to bowls of ramen, or a quick weeknight meal of your favorite takeout.</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 1/2 in. diameter, 2 1/4 in. height, 1.7 lb. each. Holds 26 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "82368835-cb3c-427b-9016-e66e56d71dda",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Salad Plates",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 54,
+            "sales": 33,
+            "date": 1605126600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-beachgrass-green/the-salad-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-beachgrass-green/the-salad-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-beachgrass-green/the-salad-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-beachgrass-green/the-salad-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-beachgrass-green/the-salad-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-beachgrass-green/the-salad-plates-06.webp"
+            ],
+            "price": 55,
+            "discount": 0,
+            "slug": "the-salad-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>The smaller version of dinner plates, but just as elegant. It's ideal for a side salad or a high-risk game of frisbee.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 3/4 in. diameter, 3/4 in. height, 1.2 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "052a964d-373d-47c0-be5a-42248a56f2bc",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Serving Bowl",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 4,
+            "sales": 54,
+            "date": 1605213000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-beachgrass-green/the-serving-bowl-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-beachgrass-green/the-serving-bowl-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-beachgrass-green/the-serving-bowl-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-beachgrass-green/the-serving-bowl-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-beachgrass-green/the-serving-bowl-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-beachgrass-green/the-serving-bowl-06.webp"
+            ],
+            "price": 55,
+            "discount": 0,
+            "slug": "the-serving-bowl",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Our low-profile serving bowl plays for keeps. It's equally suited for hosting a special occasion and holding popcorn for a late-night snack.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "879b60e5-3c34-436e-b275-6366fa86e565",
+            "categoryId": "b70ba352-d62f-46a9-907a-ba6e4401aa73",
+            "caption": "",
+            "title": "The Serving Platter",
+            "subtitle": "Beachgrass Green",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 0,
+            "sales": 150,
+            "date": 1605299400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-beachgrass-green/the-serving-platter-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-beachgrass-green/the-serving-platter-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-beachgrass-green/the-serving-platter-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-beachgrass-green/the-serving-platter-04.webp"
+            ],
+            "price": 65,
+            "discount": 0,
+            "slug": "the-serving-platter",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>One plate. A million possibilities. Use the Serving Platter for charcuterie, a family-style meal, or breakfast in bed.</p><ul><li>Each Serving Platter is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "d7773541-f83c-41ec-bc92-773fd64ff54d",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Cereal Bowls",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 0,
+            "sales": 34,
+            "date": 1594495800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-blush-pink/the-cereal-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-blush-pink/the-cereal-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-blush-pink/the-cereal-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-blush-pink/the-cereal-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-blush-pink/the-cereal-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-blush-pink/the-cereal-bowls-06.webp"
+            ],
+            "price": 49,
+            "discount": 0,
+            "slug": "the-cereal-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't be fooled by this bowl's size. It is perfect for breakfasts to dinner, salads to soups, yogurt to ice cream!</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "6 in. diameter, 2 in. height, 1.2 lb. each. Holds 16 oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "2750d0ff-677a-4c00-a416-a12f022ad989",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Dinner Plates",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 44,
+            "sales": 32,
+            "date": 1594582200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-blush-pink/the-dinner-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-blush-pink/the-dinner-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-blush-pink/the-dinner-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-blush-pink/the-dinner-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-blush-pink/the-dinner-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-blush-pink/the-dinner-plates-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-dinner-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Simple and elegant - our dinner plate can be dressed up or dressed down for every occasion.</p><ul><li>Each plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "10 3/4 in. diameter, 3/4 in. height, 1.6 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "9743150b-5cdd-47fb-9523-c819ad6d907f",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Everything Bowls",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 3,
+            "sales": 12,
+            "date": 1604176200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-blush-pink/the-everything-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-blush-pink/the-everything-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-blush-pink/the-everything-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-blush-pink/the-everything-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-blush-pink/the-everything-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-blush-pink/the-everything-bowls-06.webp"
+            ],
+            "price": 39,
+            "discount": 0,
+            "slug": "the-everything-bowls",
+            "content": "<p>Fill this handy little bowl with your favorite snack, or line a few up on the counter to hold diced ingredients as you cook. The Everything Bowl is here for you, whenever you need it.</p><ul><li>Each Everything Bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3.4 in. diameter, 1.4 in. height, 0.23 lbs each. Holds 2.7 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "a0ec7214-cb96-44e3-abfc-81eedadbb7fb",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Mugs",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 43,
+            "sales": 34,
+            "date": 1604262600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-mugs-blush-pink/the-mugs-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-blush-pink/the-mugs-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-blush-pink/the-mugs-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-blush-pink/the-mugs-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-blush-pink/the-mugs-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-blush-pink/the-mugs-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-mugs",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Find a moment of comfort with our naturally stylish mugs.</p><ul><li>Each mug is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "4 in. diameter, 3 1/2 in. height. Holds 16oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "bb3d1724-5169-47c0-8e5b-a9b4e786460d",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Pasta Bowls",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 65,
+            "sales": 54,
+            "date": 1604349000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-blush-pink/the-pasta-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-blush-pink/the-pasta-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-blush-pink/the-pasta-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-blush-pink/the-pasta-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-blush-pink/the-pasta-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-blush-pink/the-pasta-bowls-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-pasta-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't let the “pasta” throw you off, this bowl is perfect for any occasion. From pasta with friends to bowls of ramen, or a quick weeknight meal of your favorite takeout.</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 1/2 in. diameter, 2 1/4 in. height, 1.7 lb. each. Holds 26 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "d684a617-2703-4c26-be91-6906b7c06999",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Salad Plates",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 4,
+            "sales": 65,
+            "date": 1604435400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-blush-pink/the-salad-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-blush-pink/the-salad-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-blush-pink/the-salad-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-blush-pink/the-salad-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-blush-pink/the-salad-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-blush-pink/the-salad-plates-06.webp"
+            ],
+            "price": 49,
+            "discount": 0,
+            "slug": "the-salad-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>The smaller version of dinner plates, but just as elegant. It's ideal for a side salad or a high-risk game of frisbee.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 3/4 in. diameter, 3/4 in. height, 1.2 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "e7204a67-099d-4ba0-bea1-d56abef81383",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Serving Bowl",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 45,
+            "sales": 65,
+            "date": 1604521800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-blush-pink/the-serving-bowl-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-blush-pink/the-serving-bowl-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-blush-pink/the-serving-bowl-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-blush-pink/the-serving-bowl-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-blush-pink/the-serving-bowl-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-blush-pink/the-serving-bowl-06.webp"
+            ],
+            "price": 49,
+            "discount": 0,
+            "slug": "the-serving-bowl",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Our low-profile serving bowl plays for keeps. It's equally suited for hosting a special occasion and holding popcorn for a late-night snack.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "50d92b5f-91b9-487a-a507-ca54d5bc9c6f",
+            "categoryId": "67a31cef-9d7b-47f5-bcb2-53c607d2476b",
+            "caption": "",
+            "title": "The Serving Platter",
+            "subtitle": "Blush Pink",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 65,
+            "sales": 65,
+            "date": 1604608200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-blush-pink/the-serving-platter-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-blush-pink/the-serving-platter-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-blush-pink/the-serving-platter-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-blush-pink/the-serving-platter-04.webp"
+            ],
+            "price": 59,
+            "discount": 0,
+            "slug": "the-serving-platter",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>One plate. A million possibilities. Use the Serving Platter for charcuterie, a family-style meal, or breakfast in bed.</p><ul><li>Each Serving Platter is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "4e536946-e621-44cd-8de6-24ebffca556c",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Cereal Bowls",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 12,
+            "sales": 43,
+            "date": 1582144200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-dove-gray/the-cereal-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-dove-gray/the-cereal-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-dove-gray/the-cereal-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-dove-gray/the-cereal-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-dove-gray/the-cereal-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-dove-gray/the-cereal-bowls-06.webp"
+            ],
+            "price": 49,
+            "discount": 0,
+            "slug": "the-cereal-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't be fooled by this bowl's size. It is perfect for breakfasts to dinner, salads to soups, yogurt to ice cream!</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "6 in. diameter, 2 in. height, 1.2 lb. each. Holds 16 oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "08b1333a-a17d-48cf-8970-5f1b71655214",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Dinner Plates",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 23,
+            "sales": 54,
+            "date": 1584649800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-dove-gray/the-dinner-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-dove-gray/the-dinner-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-dove-gray/the-dinner-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-dove-gray/the-dinner-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-dove-gray/the-dinner-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-dove-gray/the-dinner-plates-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-dinner-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Simple and elegant - our dinner plate can be dressed up or dressed down for every occasion.</p><ul><li>Each plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "10 3/4 in. diameter, 3/4 in. height, 1.6 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "67d5ec87-4abf-409a-8728-1de3feccaa46",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Everything Bowls",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 5,
+            "sales": 65,
+            "date": 1587324600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-dove-gray/the-everything-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-dove-gray/the-everything-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-dove-gray/the-everything-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-dove-gray/the-everything-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-dove-gray/the-everything-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-dove-gray/the-everything-bowls-06.webp"
+            ],
+            "price": 39,
+            "discount": 0,
+            "slug": "the-everything-bowls",
+            "content": "<p>Fill this handy little bowl with your favorite snack, or line a few up on the counter to hold diced ingredients as you cook. The Everything Bowl is here for you, whenever you need it.</p><ul><li>Each Everything Bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3.4 in. diameter, 1.4 in. height, 0.23 lbs each. Holds 2.7 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "494101e9-0fd2-4eb9-afa6-56a03631978f",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Mugs",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 2,
+            "sales": 43,
+            "date": 1550521800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-mugs-dove-gray/the-mugs-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-dove-gray/the-mugs-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-dove-gray/the-mugs-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-dove-gray/the-mugs-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-dove-gray/the-mugs-05.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-mugs",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Find a moment of comfort with our naturally stylish mugs.</p><ul><li>Each mug is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "4 in. diameter, 3 1/2 in. height. Holds 16oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "27260ef7-134e-4f06-af26-51d5ab211d99",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Pasta Bowls",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 4,
+            "sales": 54,
+            "date": 1589916600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-dove-gray/the-pasta-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-dove-gray/the-pasta-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-dove-gray/the-pasta-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-dove-gray/the-pasta-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-dove-gray/the-pasta-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-dove-gray/the-pasta-bowls-06.webp"
+            ],
+            "price": 69,
+            "discount": 0,
+            "slug": "the-pasta-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't let the “pasta” throw you off, this bowl is perfect for any occasion. From pasta with friends to bowls of ramen, or a quick weeknight meal of your favorite takeout.</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 1/2 in. diameter, 2 1/4 in. height, 1.7 lb. each. Holds 26 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "a2b7c55d-3ea7-41e4-8d13-072163c8cd43",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Salad Plates",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 2,
+            "sales": 43,
+            "date": 1592595000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-dove-gray/the-salad-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-dove-gray/the-salad-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-dove-gray/the-salad-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-dove-gray/the-salad-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-dove-gray/the-salad-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-dove-gray/the-salad-plates-06.webp"
+            ],
+            "price": 49,
+            "discount": 0,
+            "slug": "the-salad-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>The smaller version of dinner plates, but just as elegant. It's ideal for a side salad or a high-risk game of frisbee.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 3/4 in. diameter, 3/4 in. height, 1.2 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "9748ade7-708a-46ad-b205-53bb4ef3cc2a",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Serving Bowl",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 22,
+            "sales": 43,
+            "date": 1594323000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-dove-gray/the-serving-bowl-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-dove-gray/the-serving-bowl-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-dove-gray/the-serving-bowl-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-dove-gray/the-serving-bowl-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-dove-gray/the-serving-bowl-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-dove-gray/the-serving-bowl-06.webp"
+            ],
+            "price": 49,
+            "discount": 0,
+            "slug": "the-serving-bowl",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Our low-profile serving bowl plays for keeps. It's equally suited for hosting a special occasion and holding popcorn for a late-night snack.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "44a22bbb-4450-4c91-a5f0-3366b390c7d8",
+            "categoryId": "e5ad227c-85e5-43b8-a0a9-749b461075f1",
+            "caption": "",
+            "title": "The Serving Platter",
+            "subtitle": "Dove Gray",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 3,
+            "sales": 44,
+            "date": 1594409400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-dove-gray/the-serving-platter-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-dove-gray/the-serving-platter-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-dove-gray/the-serving-platter-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-dove-gray/the-serving-platter-04.webp"
+            ],
+            "price": 59,
+            "discount": 0,
+            "slug": "the-serving-platter",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>One plate. A million possibilities. Use the Serving Platter for charcuterie, a family-style meal, or breakfast in bed.</p><ul><li>Each Serving Platter is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "77f827d4-6100-46aa-bbd3-8456265c18dd",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Cereal Bowls",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 44,
+            "sales": 65,
+            "date": 1605385800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-midnight-blue/the-cereal-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-midnight-blue/the-cereal-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-midnight-blue/the-cereal-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-midnight-blue/the-cereal-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-midnight-blue/the-cereal-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-cereal-bowls-midnight-blue/the-cereal-bowls-06.webp"
+            ],
+            "price": 55,
+            "discount": 0,
+            "slug": "the-cereal-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't be fooled by this bowl's size. It is perfect for breakfasts to dinner, salads to soups, yogurt to ice cream!</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "6 in. diameter, 2 in. height, 1.2 lb. each. Holds 16 oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "eb67c9b5-79bc-4268-9fca-0a5b72a63cfd",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Dinner Plates",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 3,
+            "sales": 54,
+            "date": 1605472200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-midnight-blue/the-dinner-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-midnight-blue/the-dinner-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-midnight-blue/the-dinner-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-midnight-blue/the-dinner-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-midnight-blue/the-dinner-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-dinner-plates-midnight-blue/the-dinner-plates-06.webp"
+            ],
+            "price": 75,
+            "discount": 0,
+            "slug": "the-dinner-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Simple and elegant - our dinner plate can be dressed up or dressed down for every occasion.</p><ul><li>Each plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "10 3/4 in. diameter, 3/4 in. height, 1.6 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "7ebf795f-8c81-42f2-95a8-79703849d57d",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Everything Bowls",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 4,
+            "sales": 65,
+            "date": 1605558600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-midnight-blue/the-everything-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-midnight-blue/the-everything-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-midnight-blue/the-everything-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-midnight-blue/the-everything-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-midnight-blue/the-everything-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-everything-bowls-midnight-blue/the-everything-bowls-06.webp"
+            ],
+            "price": 45,
+            "discount": 0,
+            "slug": "the-everything-bowls",
+            "content": "<p>Fill this handy little bowl with your favorite snack, or line a few up on the counter to hold diced ingredients as you cook. The Everything Bowl is here for you, whenever you need it.</p><ul><li>Each Everything Bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "3.4 in. diameter, 1.4 in. height, 0.23 lbs each. Holds 2.7 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "efc4af73-332a-4b1f-94d6-8ea692556630",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Mugs",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 44,
+            "sales": 65,
+            "date": 1605731400000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-mugs-midnight-blue/the-mugs-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-midnight-blue/the-mugs-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-midnight-blue/the-mugs-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-midnight-blue/the-mugs-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-mugs-midnight-blue/the-mugs-05.webp"
+            ],
+            "price": 75,
+            "discount": 0,
+            "slug": "the-mugs",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Find a moment of comfort with our naturally stylish mugs.</p><ul><li>Each mug is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "4 in. diameter, 3 1/2 in. height. Holds 16oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "2d1436c9-e2f9-4f07-839b-b7e998105c5e",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Pasta Bowls",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 43,
+            "sales": 65,
+            "date": 1605817800000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-midnight-blue/the-pasta-bowls-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-midnight-blue/the-pasta-bowls-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-midnight-blue/the-pasta-bowls-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-midnight-blue/the-pasta-bowls-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-midnight-blue/the-pasta-bowls-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-pasta-bowls-midnight-blue/the-pasta-bowls-06.webp"
+            ],
+            "price": 75,
+            "discount": 0,
+            "slug": "the-pasta-bowls",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Don't let the “pasta” throw you off, this bowl is perfect for any occasion. From pasta with friends to bowls of ramen, or a quick weeknight meal of your favorite takeout.</p><ul><li>Each bowl is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 1/2 in. diameter, 2 1/4 in. height, 1.7 lb. each. Holds 26 fl oz."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "e84a199a-4995-4fdf-91e4-b764e583c8c2",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Salad Plates",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 23,
+            "sales": 43,
+            "date": 1605904200000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-midnight-blue/the-salad-plates-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-midnight-blue/the-salad-plates-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-midnight-blue/the-salad-plates-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-midnight-blue/the-salad-plates-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-midnight-blue/the-salad-plates-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-salad-plates-midnight-blue/the-salad-plates-06.webp"
+            ],
+            "price": 55,
+            "discount": 0,
+            "slug": "the-salad-plates",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>The smaller version of dinner plates, but just as elegant. It's ideal for a side salad or a high-risk game of frisbee.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Flat with a low rim, it's easily stackable</li><li>Hand-finished in Portugal</li><li>Comes in a set of 4</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "8 3/4 in. diameter, 3/4 in. height, 1.2 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "fb8ce77d-4e93-4a7e-9d7c-2b25be8274a2",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Serving Bowl",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 23,
+            "sales": 43,
+            "date": 1605990600000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-midnight-blue/the-serving-bowl-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-midnight-blue/the-serving-bowl-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-midnight-blue/the-serving-bowl-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-midnight-blue/the-serving-bowl-04.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-midnight-blue/the-serving-bowl-05.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-bowl-midnight-blue/the-serving-bowl-06.webp"
+            ],
+            "price": 55,
+            "discount": 0,
+            "slug": "the-serving-bowl",
+            "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>Our low-profile serving bowl plays for keeps. It's equally suited for hosting a special occasion and holding popcorn for a late-night snack.</p><ul><li>Each plate plate is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
+            "spec": [
+                {
+                    "key": "Materials",
+                    "value": "Artisan crafted stoneware. Local Portuguese clay. Lead-free semi-matte glaze. Designed in Vancouver, crafted in Portugal."
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "9 1/4 in. diameter, 3 in. height, 3 lb. each."
+                },
+                {
+                    "key": "Care information",
+                    "value": "Dishwasher, microwave, and oven safe up to 450ºF."
+                }
+            ]
+        },
+        {
+            "id": "f0e9e7ed-8f02-48f5-becb-46f7fc1a7256",
+            "categoryId": "c27f0e2e-c155-4f36-90c0-9be396bcb76b",
+            "caption": "",
+            "title": "The Serving Platter",
+            "subtitle": "Midnight Blue",
+            "tags": [
+                "Dinnerware"
+            ],
+            "stock": 23,
+            "sales": 43,
+            "date": 1606077000000,
+            "images": [
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-midnight-blue/the-serving-platter-01.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-midnight-blue/the-serving-platter-02.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-midnight-blue/the-serving-platter-03.webp",
+                "/react-based-shopify-craft-theme/images/products/the-serving-platter-midnight-blue/the-serving-platter-04.webp"
+            ],
+            "price": 65,
             "discount": 0,
             "slug": "the-serving-platter",
             "content": "<p>This is a demonstration store. You can purchase products like this from Fable.</p><p>One plate. A million possibilities. Use the Serving Platter for charcuterie, a family-style meal, or breakfast in bed.</p><ul><li>Each Serving Platter is organically shaped and one-of-a-kind</li><li>Hand-finished in Portugal</li></ul>",
