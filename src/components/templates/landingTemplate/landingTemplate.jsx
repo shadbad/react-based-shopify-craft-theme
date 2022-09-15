@@ -2,9 +2,12 @@ import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading } from 'components/atoms';
 import { Video, Carousel, CardQuote, Collage, LinkImage, CardInfo, CardPost } from 'components/molecules';
+import { useJumpToTop } from 'hooks';
 import './landing-template.scss';
 
 const LandingTemplate = function ({ content, posts }) {
+
+    useJumpToTop();
 
     return (
 

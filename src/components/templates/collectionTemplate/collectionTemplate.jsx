@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import { TextHeading } from 'components/atoms';
 import { ListProduct, FilterGroup, Sorter, ButtonIconText, FilterChips, ButtonIcon } from 'components/molecules';
-import { useOutsideClickDetector } from 'hooks';
+import { useOutsideClickDetector, useJumpToTop } from 'hooks';
 import './collection-template.scss';
 
 const CollectionTemplate = function ({ category, products }) {
@@ -167,13 +167,15 @@ const CollectionTemplate = function ({ category, products }) {
 
     useOutsideClickDetector('.collection__tools__fs-button, .collection__tools__fs-wrapper', () => setIsFilterSortMenuExpanded(false));
 
+    useJumpToTop();
+
     return (
         <>
             <div className="collection__header">
 
                 <TextHeading className="collection__title" type={1}>{category.title}</TextHeading>
 
-                <p className="collection__description">{category.description}</p>
+                {category.description && <p className="collection__description">{category.description}</p>}
             </div>
 
             <div className={`collection__tools ${isFilterSortMenuExpanded ? 'expand-fs' : ''}`}>
