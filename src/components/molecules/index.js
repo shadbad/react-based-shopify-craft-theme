@@ -22,3 +22,4 @@ export { FilterGroup } from './filterGroup/filterGroup';
 export { Sorter } from './sorter/sorter';
 export { FilterChips } from './filterChips/filterChips';
 export { Accordion } from './accordion/accordion';
+export { Paginator } from './paginator/paginator';
