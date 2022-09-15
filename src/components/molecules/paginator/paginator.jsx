@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { Button } from 'components/atoms';
@@ -33,13 +33,13 @@ const Paginator = function ({ className, size, children }) {
 
     };
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const elementSpec = wrapper.current.getBoundingClientRect();
+    //     const elementSpec = wrapper.current.getBoundingClientRect();
 
-        if (elementSpec.y < 0) wrapper.current.scrollIntoView({ behavior: 'smooth' });
+    //     if (elementSpec.y < 0) wrapper.current.scrollIntoView({ behavior: 'smooth' });
 
-    }, [currentPage]);
+    // }, [currentPage]);
 
     return (
 
