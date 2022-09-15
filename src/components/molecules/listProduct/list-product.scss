@@ -3,20 +3,16 @@
 @use "/src/assets/styles/shared.scss";
 
 .list-product {
-  display: flex;
-  gap: 1.5rem;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
-.list-product__item-wrapper {
-  a {
-    height: 100%;
+  .paginator__wrapper {
+    display: flex;
+    gap: 1.5rem;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
   }
 }
 
-.list-product__item-wrapper {
+.list-product__item {
   width: calc((100% - 4.5rem) / 4);
   overflow: hidden;
 
@@ -36,7 +32,7 @@
 .list-product--three-column {
   @extend .list-product;
 
-  .list-product__item-wrapper {
+  .list-product__item {
     width: calc((100% - 3rem) / 3);
     overflow: hidden;
 
