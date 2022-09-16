@@ -1,0 +1,138 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.product-template {
+  display: flex;
+  gap: 4rem;
+  flex-flow: row nowrap;
+}
+
+.product-template__info {
+  width: calc((100% - 4rem) * 0.4);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  order: 2;
+}
+
+.product-template__info__heading-group {
+  margin-bottom: 2rem;
+
+  .caption,
+  .subtitle {
+    display: block;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+    line-height: 1em;
+    color: colors.$charcoal300;
+  }
+
+  .caption {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .heading {
+    margin-bottom: 1rem;
+  }
+}
+
+.product-template__info__price {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+
+  &.sale {
+    vertical-align: middle;
+
+    &::after {
+      display: inline-block;
+      content: "Sale";
+      margin-left: 1rem;
+      font-size: 0.75rem;
+      background-color: colors.$charcoal200;
+      color: colors.$charcoal600;
+      border-radius: 0.25rem;
+      height: 1.5rem;
+      line-height: 1.6rem;
+      padding: 0 1rem;
+      top: -0.0625rem;
+      position: relative;
+    }
+  }
+}
+
+.product-template__info__cart {
+  margin-bottom: 2rem;
+
+  button {
+    display: block;
+    width: 100%;
+  }
+
+  .product-template__info__cart__add {
+    margin-bottom: 1rem;
+  }
+}
+
+.product-template__gallery {
+  width: calc((100% - 4rem) * 0.6);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.product-template__info__content-wrapper {
+  .notice {
+    font-style: italic;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: colors.$charcoal300;
+
+    a {
+      text-decoration: underline;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: colors.$charcoal100;
+      }
+    }
+  }
+
+  .content {
+    color: colors.$charcoal200;
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      margin-bottom: 2rem;
+
+      li {
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 1.75rem;
+        margin-bottom: 0.5rem;
+
+        &::before {
+          content: "";
+          width: 0.5rem;
+          height: 0.5rem;
+          position: absolute;
+          border-radius: 50%;
+          left: 0.5rem;
+          top: 0.46rem;
+          background-color: colors.$charcoal400;
+        }
+      }
+    }
+  }
+}

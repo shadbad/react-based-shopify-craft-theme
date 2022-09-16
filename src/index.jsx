@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from 'components/organisms';
-import { Landing, Collection, Search, ErrorBoundary } from 'pages';
+import { Landing, Collection, Product, Search, ErrorBoundary } from 'pages';
 import { Provider } from 'react-redux';
 import store from 'store/store';
 import initializeStore from 'store/initialize';
@@ -21,6 +21,7 @@ root.render(
                     <Routes>
                         <Route path="/" element={<Landing />} />
                         <Route path="/collections/:slug" element={<Collection />} />
+                        <Route path="/products/:slug" element={<Product />} />
                         <Route path="/search/:query" element={<Search />} />
                     </Routes>
                 </Layout>
