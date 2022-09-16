@@ -1,10 +1,12 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
-const useBodyLocker = function (lock = false) {
+const useBodyLocker = function (initialLockState = false) {
+
+    const [isLocked, setIsLocked] = useState(initialLockState);
 
     useLayoutEffect(() => {
 
-        if (lock) {
+        if (isLocked) {
 
             document.body.setAttribute('data-y', window.scrollY);
             document.body.classList.add('lock');
@@ -17,7 +19,9 @@ const useBodyLocker = function (lock = false) {
 
         }
 
-    });
+    }, [isLocked]);
+
+    return setIsLocked;
 
 };
 
