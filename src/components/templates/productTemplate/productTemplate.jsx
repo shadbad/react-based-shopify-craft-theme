@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading, TextPrice, Button } from 'components/atoms';
+import { CollageProduct } from 'components/molecules';
 import './product-template.scss';
 
 const ProductTemplate = function ({ product }) {
@@ -61,11 +62,11 @@ const ProductTemplate = function ({ product }) {
 
             </div>
 
-            <div className="product-template__gallery">
+            <CollageProduct className="product-template__gallery">
                 {
                     product.images.map((image) => <img key={nanoid()} src={image} alt="" />)
                 }
-            </div>
+            </CollageProduct>
 
         </div>
 
