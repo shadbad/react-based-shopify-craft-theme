@@ -40,7 +40,7 @@
 .button--filled {
   @extend .button;
   background-color: colors.$charcoal100;
-  color: colors.$charcoal400;
+  color: colors.$charcoal600;
 
   &.button--disabled {
     background-color: colors.$charcoal300;
@@ -58,7 +58,7 @@
   line-height: 2.75;
 
   &:hover {
-    background-color: colors.$charcoal500;
+    background-color: colors.$charcoal600;
     transform: scale(1);
   }
 
