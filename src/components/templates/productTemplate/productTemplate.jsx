@@ -80,6 +80,7 @@ const ProductTemplate = function ({ product }) {
                             product.spec.map((spec) => (
 
                                 <Accordion
+                                    key={nanoid()}
                                     className="product-template__spec"
                                     iconName={spec.key.toLowerCase().replace(' ', '-')}
                                     title={spec.key}
