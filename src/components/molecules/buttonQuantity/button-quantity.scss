@@ -1,0 +1,39 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.button-quantity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 9rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid colors.$charcoal300;
+  box-sizing: border-box;
+}
+
+.button-quantity__minus,
+.button-quantity__plus {
+  width: 3rem;
+  height: 3rem;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.button-quantity__quantity {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.button-quantity.disable {
+  border-color: colors.$charcoal400;
+  .button-quantity__quantity {
+    color: colors.$charcoal300;
+  }
+}
