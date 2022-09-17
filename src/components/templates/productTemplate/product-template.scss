@@ -10,10 +10,13 @@
 
 .product-template__info {
   width: calc((100% - 4rem) * 0.4);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   order: 2;
+  position: relative;
+}
+
+.product-template__info__wrapper {
+  position: sticky; // TODO: not working!!!
+  top: 0;
 }
 
 .product-template__info__heading-group {
@@ -69,13 +72,23 @@
 .product-template__info__cart {
   margin-bottom: 2rem;
 
-  button {
+  .product-template__info__cart__add,
+  .product-template__info__cart__buy {
     display: block;
     width: 100%;
   }
 
-  .product-template__info__cart__add {
+  .product-template__info__cart__add,
+  .product-template__info__cart__qty {
     margin-bottom: 1rem;
+  }
+
+  .product-template__info__cart__qty-label {
+    font-size: 0.875rem;
+    display: block;
+    line-height: 1em;
+    margin-bottom: 0.5rem;
+    color: colors.$charcoal200;
   }
 }
 
