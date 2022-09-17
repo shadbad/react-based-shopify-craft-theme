@@ -2,7 +2,7 @@
 @use "/src/assets/styles/typography.scss";
 @use "/src/assets/styles/shared.scss";
 
-.product-template {
+.product-template__info-gallery-wrapper {
   display: flex;
   gap: 4rem;
   flex-flow: row nowrap;
@@ -152,4 +152,8 @@
     margin-bottom: 0;
     border-bottom: 0.0625rem solid colors.$charcoal500;
   }
+}
+
+.product-template__banner {
+  margin-top: 6rem;
 }

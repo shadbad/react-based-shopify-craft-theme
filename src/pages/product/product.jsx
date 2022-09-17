@@ -9,15 +9,17 @@ const Product = function () {
 
     const productSlice = useSelector((state) => state.product);
 
-    if (productSlice.error !== '') throw new Error(productSlice.error);
+    const contentSlice = useSelector((state) => state.content);
 
-    if (productSlice.isLoading) return <div />; // TODO: add skeleton templates here
+    if (productSlice.error !== '' || contentSlice.error !== '') throw new Error(productSlice.error);
+
+    if (productSlice.isLoading || contentSlice.isLoading) return <div />; // TODO: add skeleton templates here
 
     const product = Product.findProduct(productSlice, slug);
 
     return (
 
-        <ProductTemplate product={product} key={product.id} />
+        <ProductTemplate product={product} banner={contentSlice.data.product.banner} key={product.id} />
 
     );
 
