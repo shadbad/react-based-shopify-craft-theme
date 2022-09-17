@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading, TextPrice, Button } from 'components/atoms';
-import { CollageProduct, ButtonQuantity } from 'components/molecules';
+import { CollageProduct, ButtonQuantity, Accordion } from 'components/molecules';
 import './product-template.scss';
 
 const ProductTemplate = function ({ product }) {
@@ -73,6 +73,24 @@ const ProductTemplate = function ({ product }) {
 
                         <div className="content" ref={contentRef} />
 
+                    </div>
+
+                    <div className="product-template__spec-wrapper">
+                        {
+                            product.spec.map((spec) => (
+
+                                <Accordion
+                                    className="product-template__spec"
+                                    iconName={spec.key.toLowerCase().replace(' ', '-')}
+                                    title={spec.key}
+                                >
+
+                                    {spec.value}
+
+                                </Accordion>
+
+                            ))
+                        }
                     </div>
 
                 </div>

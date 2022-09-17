@@ -143,3 +143,13 @@
     }
   }
 }
+
+.product-template__spec {
+  border-top: 0.0625rem solid colors.$charcoal500;
+  padding: 1rem 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    border-bottom: 0.0625rem solid colors.$charcoal500;
+  }
+}
