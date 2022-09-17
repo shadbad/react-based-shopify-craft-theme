@@ -2,12 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading, TextPrice, Button } from 'components/atoms';
-import { CollageProduct, ButtonQuantity, Accordion, Banner } from 'components/molecules';
+import { CollageProduct, ButtonQuantity, Accordion, Banner, Carousel } from 'components/molecules';
+import { useWindowResizeEffect } from 'hooks';
 import './product-template.scss';
 
 const ProductTemplate = function ({ product, banner }) {
 
     const contentRef = useRef();
+
+    const [isMobileViewEnabled, setIsMobileViewEnabled] = useState(false);
 
     const [quantity, setQuantity] = useState(product.stock === 0 ? 0 : 1);
 
@@ -17,11 +20,37 @@ const ProductTemplate = function ({ product, banner }) {
 
     }, []);
 
+    useWindowResizeEffect(() => {
+
+        if (window.innerWidth < 900) setIsMobileViewEnabled(true);
+        else setIsMobileViewEnabled(false);
+
+    });
+
     return (
 
         <div className="product-template">
 
             <div className="product-template__info-gallery-wrapper">
+
+                {
+                    isMobileViewEnabled ?
+                        (
+                            <Carousel className="product-template__gallery--carousel" gap={1.5 * 16} columnMin={300} columnMax={450}>
+                                {
+                                    product.images.map((image) => <img key={nanoid()} src={image} alt="" />)
+                                }
+                            </Carousel>
+                        )
+                        :
+                        (
+                            <CollageProduct className="product-template__gallery">
+                                {
+                                    product.images.map((image) => <img key={nanoid()} src={image} alt="" />)
+                                }
+                            </CollageProduct>
+                        )
+                }
 
                 <div className="product-template__info">
 
@@ -98,12 +127,6 @@ const ProductTemplate = function ({ product, banner }) {
 
                     </div>
                 </div>
-
-                <CollageProduct className="product-template__gallery">
-                    {
-                        product.images.map((image) => <img key={nanoid()} src={image} alt="" />)
-                    }
-                </CollageProduct>
 
             </div>
 
