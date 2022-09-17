@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-based-shopify-craft-theme/static/css/main.1b53b0ed.css",
+    "main.css": "/react-based-shopify-craft-theme/static/css/main.f518ba8d.css",
     "main.js": "/react-based-shopify-craft-theme/static/js/main.51b94acc.js",
     "static/js/634.b8635b53.chunk.js": "/react-based-shopify-craft-theme/static/js/634.b8635b53.chunk.js",
     "static/js/881.0e543dd6.chunk.js": "/react-based-shopify-craft-theme/static/js/881.0e543dd6.chunk.js",
@@ -16,12 +16,12 @@
     "static/media/americana-regular.woff": "/react-based-shopify-craft-theme/static/media/americana-regular.cc666167e51ce8392f62.woff",
     "static/media/americana-regular.woff2": "/react-based-shopify-craft-theme/static/media/americana-regular.9230191c475d3feb9fb0.woff2",
     "index.html": "/react-based-shopify-craft-theme/index.html",
-    "main.1b53b0ed.css.map": "/react-based-shopify-craft-theme/static/css/main.1b53b0ed.css.map",
+    "main.f518ba8d.css.map": "/react-based-shopify-craft-theme/static/css/main.f518ba8d.css.map",
     "main.51b94acc.js.map": "/react-based-shopify-craft-theme/static/js/main.51b94acc.js.map",
     "787.a4266475.chunk.js.map": "/react-based-shopify-craft-theme/static/js/787.a4266475.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b53b0ed.css",
+    "static/css/main.f518ba8d.css",
     "static/js/main.51b94acc.js"
   ]
 }
