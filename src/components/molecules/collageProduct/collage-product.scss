@@ -9,7 +9,7 @@
   row-gap: 1.5rem;
 }
 
-.collage__item-wrapper {
+.collage-product__item-wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -17,7 +17,7 @@
   border-radius: 0.5rem;
 
   &:hover {
-    .collage__item-wrapper__zoom-button {
+    .collage-product__item-wrapper__zoom-button {
       opacity: 1;
     }
   }
@@ -34,7 +34,7 @@
   }
 }
 
-.collage__item-wrapper__zoom-button {
+.collage-product__item-wrapper__zoom-button {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -121,7 +121,7 @@
     "six six"
     "six six";
 
-  .collage__item-wrapper {
+  .collage-product__item-wrapper {
     &:nth-of-type(6n + 1) {
       grid-area: one;
     }
@@ -159,7 +159,7 @@
     "two three"
     "four five";
 
-  .collage__item-wrapper {
+  .collage-product__item-wrapper {
     &:nth-of-type(5n + 1) {
       grid-area: one;
     }
@@ -194,7 +194,7 @@
     "four four"
     "four four";
 
-  .collage__item-wrapper {
+  .collage-product__item-wrapper {
     &:nth-of-type(4n + 1) {
       grid-area: one;
     }
@@ -223,7 +223,7 @@
     "one one"
     "two three";
 
-  .collage__item-wrapper {
+  .collage-product__item-wrapper {
     &:nth-of-type(3n + 1) {
       grid-area: one;
     }
@@ -249,7 +249,7 @@
     "two two"
     "two two";
 
-  .collage__item-wrapper {
+  .collage-product__item-wrapper {
     &:nth-of-type(2n + 1) {
       grid-area: one;
     }
@@ -269,7 +269,7 @@
     "one one"
     "one one";
 
-  .collage__item-wrapper {
+  .collage-product__item-wrapper {
     grid-area: one;
   }
 }

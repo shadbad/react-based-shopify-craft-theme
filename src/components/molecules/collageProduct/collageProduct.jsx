@@ -17,7 +17,7 @@ const CollageProduct = React.memo(function ({ className, children }) {
     const handle = {
         zoomClick: ({ target }) => {
 
-            const src = target.closest('.collage__item-wrapper').querySelector('img').getAttribute('src');
+            const src = target.closest('.collage-product__item-wrapper').querySelector('img').getAttribute('src');
             zoomViewRef.current.querySelector('img').setAttribute('src', src);
             bodyLocker(true);
             setIsZoomViewVisible(() => true);
@@ -40,10 +40,10 @@ const CollageProduct = React.memo(function ({ className, children }) {
                 {
                     images.map((img) => (
 
-                        <div key={img.key} className="collage__item-wrapper">
+                        <div key={img.key} className="collage-product__item-wrapper">
 
                             <ButtonIcon
-                                className="collage__item-wrapper__zoom-button"
+                                className="collage-product__item-wrapper__zoom-button"
                                 iconName="zoom-in"
                                 variant="expandOnHover"
                                 onClick={handle.zoomClick}
