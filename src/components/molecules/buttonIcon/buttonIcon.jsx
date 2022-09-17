@@ -4,11 +4,11 @@ import { Button, Icon } from 'components/atoms';
 
 import './button-icon.scss';
 
-const ButtonIcon = React.memo(function ({ className, iconName, variant, onClick }) {
+const ButtonIcon = React.memo(function ({ className, iconName, variant, disabled, onClick }) {
 
     return (
 
-        <Button className={`button-icon--${variant} ${className}`} onClick={onClick} variant="plain">
+        <Button className={`button-icon--${variant} ${disabled ? 'disable' : ''} ${className}`} onClick={onClick} variant="plain">
 
             <Icon className="button-icon__icon" name={iconName} />
 
@@ -22,13 +22,15 @@ ButtonIcon.propTypes = {
     className: PropTypes.string,
     iconName: PropTypes.string.isRequired,
     variant: PropTypes.oneOf(['expandOnHover', 'basic']),
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    disabled: PropTypes.bool
 };
 
 ButtonIcon.defaultProps = {
     className: '',
     variant: 'basic',
-    onClick: null
+    onClick: null,
+    disabled: false
 };
 
 export { ButtonIcon };
