@@ -1,0 +1,45 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.banner {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: colors.$charcoal100;
+  border-radius: 0.5rem;
+}
+
+.banner__image {
+  width: 50%;
+  padding-bottom: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner__content {
+  width: 50%;
+  color: colors.$charcoal500;
+  box-sizing: border-box;
+  padding: 0 4rem;
+}
+
+.banner__title {
+  color: colors.$charcoal500;
+  font-size: 2.25rem;
+  line-height: 1.5em;
+  margin-bottom: 1.5rem;
+}
+
+.banner__body {
+  line-height: 2em;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.banner__link {
+  background-color: colors.$charcoal500;
+  color: colors.$charcoal100;
+}
