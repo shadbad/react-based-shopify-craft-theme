@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading, TextPrice, Button } from 'components/atoms';
-import { CollageProduct, ButtonQuantity, Accordion, Banner, Carousel } from 'components/molecules';
+import { CollageProduct, ButtonQuantity, Accordion, Banner, Carousel, LinkProduct } from 'components/molecules';
 import { useWindowResizeEffect } from 'hooks';
 import './product-template.scss';
 
-const ProductTemplate = function ({ product, banner }) {
+const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
     const contentRef = useRef();
 
@@ -143,36 +143,69 @@ const ProductTemplate = function ({ product, banner }) {
                 )
             }
 
+            {
+                relatedProducts && (
+                    <div className="product-template__related-products">
+
+                        <TextHeading className="product-template__related-products__heading" type={3}>Upgrade your table</TextHeading>
+
+                        <ul className="product-template__related-products__list">
+
+                            {
+                                relatedProducts.map((item) => (
+                                    <li key={item.id} className="product-template__related-product-wrapper">
+
+                                        <LinkProduct
+                                            className="product-template__related-product"
+                                            title={item.title}
+                                            price={item.price}
+                                            discount={item.discount}
+                                            stock={item.stock}
+                                            images={item.images}
+                                            slug={item.slug}
+                                        />
+
+                                    </li>
+                                ))
+                            }
+
+                        </ul>
+                    </div>
+                )
+            }
+
         </div>
 
     );
 
 };
 
+ProductTemplate.productShape = PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    categoryId: PropTypes.string.isRequired,
+    caption: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    stock: PropTypes.number.isRequired,
+    sales: PropTypes.number.isRequired,
+    date: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.number.isRequired,
+    discount: PropTypes.number.isRequired,
+    slug: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    spec: PropTypes.arrayOf(PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired
+    })).isRequired
+});
+
 ProductTemplate.propTypes = {
 
-    product: PropTypes.shape({
+    product: ProductTemplate.productShape.isRequired,
 
-        id: PropTypes.string.isRequired,
-        categoryId: PropTypes.string.isRequired,
-        caption: PropTypes.string,
-        title: PropTypes.string.isRequired,
-        subtitle: PropTypes.string,
-        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-        stock: PropTypes.number.isRequired,
-        sales: PropTypes.number.isRequired,
-        date: PropTypes.number.isRequired,
-        images: PropTypes.arrayOf(PropTypes.string).isRequired,
-        price: PropTypes.number.isRequired,
-        discount: PropTypes.number.isRequired,
-        slug: PropTypes.string.isRequired,
-        content: PropTypes.string.isRequired,
-        spec: PropTypes.arrayOf(PropTypes.shape({
-            key: PropTypes.string.isRequired,
-            value: PropTypes.string.isRequired
-        })).isRequired
-
-    }).isRequired,
+    relatedProducts: PropTypes.arrayOf(ProductTemplate.productShape),
 
     banner: PropTypes.shape({
         body: PropTypes.string,
@@ -187,7 +220,8 @@ ProductTemplate.propTypes = {
 };
 
 ProductTemplate.defaultProps = {
-    banner: null
+    banner: null,
+    relatedProducts: null
 };
 
 export { ProductTemplate };

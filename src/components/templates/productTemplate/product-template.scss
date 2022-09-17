@@ -4,6 +4,8 @@
 
 $breakPoint: 900px;
 
+$breakPoint2: 450px;
+
 .product-template__info-gallery-wrapper {
   display: flex;
   gap: 4rem;
@@ -183,4 +185,38 @@ $breakPoint: 900px;
 
 .product-template__banner {
   margin-top: 6rem;
+}
+
+.product-template__related-products {
+  margin-top: 6rem;
+}
+
+.product-template__related-products__list {
+  display: flex;
+  gap: 1.5rem;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+
+  @media (max-width: $breakPoint) {
+    flex-flow: row wrap;
+  }
+}
+
+.product-template__related-product-wrapper {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+
+  a {
+    height: 100%;
+  }
+  @media (max-width: $breakPoint) {
+    min-width: calc((100% - 3rem) / 2);
+  }
+
+  @media (max-width: $breakPoint2) {
+    min-width: 100%;
+  }
 }
