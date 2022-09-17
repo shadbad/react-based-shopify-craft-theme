@@ -50,9 +50,9 @@ const AppFooter = React.memo(function () {
                         ©
                         {new Date().getFullYear()}
                         ,
-                        <a href="https://themes.shopify.com/themes/craft/styles/default" target="_blank" rel="noreferrer">theme-craft-demo</a>
+                        <a href="https://themes.shopify.com/themes/craft/styles/default" target="_blank" rel="noreferrer"> theme-craft-demo</a>
 
-                        <a href="https://www.shopify.com/" target="_blank" rel="noreferrer">Powered by Shopify</a>
+                        <a href="https://www.shopify.com/" target="_blank" rel="noreferrer"> Powered by Shopify</a>
 
                     </small>
 

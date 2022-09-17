@@ -15,6 +15,8 @@ const NavDrawer = React.memo(function () {
 
     const dispatch = useDispatch();
 
+    const bodyLocker = useBodyLocker(false);
+
     useWindowResizeEffect(() => {
 
         const header = document.querySelector('#root > header');
@@ -31,7 +33,7 @@ const NavDrawer = React.memo(function () {
 
     }, []);
 
-    useBodyLocker(isMenuDrawerOpen);
+    useEffect(() => bodyLocker(isMenuDrawerOpen), [isMenuDrawerOpen]);
 
     useEffect(() => {
 

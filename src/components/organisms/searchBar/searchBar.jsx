@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useWindowResizeEffect, useOutsideClickDetector, useBodyLocker } from 'hooks';
 import { actions as uiActions } from 'store/slices/ui.slice';
@@ -11,9 +11,9 @@ const SearchBar = function () {
 
     const dispatch = useDispatch();
 
-    const isSearchBarVisible = useSelector((state) => state.ui.search.isVisible);
+    const bodyLocker = useBodyLocker(false);
 
-    useBodyLocker(isSearchBarVisible);
+    const isSearchBarVisible = useSelector((state) => state.ui.search.isVisible);
 
     const [topPosition, setTopPosition] = useState(0);
 
@@ -28,6 +28,8 @@ const SearchBar = function () {
         setTopPosition(() => parseFloat(universalBanner.getBoundingClientRect().height));
 
     });
+
+    useEffect(() => bodyLocker(isSearchBarVisible), [isSearchBarVisible]);
 
     return (
 

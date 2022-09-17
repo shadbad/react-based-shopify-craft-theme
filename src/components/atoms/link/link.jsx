@@ -18,7 +18,7 @@ Link.propTypes = {
     onClick: PropTypes.func,
     href: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    variant: PropTypes.oneOf(['plain', 'underlineOnHover'])
+    variant: PropTypes.oneOf(['plain', 'underlineOnHover', 'button'])
 };
 
 Link.defaultProps = {
