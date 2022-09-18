@@ -8,6 +8,8 @@ const AppBar = React.memo(function () {
 
     const dispatch = useDispatch();
     const isMenuDrawerOpen = useSelector((state) => state.ui.isMenuDrawerOpen);
+    const cartItems = useSelector((state) => state.cart.items);
+    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <div className="app-bar">
@@ -19,7 +21,7 @@ const AppBar = React.memo(function () {
                     href="/cart"
                     iconName="cart"
                     variant="expandOnHover"
-                    badgeValue={0}
+                    badgeValue={totalQuantity}
                     badgeMax={99}
                 />
 
