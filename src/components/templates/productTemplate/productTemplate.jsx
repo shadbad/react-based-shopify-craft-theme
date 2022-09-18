@@ -1,6 +1,8 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
+import { actions as cartActions } from 'store/slices/cart.slice';
 import { TextHeading, TextPrice, Button } from 'components/atoms';
 import { CollageProduct, ButtonQuantity, Accordion, Banner, Carousel, LinkProduct } from 'components/molecules';
 import { useWindowResizeEffect } from 'hooks';
@@ -10,9 +12,23 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
     const contentRef = useRef();
 
+    const dispatch = useDispatch();
+
     const [isMobileViewEnabled, setIsMobileViewEnabled] = useState(false);
 
     const [quantity, setQuantity] = useState(product.stock === 0 ? 0 : 1);
+
+    const handle = {
+
+        addToCart: () => {
+
+            const payload = { productId: product.id, quantity };
+
+            dispatch(cartActions.add(payload));
+
+        }
+
+    };
 
     useLayoutEffect(() => {
 
@@ -77,6 +93,7 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
                         <div className="product-template__info__cart">
 
                             <span className="product-template__info__cart__qty-label">Quantity</span>
+
                             <ButtonQuantity
                                 className="product-template__info__cart__qty"
                                 quantity={quantity}
@@ -86,7 +103,16 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
                                 disabled={product.stock === 0}
                             />
 
-                            <Button className="product-template__info__cart__add" variant="outlined" disabled={product.stock === 0}>Add to cart</Button>
+                            <Button
+                                className="product-template__info__cart__add"
+                                variant="outlined"
+                                disabled={product.stock === 0}
+                                onClick={handle.addToCart}
+                            >
+
+                                Add to cart
+
+                            </Button>
 
                             <Button className="product-template__info__cart__buy" variant="filled" disabled={product.stock === 0}>Buy it now</Button>
 
