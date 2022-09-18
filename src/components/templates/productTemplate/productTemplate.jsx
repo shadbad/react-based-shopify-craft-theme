@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading, TextPrice, Button } from 'components/atoms';
@@ -14,7 +14,7 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
     const [quantity, setQuantity] = useState(product.stock === 0 ? 0 : 1);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
 
         contentRef.current.innerHTML = product.content;
 
