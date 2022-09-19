@@ -20,6 +20,17 @@ const Cart = function () {
         product: productSlice.list.find((product) => product.id === item.productId)
     }));
 
+    const bestsellers = productSlice.list
+        .filter((product) => product.stock > 0)
+        .sort((a, b) => {
+
+            if (a.sales < b.sales) return 1;
+            if (a.sales === b.sales) return 0;
+            return -1;
+
+        })
+        .slice(0, 4);
+
     const handle = {
 
         quantityAddition: (productId) => {
@@ -57,6 +68,7 @@ const Cart = function () {
             handleAddition={handle.quantityAddition}
             handleSubtraction={handle.quantitySubtraction}
             handleRemove={handle.productRemove}
+            bestsellers={bestsellers}
         />
 
     );
