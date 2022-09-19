@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { actions as cartActions } from 'store/slices/cart.slice';
 import { Icon, Link } from 'components/atoms';
 import { ButtonIcon } from 'components/molecules';
+import { useOutsideClickDetector } from 'hooks';
 import './notification-cart.scss';
 
 const NotificationCart = React.memo(function () {
@@ -10,6 +11,8 @@ const NotificationCart = React.memo(function () {
     const productSlice = useSelector((state) => state.product);
     const cartSlice = useSelector((state) => state.cart);
     const dispatch = useDispatch();
+
+    useOutsideClickDetector('.notification-cart.visible, .product-template__info__cart__add', () => dispatch(cartActions.removeNotification()), []);
 
     if (productSlice.error !== '') throw new Error(productSlice.error);
 
@@ -65,6 +68,7 @@ const NotificationCart = React.memo(function () {
                     className="notification-cart__button-links__cart"
                     href="/cart"
                     variant="button"
+                    onClick={handle.closeClick}
                 >
 
                     {`View my cart (${totalItemsInCart})`}
@@ -75,6 +79,7 @@ const NotificationCart = React.memo(function () {
                     className="notification-cart__button-links__checkout"
                     href="/checkout"
                     variant="button"
+                    onClick={handle.closeClick}
                 >
 
                     Check out
@@ -85,6 +90,7 @@ const NotificationCart = React.memo(function () {
                     className="notification-cart__button-links__continue"
                     href="/collections/all"
                     variant="underlined"
+                    onClick={handle.closeClick}
                 >
 
                     Continue shopping
