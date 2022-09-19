@@ -23,7 +23,11 @@ const cartSlice = createSlice({
     initialState: {
         isLoading: false,
         error: '',
-        items: []
+        items: [],
+        notification: {
+            productId: '0d07dad1-1ac0-463d-a606-1cc939995c77',
+            isVisible: false
+        }
     },
 
     reducers: {
@@ -68,6 +72,21 @@ const cartSlice = createSlice({
 
             state.items = [];
 
+        },
+
+        setAddNotification: (state, action) => {
+
+            state.notification = {
+                productId: action.payload,
+                isVisible: true
+            };
+
+        },
+
+        removeNotification: (state, action) => {
+
+            state.notification.isVisible = false;
+
         }
     },
 
@@ -101,7 +120,7 @@ const cartSlice = createSlice({
 
 });
 
-const listener = {
+const ModifyListener = {
 
     predicate: (action, { cart: currentState }, { cart: originalState }) => Object.keys(cartSlice.actions).map((a) => `cart/${a}`).includes(action.type),
 
@@ -115,7 +134,20 @@ const listener = {
     }
 };
 
-export const listenerConfig = listener;
+const AddToCartListener = {
+
+    predicate: (action, { cart: currentState }, { cart: originalState }) => action.type === cartSlice.actions.add.type,
+
+    effect: (action, listenerApi) => {
+
+        const { dispatch } = listenerApi;
+
+        dispatch(cartSlice.actions.setAddNotification(action.payload.productId));
+
+    }
+};
+
+export const listeners = { ModifyListener, AddToCartListener };
 
 export const actions = { ...cartSlice.actions, loadFromLocalStorage };
 

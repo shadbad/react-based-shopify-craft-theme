@@ -7,7 +7,7 @@ import product from './slices/product.slice';
 import content from './slices/content.slice';
 import blog from './slices/blog.slice';
 import user from './slices/user.slice';
-import cart, { listenerConfig as cartListenerConfig } from './slices/cart.slice';
+import cart, { listeners as cartListeners } from './slices/cart.slice';
 
 const listenerMiddleware = createListenerMiddleware();
 
@@ -19,6 +19,7 @@ const store = configureStore({
 
 });
 
-listenerMiddleware.startListening(cartListenerConfig);
+listenerMiddleware.startListening(cartListeners.AddToCartListener);
+listenerMiddleware.startListening(cartListeners.ModifyListener);
 
 export default store;
