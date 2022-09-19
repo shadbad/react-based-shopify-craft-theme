@@ -77,7 +77,7 @@ const NotificationCart = React.memo(function () {
 
                 <Link
                     className="notification-cart__button-links__checkout"
-                    href="/checkout"
+                    href="/check-out"
                     variant="button"
                     onClick={handle.closeClick}
                 >
