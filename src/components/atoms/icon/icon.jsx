@@ -48,8 +48,6 @@ const Icon = React.memo(function ({ name, className }) {
             className={`icon ${name} ${className}`}
         >
 
-            <title>{name}</title>
-
             {state.paths.map((p, index) => <path key={`${name}-path-${index}`} className="icon__path" d={p} />)}
 
         </svg>
