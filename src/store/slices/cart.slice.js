@@ -25,7 +25,7 @@ const cartSlice = createSlice({
         error: '',
         items: [],
         notification: {
-            productId: '0d07dad1-1ac0-463d-a606-1cc939995c77',
+            productId: '',
             isVisible: false
         }
     },
@@ -54,7 +54,7 @@ const cartSlice = createSlice({
 
         remove: (state, action) => {
 
-            state.items = state.items.filter((item) => item.productId === action.payload);
+            state.items = state.items.filter((item) => item.productId !== action.payload);
 
         },
 
@@ -62,9 +62,7 @@ const cartSlice = createSlice({
 
             const { productId, quantity } = action.payload;
 
-            state.items = state.items
-                .filter((item) => item.productId !== productId)
-                .push({ productId, quantity });
+            state.items = [...state.items.filter((item) => item.productId !== productId), { productId, quantity }];
 
         },
 
@@ -85,6 +83,7 @@ const cartSlice = createSlice({
 
         removeNotification: (state, action) => {
 
+            state.notification.productId = '';
             state.notification.isVisible = false;
 
         }
