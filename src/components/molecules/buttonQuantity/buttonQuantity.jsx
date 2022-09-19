@@ -3,21 +3,7 @@ import PropTypes from 'prop-types';
 import { ButtonIcon } from 'components/molecules';
 import './button-quantity.scss';
 
-const ButtonQuantity = React.memo(function ({ className, quantity, setQuantity, min, max, disabled }) {
-
-    const handle = {
-        plusClick: () => {
-
-            if (quantity < max) setQuantity(() => quantity + 1);
-
-        },
-
-        minusClick: () => {
-
-            if (quantity > min) setQuantity(() => quantity - 1);
-
-        }
-    };
+const ButtonQuantity = React.memo(function ({ className, value, handleAddition, handleSubtraction, min, max, disabled }) {
 
     return (
         <div className={`button-quantity ${disabled ? 'disable' : ''} ${className}`}>
@@ -26,18 +12,18 @@ const ButtonQuantity = React.memo(function ({ className, quantity, setQuantity, 
                 className="button-quantity__minus"
                 variant="expandOnHover"
                 iconName="minus"
-                onClick={handle.minusClick}
-                disabled={disabled || quantity === min}
+                onClick={handleSubtraction}
+                disabled={disabled || value === min}
             />
 
-            <span className="button-quantity__quantity">{quantity}</span>
+            <span className="button-quantity__quantity">{value}</span>
 
             <ButtonIcon
                 className="button-quantity__plus"
                 variant="expandOnHover"
                 iconName="plus"
-                onClick={handle.plusClick}
-                disabled={disabled || quantity === max}
+                onClick={handleAddition}
+                disabled={disabled || value === max}
             />
 
         </div>
@@ -50,15 +36,18 @@ ButtonQuantity.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
     disabled: PropTypes.bool,
-    quantity: PropTypes.number.isRequired,
-    setQuantity: PropTypes.func.isRequired
+    value: PropTypes.number.isRequired,
+    handleAddition: PropTypes.func,
+    handleSubtraction: PropTypes.func
 };
 
 ButtonQuantity.defaultProps = {
     className: '',
     min: 0,
     max: Number.MAX_SAFE_INTEGER,
-    disabled: false
+    disabled: false,
+    handleAddition: null,
+    handleSubtraction: null
 };
 
 export { ButtonQuantity };

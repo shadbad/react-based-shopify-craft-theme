@@ -30,3 +30,8 @@
     transform: scale(1);
   }
 }
+
+.link--underlined {
+  @extend .link;
+  text-decoration: underline;
+}

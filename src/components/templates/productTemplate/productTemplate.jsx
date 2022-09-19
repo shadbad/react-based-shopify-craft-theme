@@ -26,6 +26,18 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
             dispatch(cartActions.add(payload));
 
+        },
+
+        quantityAddition: () => {
+
+            if (quantity < product.stock) setQuantity(() => quantity + 1);
+
+        },
+
+        quantitySubtraction: () => {
+
+            if (quantity > 1) setQuantity(() => quantity - 1);
+
         }
 
     };
@@ -34,7 +46,7 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
         contentRef.current.innerHTML = product.content;
 
-    }, []);
+    }, [product]);
 
     useWindowResizeEffect(() => {
 
@@ -96,8 +108,9 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
                             <ButtonQuantity
                                 className="product-template__info__cart__qty"
-                                quantity={quantity}
-                                setQuantity={setQuantity}
+                                value={quantity}
+                                handleAddition={handle.quantityAddition}
+                                handleSubtraction={handle.quantitySubtraction}
                                 min={1}
                                 max={product.stock}
                                 disabled={product.stock === 0}

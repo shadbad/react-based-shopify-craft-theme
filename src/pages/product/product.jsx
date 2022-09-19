@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { ProductTemplate } from 'components/templates';
+import { NotificationCart } from 'components/organisms';
 
 const Product = function () {
 
@@ -21,7 +22,13 @@ const Product = function () {
 
     return (
 
-        <ProductTemplate product={product} relatedProducts={relatedProducts} banner={contentSlice.data.product.banner} key={product.id} />
+        <>
+
+            <ProductTemplate product={product} relatedProducts={relatedProducts} banner={contentSlice.data.product.banner} key={product.id} />
+
+            <NotificationCart />
+
+        </>
 
     );
 

@@ -23,7 +23,11 @@ const cartSlice = createSlice({
     initialState: {
         isLoading: false,
         error: '',
-        items: []
+        items: [],
+        notification: {
+            productId: '',
+            isVisible: false
+        }
     },
 
     reducers: {
@@ -50,7 +54,7 @@ const cartSlice = createSlice({
 
         remove: (state, action) => {
 
-            state.items = state.items.filter((item) => item.productId === action.payload);
+            state.items = state.items.filter((item) => item.productId !== action.payload);
 
         },
 
@@ -58,15 +62,29 @@ const cartSlice = createSlice({
 
             const { productId, quantity } = action.payload;
 
-            state.items = state.items
-                .filter((item) => item.productId !== productId)
-                .push({ productId, quantity });
+            state.items = [...state.items.filter((item) => item.productId !== productId), { productId, quantity }];
 
         },
 
         clear: (state, action) => {
 
             state.items = [];
+
+        },
+
+        setAddNotification: (state, action) => {
+
+            state.notification = {
+                productId: action.payload,
+                isVisible: true
+            };
+
+        },
+
+        removeNotification: (state, action) => {
+
+            state.notification.productId = '';
+            state.notification.isVisible = false;
 
         }
     },
@@ -101,7 +119,7 @@ const cartSlice = createSlice({
 
 });
 
-const listener = {
+const ModifyListener = {
 
     predicate: (action, { cart: currentState }, { cart: originalState }) => Object.keys(cartSlice.actions).map((a) => `cart/${a}`).includes(action.type),
 
@@ -115,7 +133,20 @@ const listener = {
     }
 };
 
-export const listenerConfig = listener;
+const AddToCartListener = {
+
+    predicate: (action, { cart: currentState }, { cart: originalState }) => action.type === cartSlice.actions.add.type,
+
+    effect: (action, listenerApi) => {
+
+        const { dispatch } = listenerApi;
+
+        dispatch(cartSlice.actions.setAddNotification(action.payload.productId));
+
+    }
+};
+
+export const listeners = { ModifyListener, AddToCartListener };
 
 export const actions = { ...cartSlice.actions, loadFromLocalStorage };
 

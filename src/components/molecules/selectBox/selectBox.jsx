@@ -10,6 +10,8 @@ const SelectBox = React.memo(function ({ className, title, children }) {
 
     const componentRef = useRef();
 
+    useOutsideClickDetector([componentRef], () => setIsExpanded(false));
+
     const handle = {
 
         buttonClick: useCallback(() => setIsExpanded(() => !isExpanded)),
@@ -17,8 +19,6 @@ const SelectBox = React.memo(function ({ className, title, children }) {
         singleOptionClick: useCallback(() => setIsExpanded(false))
 
     };
-
-    useOutsideClickDetector([componentRef], () => setIsExpanded(false));
 
     return (
 
