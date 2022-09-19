@@ -16,6 +16,10 @@ const CollectionTemplate = function ({ category, products }) {
 
     const [isFilterSortMenuExpanded, setIsFilterSortMenuExpanded] = useState(false);
 
+    useOutsideClickDetector('.collection__tools__fs-button, .collection__tools__fs-wrapper', () => setIsFilterSortMenuExpanded(false));
+
+    useJumpToTop();
+
     const config = {
 
         filters: [
@@ -165,10 +169,6 @@ const CollectionTemplate = function ({ category, products }) {
             .filter((f) => selectedFilters.has(f.key)))
 
     };
-
-    useOutsideClickDetector('.collection__tools__fs-button, .collection__tools__fs-wrapper', () => setIsFilterSortMenuExpanded(false));
-
-    useJumpToTop();
 
     return (
         <>

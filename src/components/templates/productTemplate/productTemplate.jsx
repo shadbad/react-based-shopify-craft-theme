@@ -46,7 +46,7 @@ const ProductTemplate = function ({ product, relatedProducts, banner }) {
 
         contentRef.current.innerHTML = product.content;
 
-    }, []);
+    }, [product]);
 
     useWindowResizeEffect(() => {
 

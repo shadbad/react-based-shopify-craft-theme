@@ -6,13 +6,13 @@ import './menu-list.scss';
 
 const MenuList = React.memo(function ({ className, links, variant, onItemClick }) {
 
-    const linkVariant = variant === 'metro' ? 'underlineOnHover' : 'plain';
-
     useOutsideClickDetector('.menu-list__item.expand', () => {
 
         document.querySelector('.menu-list__item.expand').classList.remove('expand');
 
     }, []);
+
+    const linkVariant = variant === 'metro' ? 'underlineOnHover' : 'plain';
 
     return (
 
