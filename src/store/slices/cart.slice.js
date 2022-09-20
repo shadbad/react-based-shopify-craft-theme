@@ -39,10 +39,14 @@ const cartSlice = createSlice({
 
             if (entry) {
 
-                state.items = [...state.items.filter((item) => item.productId !== productId), {
+                const index = state.items.indexOf(entry);
+
+                const updated = {
                     productId,
                     quantity: entry.quantity + quantity
-                }];
+                };
+
+                state.items = [...state.items.slice(0, index), updated, ...state.items.slice(index + 1)];
 
             } else {
 
@@ -60,9 +64,11 @@ const cartSlice = createSlice({
 
         update: (state, action) => {
 
-            const { productId, quantity } = action.payload;
+            const item = { productId: action.payload.productId, quantity: action.payload.quantity };
 
-            state.items = [...state.items.filter((item) => item.productId !== productId), { productId, quantity }];
+            const index = state.items.findIndex((x) => x.productId === item.productId);
+
+            state.items = [...state.items.slice(0, index), item, ...state.items.slice(index + 1)];
 
         },
 
