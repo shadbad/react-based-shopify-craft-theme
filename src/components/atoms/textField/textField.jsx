@@ -6,7 +6,7 @@ const TextField = function ({ className, value, type, label, required, error, on
 
     const id = label.replace(' ', '_');
 
-    const [hasValue, setHasValue] = useState(() => value !== '');
+    const [hasValue, setHasValue] = useState(value !== '');
 
     const [isFocused, setIsFocused] = useState(false);
 

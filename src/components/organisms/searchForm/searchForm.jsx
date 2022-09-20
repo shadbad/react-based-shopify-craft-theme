@@ -34,6 +34,8 @@ const SearchForm = React.memo(function ({ className }) {
 
             if (query.trim() !== '') navigate(`/search/${query}`);
 
+            dispatch(uiActions.setSearchVisibility(false));
+
         }),
 
         queryChange: useCallback(({ target }) => {
