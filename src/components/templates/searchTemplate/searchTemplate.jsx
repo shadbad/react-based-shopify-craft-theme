@@ -1,43 +1,29 @@
 import PropTypes from 'prop-types';
+import { nanoid } from '@reduxjs/toolkit';
 import { TextHeading } from 'components/atoms';
 import { ListProduct } from 'components/molecules';
-import { useJumpToTop } from 'hooks';
-import './collection-template.scss';
+import { SearchForm } from 'components/organisms';
 
-const CollectionTemplate = function ({ category, products }) {
+import './search-template.scss';
 
-    useJumpToTop();
+const SearchTemplate = function ({ products }) {
 
     return (
         <>
-            <div className="collection__header">
 
-                <TextHeading className="collection__title" type={1}>{category.title}</TextHeading>
+            <TextHeading className="search-template__heading" type={1}>Search results</TextHeading>
 
-                {category.description && <p className="collection__description">{category.description}</p>}
+            <div className="search-template__form-wrapper">
+                <SearchForm className="search-template__form" key={nanoid()} />
             </div>
 
-            <ListProduct products={products} />
+            <ListProduct key={nanoid()} className="search-template__list" products={products} />
         </>
     );
 
 };
 
-CollectionTemplate.propTypes = {
-
-    category: PropTypes.shape({
-
-        id: PropTypes.string,
-
-        title: PropTypes.string,
-
-        url: PropTypes.string,
-
-        slug: PropTypes.string,
-
-        description: PropTypes.string
-
-    }).isRequired,
+SearchTemplate.propTypes = {
 
     products: PropTypes.arrayOf(
 
@@ -82,7 +68,6 @@ CollectionTemplate.propTypes = {
         })
 
     ).isRequired
-
 };
 
-export { CollectionTemplate };
+export { SearchTemplate };
