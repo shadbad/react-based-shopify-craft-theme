@@ -27,115 +27,131 @@ const CartTemplate = function ({ items, handleAddition, handleSubtraction, handl
 
                             <Link className="cart-template__header__continue" href="/collections/all" variant="underlined">Continue shopping</Link>
                         </div>
-                        <table className="cart-template__table">
-                            <thead className="cart-template__table__header">
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
 
-                            <tbody className="cart-template__table__body">
+                        <div className="cart-template__table-wrapper">
+                            <table className="cart-template__table">
 
-                                {
-                                    items.map((item) => (
+                                <thead className="cart-template__table__header">
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
 
-                                        <tr key={item.product.id} className="cart-template__table__body__row">
+                                <tbody className="cart-template__table__body">
 
-                                            <td className="cart-template__table__body__row__image-link-price">
+                                    {
+                                        items.map((item) => (
 
-                                                <img
-                                                    className="cart-template__table__body__row__image-link-price__image"
-                                                    src={item.product.images[0]}
-                                                    alt={item.product.title}
-                                                />
+                                            <tr key={item.product.id} className="cart-template__table__body__row">
 
-                                                <div>
-                                                    <Link
-                                                        href={`/products/${item.product.slug}`}
-                                                        variant="underlineOnHover"
-                                                        className="cart-template__table__body__row__image-link-price__link"
-                                                    >
-                                                        {item.product.title}
-                                                    </Link>
+                                                <td className="cart-template__table__body__row__image-link-price">
+
+                                                    <img
+                                                        className="cart-template__table__body__row__image-link-price__image"
+                                                        src={item.product.images[0]}
+                                                        alt={item.product.title}
+                                                    />
+
+                                                    <div>
+                                                        <Link
+                                                            href={`/products/${item.product.slug}`}
+                                                            variant="underlineOnHover"
+                                                            className="cart-template__table__body__row__image-link-price__link"
+                                                        >
+                                                            {item.product.title}
+                                                        </Link>
+
+                                                        <TextPrice
+                                                            className="cart-template__table__body__row__image-link-price__price"
+                                                            price={item.product.price}
+                                                            discount={item.product.discount}
+                                                        />
+                                                    </div>
+
+                                                </td>
+
+                                                <td className="cart-template__table__body__row__quantity">
+
+                                                    <ButtonQuantity
+                                                        className="cart-template__table__body__row__quantity__button"
+                                                        value={item.quantity}
+                                                        min={1}
+                                                        max={item.product.stock}
+                                                        handleAddition={() => handleAddition(item.product.id)}
+                                                        handleSubtraction={() => handleSubtraction(item.product.id)}
+                                                    />
+
+                                                    <ButtonIcon
+                                                        className="cart-template__table__body__row__quantity__remove"
+                                                        iconName="trash"
+                                                        variant="expandOnHover"
+                                                        onClick={() => handleRemove(item.product.id)}
+                                                    />
+
+                                                </td>
+
+                                                <td className="cart-template__table__body__row__total">
 
                                                     <TextPrice
-                                                        className="cart-template__table__body__row__image-link-price__price"
-                                                        price={item.product.price}
-                                                        discount={item.product.discount}
+                                                        className="cart-template__table__body__row__total__text"
+                                                        price={calculate.totalPrice(item.product.price, item.product.discount, item.quantity)}
+                                                        discount={0}
                                                     />
-                                                </div>
 
-                                            </td>
+                                                </td>
+                                            </tr>
 
-                                            <td className="cart-template__table__body__row__quantity">
+                                        ))
+                                    }
 
-                                                <ButtonQuantity
-                                                    className="cart-template__table__body__row__quantity__button"
-                                                    value={item.quantity}
-                                                    min={1}
-                                                    max={item.product.stock}
-                                                    handleAddition={() => handleAddition(item.product.id)}
-                                                    handleSubtraction={() => handleSubtraction(item.product.id)}
-                                                />
+                                </tbody>
 
-                                                <ButtonIcon
-                                                    className="cart-template__table__body__row__quantity__remove"
-                                                    iconName="trash"
-                                                    variant="expandOnHover"
-                                                    onClick={() => handleRemove(item.product.id)}
-                                                />
+                                {/* <tfoot className="cart-template__table__footer">
 
-                                            </td>
+                                    <tr className="cart-template__table__footer__subtotal-row">
 
-                                            <td className="cart-template__table__body__row__total">
+                                        <td colSpan={3}>
 
-                                                <TextPrice
-                                                    className="cart-template__table__body__row__total__text"
-                                                    price={calculate.totalPrice(item.product.price, item.product.discount, item.quantity)}
-                                                    discount={0}
-                                                />
+                                            <TextHeading className="cart-template__table__footer__heading" type={4}>Subtotal</TextHeading>
 
-                                            </td>
-                                        </tr>
+                                            <TextPrice className="cart-template__table__footer__price" price={calculate.subtotal} />
 
-                                    ))
-                                }
+                                        </td>
 
-                            </tbody>
+                                    </tr>
 
-                            <tfoot className="cart-template__table__footer">
+                                    <tr className="cart-template__table__footer__note-row">
 
-                                <tr className="cart-template__table__footer__subtotal-row">
+                                        <td colSpan={3}>
+                                            Taxes and shipping calculated at checkout
+                                        </td>
 
-                                    <td colSpan={3}>
+                                    </tr>
 
-                                        <TextHeading className="cart-template__table__footer__heading" type={4}>Subtotal</TextHeading>
+                                    <tr className="cart-template__table__footer__check-out-row">
+                                        <td colSpan={3}>
+                                            <Link className="cart-template__table__footer__check-out-row__button" href="/check-out" variant="button">Check out</Link>
+                                        </td>
+                                    </tr>
 
-                                        <TextPrice className="cart-template__table__footer__price" price={calculate.subtotal} />
+                                </tfoot> */}
 
-                                    </td>
+                            </table>
+                        </div>
 
-                                </tr>
+                        <div className="cart-template__subtotal">
+                            <div>
+                                <TextHeading className="cart-template__subtotal__heading" type={4}>Subtotal</TextHeading>
 
-                                <tr className="cart-template__table__footer__note-row">
+                                <TextPrice className="cart-template__subtotal__price" price={calculate.subtotal} />
+                            </div>
 
-                                    <td colSpan={3}>
-                                        Taxes and shipping calculated at checkout
-                                    </td>
+                            <span className="cart-template__subtotal__note">Taxes and shipping calculated at checkout</span>
 
-                                </tr>
-
-                                <tr className="cart-template__table__footer__check-out-row">
-                                    <td colSpan={3}>
-                                        <Link className="cart-template__table__footer__check-out-row__button" href="/check-out" variant="button">Check out</Link>
-                                    </td>
-                                </tr>
-
-                            </tfoot>
-
-                        </table>
+                            <Link className="cart-template__subtotal__check-out-row__button" href="/check-out" variant="button">Check out</Link>
+                        </div>
                     </>
                 )
             }
