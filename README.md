@@ -2,6 +2,8 @@
 
 Hey there 👋, thanks for your interest in this repository. I created this project to keep my front-end skills like React, Redux, and styling sharp, along with strengthening my portfolio in order to improve my chances of landing a front-end role (yeah I’m tired of being a full-stack 🤓).
 
+_You can view a live demo of this repo at [https://shadbad.github.io/react-based-shopify-craft-theme/](https://shadbad.github.io/react-based-shopify-craft-theme/)_
+
 Since I’m no designer, I used a free Shopify template named [craft](https://themes.shopify.com/themes/craft/styles/default) as a blueprint for this project (All hail [Shopify](https://www.shopify.com/) and [Fable](https://fable.com/) 🖖).
 
 ## Folder structure
