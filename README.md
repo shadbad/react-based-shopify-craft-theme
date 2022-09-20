@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# React-based Shopify’s craft theme
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hey there 👋, thanks for your interest in this repository. I created this project to keep my front-end skills like React, Redux, and styling sharp, along with strengthening my portfolio in order to improve my chances of landing a front-end role (yeah I’m tired of being a full-stack 🤓).
 
-## Available Scripts
+Since I’m no designer, I used a free Shopify template named [craft](https://themes.shopify.com/themes/craft/styles/default) as a blueprint for this project (All hail [Shopify](https://www.shopify.com/) and [Fable](https://fable.com/) 🖖).
 
-In the project directory, you can run:
+## Folder structure
 
-### `npm start`
+After an intensive investigation and a lot of trial and error, I came across an article by Brad Frost called “Atomic Design” which has an interesting way of approaching the art of creating design systems.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The rules can be applied to web development as well. Also, you can’t help but notice some of the similarities between this way of looking at different web compartments and the way of MVC.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+So, in my mind
 
-### `npm test`
+- Pages act like controllers in the MVC architecture
+- Templates are like views in MVC
+- Organisms that are state-aware components and act like ASP.NET’s view components (partial views + dedicated controllers)
+- Molecules and atoms are like partial views in the MVC architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The folder structure of this project is based on this mental model, which helped me a lot when I wasn’t sure where to house a component.
 
-### `npm run build`
+## Naming
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No, I don’t speak backward!😉 But I found this **“Yoda Style”** naming very helpful especially when we’re dealing with a large list of components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Most of the time I know what I need eg. a list, a link, or … but I can’t remember the exact name of the component 😵. With Yoda named components, the type of component comes first (listProduct instead of productList), therefor all the components of the same type are next to each other which makes the task of locating components pretty easy.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### To be continued ...
