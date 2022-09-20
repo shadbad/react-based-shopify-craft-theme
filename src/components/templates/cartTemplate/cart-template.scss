@@ -3,7 +3,7 @@
 @use "/src/assets/styles/shared.scss";
 
 $breakPoint: 900px;
-
+$breakPoint1: 600px;
 $breakPoint2: 450px;
 
 .cart-template__header {
@@ -17,9 +17,26 @@ $breakPoint2: 450px;
   margin: 0;
 }
 
+.cart-template__table-wrapper {
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: colors.$charcoal500;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: colors.$charcoal400;
+  }
+  overflow: auto;
+}
+
 .cart-template__table {
   width: 100%;
-  margin-bottom: 6rem;
+
+  min-width: 650px;
 }
 
 .cart-template__table__header {
@@ -83,18 +100,34 @@ $breakPoint2: 450px;
 }
 
 .cart-template__table__body__row__quantity {
-  width: 13.5rem;
+  width: 10.5rem;
+  box-sizing: border-box;
 }
 
 .cart-template__table__body__row__quantity__button {
   float: left;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
+  box-sizing: border-box;
+
+  .button-quantity__minus,
+  .button-quantity__plus {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .button-quantity__quantity {
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+  }
 }
 
 .cart-template__table__body__row__quantity__remove {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   float: left;
+  position: relative;
+  top: 0.0625rem;
   svg {
     height: 1.25rem;
     width: 1.25rem;
@@ -114,27 +147,29 @@ $breakPoint2: 450px;
 
 .cart-template__table__body__row__total {
   text-align: right;
-  width: 12rem;
+  width: 7.5rem;
+  box-sizing: border-box;
 }
 
 .cart-template__table__body__row__total__text {
   font-size: 1rem;
 }
 
-.cart-template__table__footer {
-  tr {
-    td {
-      padding-top: 1rem;
-      text-align: right;
-    }
+.cart-template__subtotal {
+  padding-top: 1rem;
+  margin-bottom: 6rem;
+  border-top: 0.0625rem solid colors.$charcoal500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+
+  @media (max-width: $breakPoint1) {
+    border: none;
   }
 }
 
-.cart-template__table__footer__subtotal-row {
-  border-top: 0.0625rem solid colors.$charcoal500;
-}
-
-.cart-template__table__footer__heading {
+.cart-template__subtotal__heading {
   margin-bottom: 0;
   line-height: 1.5rem;
   height: 1.5rem;
@@ -143,23 +178,22 @@ $breakPoint2: 450px;
   margin-right: 1.5rem;
 }
 
-.cart-template__table__footer__price {
+.cart-template__subtotal__price {
   font-size: 1.25rem;
   height: 1.5rem;
   line-height: 1.5rem;
   display: inline-block;
 }
 
-.cart-template__table__footer__note-row {
+.cart-template__subtotal__note-row {
   font-size: 0.875rem;
   color: colors.$charcoal300;
 }
 
-.cart-template__table__footer__check-out-row__button {
-  float: right;
+.cart-template__subtotal__check-out-row__button {
   background-color: colors.$charcoal100;
   color: colors.$charcoal500;
-  min-width: 13rem;
+  width: 12rem;
   text-align: center;
 }
 
