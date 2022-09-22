@@ -37,7 +37,7 @@ const SearchBar = function () {
 
             <div className="search-bar__wrapper">
 
-                <SearchForm className="search-bar__form" />
+                <SearchForm className="search-bar__form" focus={isSearchBarVisible} />
 
                 <ButtonIcon
                     className="search-bar__button-close"
