@@ -14,7 +14,7 @@ const SearchTemplate = function ({ products }) {
             <TextHeading className="search-template__heading" type={1}>Search results</TextHeading>
 
             <div className="search-template__form-wrapper">
-                <SearchForm className="search-template__form" key={nanoid()} />
+                <SearchForm className="search-template__form" focus={false} prediction={false} key={nanoid()} />
             </div>
 
             <ListProduct key={nanoid()} className="search-template__list" products={products} />

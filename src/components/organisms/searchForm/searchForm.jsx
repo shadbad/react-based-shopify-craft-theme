@@ -7,7 +7,7 @@ import { ButtonIcon, SearchPredictiveResult } from 'components/molecules';
 import { actions as uiActions } from 'store/slices/ui.slice';
 import './search-form.scss';
 
-const SearchForm = React.memo(function ({ className }) {
+const SearchForm = React.memo(function ({ className, focus, prediction }) {
 
     const dispatch = useDispatch();
 
@@ -44,14 +44,18 @@ const SearchForm = React.memo(function ({ className }) {
 
         }),
 
-        searchLinkClick: useCallback(() => dispatch(uiActions.setSearchVisibility(false)))
+        searchLinkClick: useCallback(() => {
+
+            dispatch(uiActions.setSearchVisibility(false));
+
+        })
 
     };
 
     const filteredProducts = helpers.filterProducts(query, products);
 
     return (
-        <form className={`search-form ${filteredProducts.length > 0 ? 'with-result' : ''} ${className}`}>
+        <form className={`search-form ${filteredProducts.length > 0 && prediction ? 'with-result' : ''} ${className}`}>
 
             <TextField
                 className="search-form__input"
@@ -60,6 +64,7 @@ const SearchForm = React.memo(function ({ className }) {
                 label="Search"
                 onChange={handle.queryChange}
                 onEnterPress={handle.submit}
+                focus={focus}
             />
 
             <ButtonIcon
@@ -68,12 +73,18 @@ const SearchForm = React.memo(function ({ className }) {
                 onClick={handle.submit}
             />
 
-            <SearchPredictiveResult
-                className="search-form__result"
-                query={query}
-                filteredProducts={filteredProducts}
-                onClick={handle.searchLinkClick}
-            />
+            {
+                prediction && filteredProducts.length > 0 && (
+
+                    <SearchPredictiveResult
+                        className="search-form__result"
+                        query={query}
+                        filteredProducts={filteredProducts}
+                        onClick={handle.searchLinkClick}
+                    />
+
+                )
+            }
 
         </form>
     );
@@ -81,11 +92,15 @@ const SearchForm = React.memo(function ({ className }) {
 });
 
 SearchForm.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    focus: PropTypes.bool,
+    prediction: PropTypes.bool
 };
 
 SearchForm.defaultProps = {
-    className: ''
+    className: '',
+    focus: true,
+    prediction: true
 };
 
 export { SearchForm };

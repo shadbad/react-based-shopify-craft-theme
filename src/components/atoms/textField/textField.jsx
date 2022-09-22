@@ -1,21 +1,29 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useRef, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import './text-field.scss';
 
-const TextField = function ({ className, value, type, label, required, error, onChange, onEnterPress }) {
+const TextField = function ({ className, value, type, label, focus, required, error, onChange, onEnterPress }) {
 
     const id = label.replace(' ', '_');
 
     const [hasValue, setHasValue] = useState(value !== '');
 
-    const [isFocused, setIsFocused] = useState(false);
+    const [isFocused, setIsFocused] = useState(focus);
+
+    const containerRef = useRef();
+
+    useLayoutEffect(() => {
+
+        if (focus) containerRef.current.querySelector('.text-field__input').focus();
+        else containerRef.current.querySelector('.text-field__input').blur();
+
+    }, [focus]);
 
     const handle = {
 
-        click: useCallback(({ target }) => {
+        click: useCallback(() => {
 
-            const container = target.closest('.text-field');
-            container.querySelector('.text-field__input').focus();
+            containerRef.current.querySelector('.text-field__input').focus();
 
         }),
 
@@ -57,6 +65,7 @@ const TextField = function ({ className, value, type, label, required, error, on
             onKeyDown={handle.click}
             role="textbox"
             tabIndex={-1}
+            ref={containerRef}
         >
 
             <input
@@ -87,6 +96,7 @@ TextField.propTypes = {
     value: PropTypes.string,
     type: PropTypes.oneOf(['text', 'search', 'password', 'email']).isRequired,
     required: PropTypes.bool,
+    focus: PropTypes.bool,
     label: PropTypes.string.isRequired,
     error: PropTypes.string,
     onChange: PropTypes.func,
@@ -97,6 +107,7 @@ TextField.defaultProps = {
     className: '',
     value: '',
     required: false,
+    focus: false,
     error: '',
     onChange: null,
     onEnterPress: null
