@@ -1,0 +1,9 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+
+.text-date {
+  display: block;
+  font-family: typography.$heading;
+  font-size: 0.75rem;
+  letter-spacing: 0.0625rem;
+}
