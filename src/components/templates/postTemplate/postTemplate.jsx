@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { TextHeading, TextDate } from 'components/atoms';
+import './post-template.scss';
 
 const PostTemplate = function ({ post }) {
 
@@ -8,18 +9,18 @@ const PostTemplate = function ({ post }) {
 
     useLayoutEffect(() => {
 
-        containerRef.current.innerHtml = post.body;
+        containerRef.current.innerHTML = post.body;
 
     }, []);
 
     return (
         <div className="post-template">
 
+            <span className="post-template__image" style={{ backgroundImage: `url(${post.cover})` }} />
+
             <div className="post-template__header">
 
-                <img src={post.cover} alt={post.title} />
-
-                <TextHeading type={1}>{post.title}</TextHeading>
+                <TextHeading className="post-template__header__title" type={1}>{post.title}</TextHeading>
 
                 <TextDate className="post-template__header__date" date={post.date} />
 
