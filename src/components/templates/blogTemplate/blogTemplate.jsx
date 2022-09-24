@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Paginator, CardPost } from 'components/molecules';
+import { useJumpToTop } from 'hooks';
 import './blog-template.scss';
 
 const BlogTemplate = function ({ posts }) {
+
+    useJumpToTop();
 
     return (
 

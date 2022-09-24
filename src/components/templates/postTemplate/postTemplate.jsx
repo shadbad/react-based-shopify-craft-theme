@@ -1,9 +1,12 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { TextHeading, TextDate } from 'components/atoms';
+import { useJumpToTop } from 'hooks';
 import './post-template.scss';
 
 const PostTemplate = function ({ post }) {
+
+    useJumpToTop();
 
     const containerRef = useRef();
 

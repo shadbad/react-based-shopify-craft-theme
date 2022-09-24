@@ -1,10 +1,7 @@
 import { useSelector } from 'react-redux';
 import { BlogTemplate } from 'components/templates';
-import { useJumpToTop } from 'hooks';
 
 const Blog = function () {
-
-    useJumpToTop();
 
     const blogSlice = useSelector((state) => state.blog);
 
