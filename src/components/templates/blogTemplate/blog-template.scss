@@ -1,0 +1,20 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@use "/src/assets/styles/shared.scss";
+
+.blog-template__paginator {
+  .paginator__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+  }
+}
+
+.blog-template__post {
+  flex-shrink: 0;
+  width: calc((100% - 1.5rem) / 2);
+
+  &:first-of-type {
+    width: 100%;
+  }
+}
