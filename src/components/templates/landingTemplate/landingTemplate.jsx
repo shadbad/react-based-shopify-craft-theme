@@ -111,7 +111,7 @@ const LandingTemplate = function ({ content, posts }) {
                             <CardPost
                                 key={nanoid()}
                                 title={item.title}
-                                href={item.url}
+                                href={`/blog/${item.slug}`}
                                 date={item.date}
                                 summary={item.summary}
                                 cover={item.cover}
@@ -212,7 +212,7 @@ LandingTemplate.propTypes = {
 
         title: PropTypes.string,
 
-        url: PropTypes.string,
+        slug: PropTypes.string,
 
         date: PropTypes.number,
 
