@@ -1,21 +1,11 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { TextDate } from 'components/atoms';
 
 import './card-post.scss';
 
 const CardPost = React.memo(function ({ className, href, cover, title, date, summary }) {
-
-    const dateFormatter = useCallback((dateTime) => {
-
-        const parts = new Intl
-            .DateTimeFormat('en-GB', { month: 'long', year: 'numeric', day: 'numeric' })
-            .formatToParts(new Date(dateTime))
-            .filter((part) => part.type !== 'literal');
-
-        return `${parts[1].value} ${parts[0].value}. ${parts[2].value}`;
-
-    });
 
     return (
 
@@ -25,7 +15,7 @@ const CardPost = React.memo(function ({ className, href, cover, title, date, sum
 
             <strong className="card-post__title">{title}</strong>
 
-            <time className="card-post__date" dateTime={new Date(date).toISOString()}>{dateFormatter(date)}</time>
+            <TextDate className="card-post__date" date={date} />
 
             <span className="card-post__summary">{summary}</span>
 
