@@ -1,0 +1,48 @@
+@use "/src/assets/styles/colors.scss";
+@use "/src/assets/styles/typography.scss";
+@import "/src/assets/styles/partials/reset";
+@import "/src/assets/styles/partials/fonts";
+
+:root {
+  font: 400 16px/1.62em typography.$body;
+  background-color: colors.$charcoal600;
+  color: colors.$charcoal100;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: colors.$charcoal500;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: colors.$charcoal400;
+  }
+}
+
+::selection {
+  color: colors.$charcoal100;
+  background-color: colors.$charcoal500;
+}
+
+body {
+  min-height: 100vh;
+
+  &.lock {
+    overflow: hidden;
+    padding-right: 0.5rem;
+  }
+}
+
+button,
+input,
+textarea {
+  font-family: typography.$body !important;
+}
