@@ -1,0 +1,46 @@
+@use '/src/assets/styles/colors.scss';
+
+.error-boundary__heading {
+    text-align: center;
+    position: relative;
+    color: colors.$charcoal300;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 8rem;
+}
+
+.error-boundary__title {
+    max-width: 200rem;
+    margin: 0 auto 8rem auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 6rem;
+    color: colors.$error;
+}
+
+.error-boundary__trace {
+    background-color: colors.$charcoal100;
+    max-width: 200rem;
+    box-sizing: border-box;
+    padding: 6rem 4rem;
+    border-radius: 2rem;
+    margin: auto;
+    overflow-y: auto;
+}
+
+.error-boundary__trace__item {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color: colors.$charcoal600;
+    &:hover {
+        background-color: colors.$charcoal200;
+        color: colors.$charcoal600;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
