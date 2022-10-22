@@ -1,5 +1,6 @@
 {
     "name": "react-based-shopify-craft-theme",
+    "homepage": "http://shadbad.github.io/react-based-shopify-craft-theme/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
