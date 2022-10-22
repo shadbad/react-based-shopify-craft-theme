@@ -23,7 +23,13 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "coverage": "npm run test --coverage --watchAll",
+        "lint": "eslint --ignore-path .gitignore .",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "prepare": "husky install"
     },
     "browserslist": {
         "production": [
@@ -42,15 +48,19 @@
         "@typescript-eslint/parser": "^5.40.1",
         "eslint": "^8.25.0",
         "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
         "eslint-import-resolver-typescript": "^3.5.2",
         "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jest-dom": "^4.0.2",
         "eslint-plugin-jsx-a11y": "^6.6.1",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.31.10",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "gh-pages": "^4.0.0",
         "prettier": "^2.7.1",
         "prettier-eslint": "^15.0.1",
         "prettier-eslint-cli": "^7.1.0",
-        "sass": "^1.55.0"
+        "sass": "^1.55.0",
+        "husky": "^8.0.0"
     }
 }
