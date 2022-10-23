@@ -4,8 +4,6 @@ import { Landing } from './landing';
 describe('Landing page', () => {
     it('renders Landing page', () => {
         render(<Landing />);
-        expect(
-            screen.getByRole('heading', { name: 'Landing page' })
-        ).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Landing page' })).toBeInTheDocument();
     });
 });

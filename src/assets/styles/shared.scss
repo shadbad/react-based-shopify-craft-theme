@@ -39,12 +39,7 @@
         left: 0;
         width: 20%;
         bottom: 0;
-        background: linear-gradient(
-            to right,
-            transparent 5%,
-            colors.$charcoal700,
-            transparent 95%
-        );
+        background: linear-gradient(to right, transparent 5%, colors.$charcoal700, transparent 95%);
         animation: loading infinite linear 1.5s;
     }
 }

@@ -36,9 +36,7 @@ class ErrorBoundary extends Component<propTypes, stateType> {
         if (hasError) {
             return (
                 <>
-                    <h1 className="error-boundary__heading">
-                        Sorry.. there was an error
-                    </h1>
+                    <h1 className="error-boundary__heading">Sorry.. there was an error</h1>
 
                     <h2 className="error-boundary__title">{error}</h2>
 
@@ -46,10 +44,7 @@ class ErrorBoundary extends Component<propTypes, stateType> {
                         {info.split(' at ').map(
                             (item) =>
                                 item.trim().length > 0 && (
-                                    <li
-                                        key={item}
-                                        className="error-boundary__trace__item"
-                                    >
+                                    <li key={item} className="error-boundary__trace__item">
                                         {`at ${item}`}
                                     </li>
                                 )
