@@ -20,39 +20,41 @@ function IconComponent({ name, className }: propTypes) {
     );
 }
 
+export type iconNameType =
+    | 'care-information'
+    | 'dimensions'
+    | 'materials'
+    | 'logo'
+    | 'arrow-left'
+    | 'arrow-right'
+    | 'check'
+    | 'check-square'
+    | 'chevron-down'
+    | 'chevron-left'
+    | 'chevron-right'
+    | 'chevron-up'
+    | 'clipboard'
+    | 'github'
+    | 'heart'
+    | 'instagram'
+    | 'linkedin'
+    | 'menu'
+    | 'minus'
+    | 'play'
+    | 'plus'
+    | 'refresh'
+    | 'search'
+    | 'cart'
+    | 'sliders'
+    | 'square'
+    | 'trash'
+    | 'twitter'
+    | 'upload'
+    | 'cross'
+    | 'zoom-in';
+
 type propTypes = {
-    name:
-        | 'care-information'
-        | 'dimensions'
-        | 'materials'
-        | 'logo'
-        | 'arrow-left'
-        | 'arrow-right'
-        | 'check'
-        | 'check-square'
-        | 'chevron-down'
-        | 'chevron-left'
-        | 'chevron-right'
-        | 'chevron-up'
-        | 'clipboard'
-        | 'github'
-        | 'heart'
-        | 'instagram'
-        | 'linkedin'
-        | 'menu'
-        | 'minus'
-        | 'play'
-        | 'plus'
-        | 'refresh'
-        | 'search'
-        | 'cart'
-        | 'sliders'
-        | 'square'
-        | 'trash'
-        | 'twitter'
-        | 'upload'
-        | 'cross'
-        | 'zoom-in';
+    name: iconNameType;
     className?: string;
 };
 
