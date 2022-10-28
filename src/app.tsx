@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary, Landing } from 'components/pages';
+import 'assets/styles/globals.scss';
 
 export default function App() {
     return (
