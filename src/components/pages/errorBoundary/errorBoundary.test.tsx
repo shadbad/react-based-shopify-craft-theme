@@ -5,7 +5,9 @@ import { ErrorBoundary } from './errorBoundary';
 describe('ErrorBoundary', () => {
     it('Renders children when there is no error', () => {
         const sampleChild = <h1>No Error</h1>;
+
         render(<ErrorBoundary>{sampleChild}</ErrorBoundary>);
+
         expect(screen.getByRole('heading', { name: 'No Error' })).toBeInTheDocument();
     });
 
